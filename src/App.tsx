@@ -1,0 +1,1002 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+import React, { useState, useEffect } from 'react';
+import { 
+  BrowserRouter as Router, 
+  Routes, 
+  Route, 
+  Link, 
+  useLocation,
+  useNavigate,
+  useParams
+} from 'react-router-dom';
+import { 
+  Building2, 
+  CheckCircle2, 
+  ChevronRight, 
+  Clock, 
+  Facebook, 
+  Instagram, 
+  Mail, 
+  MapPin, 
+  MessageCircle, 
+  Phone, 
+  TrendingUp, 
+  Wallet,
+  Menu,
+  X,
+  ArrowRight,
+  ShieldCheck,
+  Wrench,
+  Check
+} from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
+
+// --- Data ---
+
+const PROJECTS = [
+  {
+    id: 'ares-6',
+    name: 'Ares 6',
+    status: 'En construcción',
+    category: 'En desarrollo',
+    description: 'Departamentos de 2 ambientes ideales para alquiler temporario. Incluye local en planta baja y 9 cocheras cubiertas.',
+    features: ['Financiación 24 cuotas', 'Local en PB', '9 Cocheras cubiertas', 'Ideal inversión'],
+    image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/APOLO-ARES-6-1.jpg'
+  },
+  {
+    id: 'viggo-91',
+    name: 'Viggo 91',
+    status: 'Próximo lanzamiento',
+    category: 'En desarrollo',
+    description: 'Viviendas modernas con la posibilidad única de pago con granos a futuro. Un procedimiento seguro y confiable.',
+    features: ['Pagá con granos', 'Diseño funcional', 'Sin expensas', 'Ubicación premium'],
+    image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2022/05/Copia-de-1.8.jpg'
+  },
+  {
+    id: 'ares-22',
+    name: 'Ares 22',
+    status: 'En desarrollo',
+    category: 'En desarrollo',
+    description: 'Proyecto de vanguardia con unidades funcionales y diseño contemporáneo.',
+    features: ['Diseño moderno', 'Alta rentabilidad', 'Financiación directa'],
+    image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/APOLO-ARES-2-1.jpg'
+  },
+  {
+    id: 'delfos-83',
+    name: 'Delfos 83',
+    status: 'En desarrollo',
+    category: 'En desarrollo',
+    description: 'Exclusividad y confort en una de las mejores zonas de Necochea.',
+    features: ['Terminaciones de lujo', 'Ubicación privilegiada', 'Seguridad'],
+    image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2024/11/Copia-de-Nueva-Fachada-1.jpg'
+  },
+  {
+    id: 'orfeo',
+    name: 'Orfeo',
+    status: 'En desarrollo',
+    category: 'En desarrollo',
+    description: 'Unidades pensadas para la vida moderna, con espacios amplios y luminosos.',
+    features: ['Espacios verdes', 'Luminosidad', 'Calidad constructiva'],
+    image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/2e5afdf1-5119-4591-bc96-3bd37dc07dae-scaled.jpg'
+  },
+  {
+    id: 'dafne-42',
+    name: 'Dafne 42',
+    status: 'Obra finalizada',
+    category: 'Finalizados',
+    description: 'Departamentos de 1, 2 y 3 ambientes con patio propio y cocheras disponibles. Entrega inmediata.',
+    features: ['Patio propio', '1, 2 y 3 ambientes', 'Cocheras disponibles', 'Terminaciones premium'],
+    image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2024/11/IMG-20201120-WA0031.jpg'
+  },
+  {
+    id: 'zeus-543',
+    name: 'Zeus 543',
+    status: 'Obra finalizada',
+    category: 'Finalizados',
+    description: 'Solidez y diseño en un proyecto ya entregado y consolidado.',
+    features: ['Entrega inmediata', 'Calidad Apolo', 'Diseño funcional'],
+    image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2024/11/IMG-20210405-WA0009.jpg'
+  }
+];
+
+// --- Components ---
+
+const Layout = ({ children }: { children: React.ReactNode }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  const navLinks = [
+    { name: 'Emprendimientos', path: '/proyectos' },
+    { name: 'Financiación', path: '/financiacion' },
+    { name: 'Nosotros', path: '/nosotros' },
+    { name: 'Proceso', path: '/servicios' },
+  ];
+
+  const isDarkPage = location.pathname === '/' && !scrolled;
+
+  return (
+    <div className="min-h-screen flex flex-col bg-apolo-paper">
+      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-apolo-paper/95 backdrop-blur-md py-4 shadow-lg border-b border-white/10' : 'bg-transparent py-6'}`}>
+        <div className="max-w-7xl mx-auto px-6 md:px-8 flex justify-between items-center">
+          <Link to="/" className="flex items-center gap-4 group">
+            <img 
+              src="https://apoloconstrucciones.com.ar/wp-content/uploads/2021/09/LOGO-APOLO2-768x766-1.png" 
+              alt="Apolo Logo" 
+              className="w-10 h-10 object-contain transition-transform duration-500 group-hover:scale-105"
+              referrerPolicy="no-referrer"
+            />
+            <span className="text-white font-bold text-lg tracking-wide hidden sm:block">APOLO CONSTRUCCIONES</span>
+          </Link>
+
+          <div className="hidden md:flex items-center gap-8">
+            <div className="flex items-center gap-6">
+              {navLinks.map((link) => (
+                <Link 
+                  key={link.name} 
+                  to={link.path}
+                  className={`relative text-sm font-medium transition-all duration-300 group ${
+                    location.pathname === link.path 
+                      ? 'text-[#f27d26]' 
+                      : 'text-white/70 hover:text-white'
+                  }`}
+                >
+                  {link.name}
+                  <span className={`absolute -bottom-1 left-0 w-full h-[2px] bg-[#f27d26] transform origin-left transition-transform duration-300 ${location.pathname === link.path ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></span>
+                </Link>
+              ))}
+              <Link 
+                to="/contacto"
+                className={`relative text-sm font-medium transition-all duration-300 group ${
+                  location.pathname === '/contacto' 
+                    ? 'text-[#f27d26]' 
+                    : 'text-white/70 hover:text-white'
+                }`}
+              >
+                Contacto
+                <span className={`absolute -bottom-1 left-0 w-full h-[2px] bg-[#f27d26] transform origin-left transition-transform duration-300 ${location.pathname === '/contacto' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></span>
+              </Link>
+            </div>
+            <Link 
+              to="/contacto"
+              className="px-6 py-2.5 bg-[#22c55e] hover:bg-[#16a34a] hover:-translate-y-0.5 hover:shadow-[0_8px_20px_-6px_rgba(34,197,94,0.5)] active:scale-95 transition-all duration-300 text-sm font-bold text-white rounded shadow-lg"
+            >
+              Contactanos
+            </Link>
+          </div>
+
+          <button 
+            className="md:hidden relative z-50 p-2 group" 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle Menu"
+          >
+            <div className="flex flex-col gap-1.5 items-end">
+              <motion.div 
+                animate={isMenuOpen ? { rotate: 45, y: 8, width: 24 } : { rotate: 0, y: 0, width: 24 }}
+                className="h-px bg-white transition-all duration-300"
+              />
+              <motion.div 
+                animate={isMenuOpen ? { opacity: 0, x: 10 } : { opacity: 1, x: 0, width: 16 }}
+                className="h-px bg-white transition-all duration-300"
+              />
+              <motion.div 
+                animate={isMenuOpen ? { rotate: -45, y: -8, width: 24 } : { rotate: 0, y: 0, width: 24 }}
+                className="h-px bg-white transition-all duration-300"
+              />
+            </div>
+          </button>
+        </div>
+      </nav>
+
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            className="fixed inset-0 z-40 bg-apolo-paper/95 backdrop-blur-xl flex flex-col md:hidden pt-32 pb-12"
+          >
+            <div className="flex-grow flex flex-col items-center justify-center gap-10 px-8">
+              {[...navLinks, { name: 'Contacto', path: '/contacto' }].map((link, i) => (
+                <motion.div
+                  key={link.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 + i * 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  <Link 
+                    to={link.path}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`text-3xl font-bold tracking-wide transition-all duration-300 ${
+                      location.pathname === link.path ? 'text-[#f27d26]' : 'text-white hover:text-[#f27d26]'
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+            
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6 }}
+              className="flex justify-center gap-8 mt-auto"
+            >
+              <a href="https://www.instagram.com/apolo.construcciones/" target="_blank" rel="noreferrer" className="text-white/50 hover:text-[#f27d26] transition-colors">
+                <Instagram size={24} />
+              </a>
+              <a href="https://www.facebook.com/apoloconstructora" target="_blank" rel="noreferrer" className="text-white/50 hover:text-[#f27d26] transition-colors">
+                <Facebook size={24} />
+              </a>
+              <a href="https://wa.me/5492262506588" target="_blank" rel="noreferrer" className="text-white/50 hover:text-[#f27d26] transition-colors">
+                <MessageCircle size={24} />
+              </a>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <main className="flex-grow">
+        {children}
+      </main>
+
+      <footer className="bg-apolo-dark text-white pt-32 pb-16 border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-12 gap-16 mb-24">
+            <div className="md:col-span-5">
+              <Link to="/" className="inline-block mb-10">
+                <img 
+                  src="https://apoloconstrucciones.com.ar/wp-content/uploads/2021/09/LOGO-APOLO2-768x766-1.png" 
+                  alt="Apolo Logo" 
+                  className="w-16 h-16 object-contain"
+                  referrerPolicy="no-referrer"
+                />
+              </Link>
+              <p className="text-white/70 max-w-sm text-lg font-medium leading-relaxed mb-10">
+                Desarrollamos el futuro de Necochea con una visión arquitectónica que prioriza la calidad y el diseño.
+              </p>
+              <div className="flex gap-6">
+                <a href="https://www.facebook.com/apoloconstructora" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#f27d26] hover:text-white hover:border-[#f27d26] transition-all text-white/70">
+                  <Facebook size={18} />
+                </a>
+                <a href="https://www.instagram.com/apolo.construcciones/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#f27d26] hover:text-white hover:border-[#f27d26] transition-all text-white/70">
+                  <Instagram size={18} />
+                </a>
+              </div>
+            </div>
+            <div className="md:col-span-2">
+              <p className="text-white/50 text-[10px] uppercase tracking-[0.2em] font-semibold mb-8">Navegación</p>
+              <ul className="space-y-4 font-medium text-white/70">
+                {navLinks.map(link => (
+                  <li key={link.name}><Link to={link.path} className="hover:text-[#f27d26] transition-colors">{link.name}</Link></li>
+                ))}
+              </ul>
+            </div>
+            <div className="md:col-span-5">
+              <p className="text-white/50 text-[10px] uppercase tracking-[0.2em] font-semibold mb-8">Contacto</p>
+              <div className="grid grid-cols-1 gap-8">
+                <div>
+                  <p className="text-white/50 text-[10px] uppercase tracking-[0.2em] font-semibold mb-2">Oficina</p>
+                  <p className="text-xl font-bold text-white">Calle 62 N° 3124, Necochea</p>
+                </div>
+                <div className="flex flex-col md:flex-row gap-8 md:gap-16">
+                  <div>
+                    <p className="text-white/50 text-[10px] uppercase tracking-[0.2em] font-semibold mb-2">Llamanos</p>
+                    <p className="text-xl font-bold text-white">+54 9 2262 506588</p>
+                  </div>
+                  <div>
+                    <p className="text-white/50 text-[10px] uppercase tracking-[0.2em] font-semibold mb-2">Email</p>
+                    <p className="text-xl font-bold text-white">info@apoloconstrucciones.com.ar</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/50 font-medium">
+            <p>&copy; {new Date().getFullYear()} Apolo Construcciones. Todos los derechos reservados.</p>
+            <div className="flex gap-6">
+              <a href="#" className="hover:text-[#f27d26] transition-colors">Términos y Condiciones</a>
+              <a href="#" className="hover:text-[#f27d26] transition-colors">Política de Privacidad</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <a 
+        href="https://wa.me/5492262506588" 
+        target="_blank" 
+        rel="noreferrer"
+        className="fixed bottom-8 right-8 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform z-50 group"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.405-.883-.733-1.48-1.638-1.653-1.935-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+        </svg>
+        <span className="absolute right-full mr-4 bg-apolo-paper text-white px-4 py-2 rounded-lg text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-xl border border-white/10">
+          ¿En qué podemos ayudarte?
+        </span>
+      </a>
+    </div>
+  );
+};
+
+// --- Pages ---
+
+const Home = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const carouselItems = [
+    {
+      name: 'Viggo 91',
+      features: ['Espacios amplios', 'Luminosidad', 'Terminaciones de lujo'],
+      image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2022/05/Copia-de-1.8.jpg'
+    },
+    {
+      name: 'Ares 6',
+      features: ['Diseño minimalista', 'Ubicación premium', 'Vistas panorámicas'],
+      image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/APOLO-ARES-6-1.jpg'
+    },
+    {
+      name: 'Ares 22',
+      features: ['Entrega inmediata', 'Calidad Apolo', 'Diseño funcional'],
+      image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2024/11/IMG-20210405-WA0009.jpg'
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % carouselItems.length);
+    }, 8000);
+    return () => clearInterval(timer);
+  }, [carouselItems.length]);
+
+  return (
+    <div className="bg-apolo-dark">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <AnimatePresence mode="wait">
+            <motion.img 
+              key={currentIndex}
+              src={carouselItems[currentIndex].image} 
+              alt={carouselItems[currentIndex].name} 
+              initial={{ opacity: 0, scale: 1.1 }}
+              animate={{ opacity: 0.6, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1] }}
+              className="w-full h-full object-cover brightness-75"
+              referrerPolicy="no-referrer"
+            />
+          </AnimatePresence>
+          <div className="absolute inset-0 bg-gradient-to-t from-apolo-dark via-apolo-dark/40 to-transparent z-10" />
+        </div>
+        
+        <div className="relative z-20 text-center px-6 max-w-5xl mx-auto pt-24 md:pt-32">
+          <motion.div 
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.2 } }
+            }}
+            className="flex flex-col items-center"
+          >
+            <motion.h1 
+              variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } } }}
+              className="text-4xl md:text-6xl lg:text-7xl text-white font-bold mb-8 tracking-tight drop-shadow-lg font-sans text-center"
+            >
+              Descubrí tu Casa Propia.
+            </motion.h1>
+
+            <motion.p 
+              variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } } }}
+              className="text-lg md:text-2xl text-white/90 mb-16 max-w-3xl mx-auto font-medium drop-shadow-md font-sans text-center px-4"
+            >
+              Departamentos y Emprendimientos en Pozo — Necochea
+            </motion.p>
+            
+            <motion.div variants={{ hidden: { opacity: 0, scale: 0.9 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } } }}>
+              <Link 
+                to="/contacto" 
+                className="inline-block px-8 py-4 bg-[#22c55e] hover:bg-[#16a34a] hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_rgba(34,197,94,0.6)] active:scale-95 text-white text-lg font-bold rounded transition-all duration-300 shadow-lg mb-16"
+              >
+                Quiero que me contacten
+              </Link>
+            </motion.div>
+
+            <motion.div 
+              variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } } }}
+              className="flex flex-wrap justify-center gap-6 px-4"
+            >
+              <span className="px-6 py-2 border border-[#f27d26] text-[#f27d26] rounded-full text-sm font-medium bg-black/40 backdrop-blur-sm hover:bg-[#f27d26]/10 hover:border-[#f27d26] transition-colors cursor-default">
+                Venta desde el pozo
+              </span>
+              <span className="px-6 py-2 border border-[#f27d26] text-[#f27d26] rounded-full text-sm font-medium bg-black/40 backdrop-blur-sm hover:bg-[#f27d26]/10 hover:border-[#f27d26] transition-colors cursor-default">
+                Fideicomiso al costo
+              </span>
+            </motion.div>
+          </motion.div>
+        </div>
+
+        {/* Carousel Indicators */}
+        <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex gap-3 z-30">
+          {carouselItems.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className="group py-2"
+              aria-label={`Go to slide ${index + 1}`}
+            >
+              <div className={`h-2 rounded-full transition-all duration-500 ${
+                index === currentIndex ? 'w-8 bg-[#f27d26]' : 'w-2 bg-white/50 group-hover:bg-white/80'
+              }`} />
+            </button>
+          ))}
+        </div>
+
+        {/* Scroll Indicator */}
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2, duration: 1 }}
+          className="absolute bottom-8 right-12 hidden md:flex flex-col items-center gap-4 z-30"
+        >
+          <span className="text-[9px] uppercase tracking-[0.4em] text-white/30 rotate-90 origin-right translate-y-8">Scroll</span>
+          <div className="w-px h-16 bg-gradient-to-b from-white/30 to-transparent" />
+        </motion.div>
+      </section>
+
+      <section className="py-24 bg-apolo-paper overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div 
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            className="grid md:grid-cols-2 gap-16 items-center"
+          >
+            <div className="relative">
+              <div className="aspect-[4/5] overflow-hidden rounded-2xl">
+                <img 
+                  src="https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/APOLO-ARES-6-1.jpg" 
+                  alt="Architecture" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div className="absolute -bottom-12 -right-12 w-64 h-80 bg-apolo-dark shadow-2xl border border-white/10 p-12 flex flex-col justify-end hidden md:flex rounded-2xl">
+                <p className="text-white/50 text-[10px] uppercase tracking-[0.2em] font-semibold mb-4">Trayectoria</p>
+                <h4 className="text-white text-4xl font-bold text-[#f27d26]">+15</h4>
+                <p className="text-white/70 text-xs uppercase tracking-widest mt-2">Años de Excelencia</p>
+              </div>
+            </div>
+            <div>
+              <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-6">Sobre Nosotros</p>
+              <h2 className="text-4xl md:text-6xl mb-8 leading-tight text-white font-bold tracking-tight">
+                Construimos <br /><span className="text-[#f27d26]">Legados.</span>
+              </h2>
+              <p className="text-lg text-white/70 mb-6 leading-relaxed font-medium">
+                En Apolo Construcciones, no solo edificamos estructuras; creamos hogares y oportunidades de inversión que perduran. Nuestra filosofía se basa en la honestidad, la calidad constructiva y el respeto por el entorno.
+              </p>
+              <p className="text-lg text-white/70 mb-10 leading-relaxed font-medium">
+                Cada proyecto es una pieza única de arquitectura contemporánea, diseñada para maximizar el confort y la plusvalía de nuestros clientes en Necochea.
+              </p>
+              <Link to="/nosotros" className="group flex items-center gap-4 text-white uppercase text-[10px] tracking-[0.3em] font-bold">
+                Nuestra Historia
+                <div className="w-12 h-px bg-[#f27d26] group-hover:w-20 transition-all duration-500"></div>
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-apolo-dark overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
+              Nuestros Emprendimientos
+            </h2>
+          </motion.div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {PROJECTS.filter(p => ['ares-22', 'delfos-83', 'viggo-91'].includes(p.id)).map((project, index) => (
+              <motion.div 
+                key={project.id} 
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.8, delay: index * 0.2, ease: [0.22, 1, 0.36, 1] }}
+                className="bg-apolo-paper rounded-2xl shadow-lg border border-white/10 overflow-hidden flex flex-col hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(242,125,38,0.15)] transition-all duration-500 group"
+              >
+                <div className="aspect-[4/3] overflow-hidden relative">
+                  <img src={project.image} alt={project.name} className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110" referrerPolicy="no-referrer" loading="lazy" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-apolo-paper via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                </div>
+                <div className="p-8 flex flex-col flex-grow z-10 relative">
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="px-3 py-1 bg-black/40 text-[#f27d26] rounded-full text-xs font-bold border border-[#f27d26]/30">Venta desde el pozo</span>
+                    <span className="px-3 py-1 bg-black/40 text-[#f27d26] rounded-full text-xs font-bold border border-[#f27d26]/30">Fideicomiso</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-6 uppercase group-hover:text-[#f27d26] transition-colors duration-300">{project.name}</h3>
+                  <div className="flex flex-col gap-3 mb-8">
+                    {project.features.map((feature, i) => (
+                      <div key={i} className="flex items-start gap-3 text-white/70 text-sm font-medium group-hover:text-white/90 transition-colors duration-300">
+                        <Check className="w-4 h-4 text-[#22c55e] shrink-0 mt-0.5" />
+                        <span>{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <Link to={`/proyectos/${project.id}`} className="mt-auto w-max px-6 py-3 bg-white/10 hover:bg-[#f27d26] text-white font-bold rounded transition-colors text-sm group-hover:shadow-[0_4px_14px_0_rgba(242,125,38,0.39)]">
+                    Me interesa
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          <div className="mt-16 text-center">
+            <Link to="/proyectos" className="inline-flex items-center gap-4 text-white uppercase text-[10px] tracking-[0.3em] font-bold group">
+              Ver Todos Los Proyectos
+              <div className="w-12 h-px bg-[#f27d26] group-hover:w-20 transition-all duration-500"></div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-apolo-paper overflow-hidden relative">
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            className="grid md:grid-cols-2 gap-16 items-center"
+          >
+            <div>
+              <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-6">Financiación Exclusiva</p>
+              <h2 className="text-4xl md:text-6xl mb-8 leading-tight text-white font-bold tracking-tight">
+                Pagá con <br /><span className="text-[#f27d26]">Granos a Futuro.</span>
+              </h2>
+              <p className="text-lg text-white/70 mb-10 leading-relaxed font-medium">
+                Un procedimiento seguro y confiable pensado para el sector agropecuario. Asegurá tu propiedad hoy y cancelá con tu producción futura.
+              </p>
+              <div className="grid grid-cols-1 gap-5 mb-10">
+                <div className="flex items-center gap-4 text-white/70 font-medium">
+                  <Check className="w-5 h-5 text-[#22c55e]" />
+                  Procedimiento seguro y transparente
+                </div>
+                <div className="flex items-center gap-4 text-white/70 font-medium">
+                  <Check className="w-5 h-5 text-[#22c55e]" />
+                  Sin intermediarios bancarios
+                </div>
+                <div className="flex items-center gap-4 text-white/70 font-medium">
+                  <Check className="w-5 h-5 text-[#22c55e]" />
+                  Capitalización inmediata
+                </div>
+              </div>
+              <Link to="/financiacion" className="px-8 py-4 bg-[#22c55e] text-white hover:bg-[#16a34a] uppercase text-[10px] tracking-[0.3em] font-bold rounded transition-all inline-block shadow-lg">
+                Más sobre financiación
+              </Link>
+            </div>
+            <div className="relative">
+              <div className="aspect-square overflow-hidden rounded-2xl">
+                <img src="https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/APOLO-ARES-5-1.jpg" alt="Agro" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+const Proyectos = () => {
+  const [filter, setFilter] = useState('Todos');
+  const categories = ['Todos', 'En desarrollo', 'Finalizados'];
+  
+  const filteredProjects = filter === 'Todos' 
+    ? PROJECTS 
+    : PROJECTS.filter(p => p.category === filter);
+
+  return (
+    <div className="pt-32 pb-24 bg-apolo-dark min-h-screen">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-24 gap-8 md:gap-12">
+          <div className="max-w-2xl">
+            <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-4 md:mb-6">Nuestros Desarrollos</p>
+            <h1 className="text-5xl md:text-8xl mb-8 leading-tight tracking-tighter font-bold font-sans text-white">
+              Proyectos <br /><span className="text-[#f27d26] font-bold">Inmobiliarios.</span>
+            </h1>
+          </div>
+          <div className="flex gap-6 md:gap-8 border-b border-white/10 pb-4 w-full md:w-auto overflow-x-auto no-scrollbar">
+            {categories.map(cat => (
+              <button 
+                key={cat} 
+                onClick={() => setFilter(cat)}
+                className={`uppercase text-[10px] tracking-[0.3em] font-bold transition-all whitespace-nowrap ${filter === cat ? 'text-[#f27d26]' : 'text-white/50 hover:text-white/70'}`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {filteredProjects.map((project, index) => (
+            <motion.div 
+              key={project.id} 
+              layout
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+              className="bg-apolo-paper rounded-2xl shadow-lg border border-white/10 overflow-hidden flex flex-col hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(242,125,38,0.15)] transition-all duration-500 group"
+            >
+              <div className="aspect-[4/3] overflow-hidden relative">
+                <img src={project.image} alt={project.name} className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110" referrerPolicy="no-referrer" loading="lazy" />
+                <div className="absolute inset-0 bg-gradient-to-t from-apolo-paper via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              </div>
+              <div className="p-8 flex flex-col flex-grow z-10 relative">
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="px-3 py-1 bg-black/40 text-[#f27d26] rounded-full text-xs font-bold border border-[#f27d26]/30">{project.status}</span>
+                  <span className="px-3 py-1 bg-black/40 text-[#f27d26] rounded-full text-xs font-bold border border-[#f27d26]/30">{project.category}</span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-6 uppercase group-hover:text-[#f27d26] transition-colors duration-300">{project.name}</h3>
+                <div className="flex flex-col gap-3 mb-8">
+                  {project.features.map((feature, i) => (
+                    <div key={i} className="flex items-start gap-3 text-white/70 text-sm font-medium group-hover:text-white/90 transition-colors duration-300">
+                      <Check className="w-4 h-4 text-[#22c55e] shrink-0 mt-0.5" />
+                      <span>{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                <Link to={`/proyectos/${project.id}`} className="mt-auto w-max px-6 py-3 bg-white/10 hover:bg-[#f27d26] text-white font-bold rounded transition-colors text-sm group-hover:shadow-[0_4px_14px_0_rgba(242,125,38,0.39)]">
+                  Me interesa
+                </Link>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Financiacion = () => {
+  return (
+    <div className="pt-32 pb-24 bg-apolo-paper min-h-screen">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-3xl mb-24">
+          <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-6">Inversión y Resguardo</p>
+          <h1 className="text-6xl md:text-8xl mb-8 leading-tight tracking-tighter font-bold font-sans text-white">
+            Opciones de <br /><span className="text-[#f27d26] font-bold">Financiación.</span>
+          </h1>
+          <p className="text-xl text-white/70 font-medium leading-relaxed">
+            Facilitamos el camino hacia tu nuevo hogar con opciones flexibles y seguras, diseñadas para el inversor.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            className="bg-apolo-dark p-8 md:p-16 rounded-2xl border border-white/10 flex flex-col h-full hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(242,125,38,0.1)] transition-all duration-500 group"
+          >
+            <p className="text-white/50 text-[10px] uppercase tracking-[0.2em] font-semibold mb-8">Plan Tradicional</p>
+            <h2 className="text-3xl md:text-4xl mb-8 font-bold font-sans text-white">Hasta 24 Cuotas</h2>
+            <p className="text-white/70 text-lg mb-12 leading-relaxed font-medium">
+              Financiación directa con Apolo Construcciones. Planes adaptados a tu medida para que puedas invertir con tranquilidad y previsibilidad.
+            </p>
+            <div className="space-y-6 mb-16 flex-grow">
+              <div className="flex items-start gap-4 font-medium text-white/70">
+                <Check className="w-5 h-5 text-[#22c55e] shrink-0 mt-0.5" />
+                <span>Cuotas fijas en pesos o dólares</span>
+              </div>
+              <div className="flex items-start gap-4 font-medium text-white/70">
+                <Check className="w-5 h-5 text-[#22c55e] shrink-0 mt-0.5" />
+                <span>Sin requisitos bancarios complejos</span>
+              </div>
+              <div className="flex items-start gap-4 font-medium text-white/70">
+                <Check className="w-5 h-5 text-[#22c55e] shrink-0 mt-0.5" />
+                <span>Posesión inmediata en obras finalizadas</span>
+              </div>
+            </div>
+            <Link to="/contacto" className="w-max px-8 py-4 bg-white/10 hover:bg-white/20 hover:-translate-y-1 hover:shadow-lg active:scale-95 text-white font-bold rounded transition-all duration-300 text-sm uppercase tracking-wider">
+              Consultar Plan
+            </Link>
+          </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            className="bg-apolo-paper p-8 md:p-16 rounded-2xl border border-white/10 flex flex-col h-full shadow-2xl hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(34,197,94,0.15)] transition-all duration-500 group"
+          >
+            <p className="text-[#f27d26]/80 text-[10px] uppercase tracking-[0.2em] font-semibold mb-8">Plan Agro</p>
+            <h2 className="text-3xl md:text-4xl mb-8 font-bold font-sans text-white">Canje de Granos</h2>
+            <p className="text-white/70 text-lg mb-12 leading-relaxed font-medium">
+              Utilizá tu producción agropecuaria como moneda de cambio. Un sistema ágil y seguro para el productor de hoy, optimizando su capitalización.
+            </p>
+            <div className="space-y-6 mb-16 flex-grow">
+              <div className="flex items-start gap-4 font-medium text-white/70">
+                <Check className="w-5 h-5 text-[#22c55e] shrink-0 mt-0.5" />
+                <span>Canje directo por granos a futuro</span>
+              </div>
+              <div className="flex items-start gap-4 font-medium text-white/70">
+                <Check className="w-5 h-5 text-[#22c55e] shrink-0 mt-0.5" />
+                <span>Importantes beneficios impositivos</span>
+              </div>
+              <div className="flex items-start gap-4 font-medium text-white/70">
+                <Check className="w-5 h-5 text-[#22c55e] shrink-0 mt-0.5" />
+                <span>Resguardo de valor en ladrillos</span>
+              </div>
+            </div>
+            <a href="https://www.agrocanje.com.ar/" target="_blank" rel="noreferrer" className="w-max px-8 py-4 bg-[#22c55e] hover:bg-[#16a34a] hover:-translate-y-1 shadow-[0_10px_30px_-10px_rgba(34,197,94,0.5)] hover:shadow-[0_15px_40px_-10px_rgba(34,197,94,0.6)] active:scale-95 text-white font-bold rounded transition-all duration-300 text-sm uppercase tracking-wider items-center flex gap-2">
+              Ver Agrocanje <ArrowRight size={18} />
+            </a>
+          </motion.div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Nosotros = () => {
+  return (
+    <div className="pt-32 pb-24 bg-apolo-dark min-h-screen">
+      <div className="max-w-7xl mx-auto px-6">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          className="grid lg:grid-cols-2 gap-16 items-center mb-24"
+        >
+          <div>
+            <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-6">Nuestra Historia</p>
+            <h1 className="text-6xl md:text-8xl mb-10 leading-tight tracking-tighter font-bold font-sans text-white">
+              Sobre <br /><span className="text-[#f27d26] font-bold">Nosotros.</span>
+            </h1>
+            <p className="text-xl text-white/70 mb-12 leading-relaxed font-medium">
+              En Apolo Construcciones, no solo levantamos paredes; creamos espacios donde las familias construyen su futuro. Con más de 15 años en el mercado de Necochea, nos hemos consolidado como referentes en calidad y cumplimiento.
+            </p>
+            <div className="grid grid-cols-2 gap-12">
+              <div>
+                <div className="text-5xl font-bold text-[#f27d26] mb-2">+15</div>
+                <div className="text-white/50 text-[10px] uppercase tracking-[0.2em] font-semibold">Años de trayectoria</div>
+              </div>
+              <div>
+                <div className="text-5xl font-bold text-[#f27d26] mb-2">+500</div>
+                <div className="text-white/50 text-[10px] uppercase tracking-[0.2em] font-semibold">Hogares entregados</div>
+              </div>
+            </div>
+          </div>
+          <div className="aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl border border-white/10">
+            <img src="https://apoloconstrucciones.com.ar/wp-content/uploads/2021/05/FOTOS-1D.jpg" alt="Nosotros" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+const Servicios = () => {
+  return (
+    <div className="pt-32 pb-24 bg-apolo-paper min-h-screen">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-3xl mb-24">
+          <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-6">Nuestra Propuesta</p>
+          <h1 className="text-6xl md:text-8xl mb-10 leading-tight tracking-tighter font-bold font-sans text-white">
+            Nuestros <br /><span className="text-[#f27d26] font-bold">Servicios.</span>
+          </h1>
+          <p className="text-xl text-white/70 mb-12 leading-relaxed font-medium">
+            Acompañamos a nuestros clientes en cada etapa del proceso, desde la concepción del proyecto hasta la entrega de llaves y el servicio posventa.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {[
+            {
+              title: "Desarrollo Inmobiliario",
+              desc: "Planificación y ejecución integral de proyectos residenciales y comerciales con los más altos estándares de calidad."
+            },
+            {
+              title: "Servicio Pos-Venta",
+              desc: "Garantía y mantenimiento especializado para asegurar que tu propiedad se mantenga impecable a través del tiempo."
+            },
+            {
+              title: "Asesoramiento Legal",
+              desc: "Transparencia absoluta en cada contrato y trámite administrativo, brindando seguridad jurídica a tu inversión."
+            }
+          ].map((s, i) => (
+            <motion.div 
+              key={i} 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.8, delay: i * 0.2, ease: [0.22, 1, 0.36, 1] }}
+              className="p-8 md:p-12 bg-apolo-dark rounded-2xl shadow-lg border border-white/10 hover:border-white/20 transition-all duration-300 group"
+            >
+              <p className="text-white/30 text-[10px] uppercase tracking-[0.2em] font-bold mb-12 group-hover:text-[#f27d26] transition-colors">0{i + 1}</p>
+              <h3 className="text-2xl mb-6 font-bold font-sans text-white">{s.title}</h3>
+              <p className="text-white/70 leading-relaxed font-medium">{s.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Contacto = () => {
+  return (
+    <div className="pt-32 pb-24 bg-apolo-dark min-h-screen">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-3xl mb-24">
+          <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-6">Estamos a su disposición</p>
+          <h1 className="text-6xl md:text-8xl mb-10 leading-tight tracking-tighter font-bold font-sans text-white">
+            Hablemos de su <br /><span className="text-[#f27d26] font-bold">Próximo Proyecto.</span>
+          </h1>
+        </div>
+
+        <div className="grid lg:grid-cols-3 gap-16 md:gap-24">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            className="space-y-12 md:space-y-16"
+          >
+            <div>
+              <p className="text-white/50 text-[10px] uppercase tracking-[0.2em] font-semibold mb-4">Teléfono</p>
+              <p className="text-xl md:text-2xl font-bold font-sans text-white">+54 9 2262 506588</p>
+            </div>
+            <div>
+              <p className="text-white/50 text-[10px] uppercase tracking-[0.2em] font-semibold mb-4">Email</p>
+              <p className="text-xl md:text-2xl font-bold font-sans text-white">info@apoloconstrucciones.com.ar</p>
+            </div>
+            <div>
+              <p className="text-white/50 text-[10px] uppercase tracking-[0.2em] font-semibold mb-4">Ubicación</p>
+              <p className="text-xl md:text-2xl font-bold font-sans text-white">Calle 62 N° 3124, Necochea</p>
+            </div>
+            <div className="pt-4 md:pt-8 flex gap-6">
+              <a href="https://www.instagram.com/apolo.construcciones/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 hover:text-white hover:border-white/20 transition-all text-white/70">
+                <Instagram size={18} />
+              </a>
+              <a href="https://www.facebook.com/apoloconstructora" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 hover:text-white hover:border-white/20 transition-all text-white/70">
+                <Facebook size={18} />
+              </a>
+            </div>
+          </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            className="lg:col-span-2"
+          >
+            <form className="grid gap-8 md:gap-12">
+              <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+                <div className="relative">
+                  <input type="text" placeholder="Nombre" className="w-full bg-transparent border-b border-white/10 py-4 outline-none focus:border-[#f27d26] transition-all font-medium text-white placeholder:text-white/50" />
+                </div>
+                <div className="relative">
+                  <input type="email" placeholder="Email" className="w-full bg-transparent border-b border-white/10 py-4 outline-none focus:border-[#f27d26] transition-all font-medium text-white placeholder:text-white/50" />
+                </div>
+              </div>
+              <div className="relative">
+                <input type="text" placeholder="Asunto" className="w-full bg-transparent border-b border-white/10 py-4 outline-none focus:border-[#f27d26] transition-all font-medium text-white placeholder:text-white/50" />
+              </div>
+              <div className="relative">
+                <textarea rows={4} placeholder="Mensaje" className="w-full bg-transparent border-b border-white/10 py-4 outline-none focus:border-[#f27d26] transition-all font-medium resize-none text-white placeholder:text-white/50"></textarea>
+              </div>
+              <button className="w-max px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded transition-colors text-sm uppercase tracking-wider mt-4 md:mt-8">
+                Enviar Mensaje
+              </button>
+            </form>
+          </motion.div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const ProjectDetail = () => {
+  const { id } = useParams();
+  const project = PROJECTS.find(p => p.id === id);
+
+  if (!project) return <div className="pt-32 text-center text-white">Proyecto no encontrado</div>;
+
+  return (
+    <div className="pt-32 pb-24 bg-apolo-dark min-h-screen">
+      <div className="max-w-7xl mx-auto px-6">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          className="grid lg:grid-cols-2 gap-16 items-start mb-24"
+        >
+          <div>
+            <Link to="/proyectos" className="group flex items-center gap-4 text-white/50 uppercase text-[10px] tracking-[0.3em] font-bold mb-12 hover:text-[#f27d26] transition-colors">
+              <div className="w-8 h-px bg-white/30 group-hover:bg-[#f27d26] group-hover:w-12 transition-all duration-500"></div>
+              Volver a Proyectos
+            </Link>
+            <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-6">{project.status}</p>
+            <h1 className="text-6xl md:text-8xl mb-10 leading-tight tracking-tighter font-bold font-sans text-white">
+              {project.name}
+            </h1>
+            <p className="text-xl text-white/70 mb-12 leading-relaxed font-medium">
+              {project.description}
+            </p>
+            <div className="space-y-8 mb-16">
+              <p className="text-white/50 text-[10px] uppercase tracking-[0.2em] font-semibold">Características Destacadas</p>
+              <div className="grid grid-cols-1 gap-6">
+                {project.features.map((f, i) => (
+                  <div key={i} className="flex items-start gap-4 font-medium text-white/70">
+                    <Check className="w-5 h-5 text-[#22c55e] shrink-0 mt-0.5" />
+                    <span>{f}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <a href="https://wa.me/5492262506588" target="_blank" rel="noreferrer" className="w-max px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded transition-colors text-sm uppercase tracking-wider inline-block">
+              Consultar Disponibilidad
+            </a>
+          </div>
+          <div className="space-y-12">
+            <div className="aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl border border-white/10">
+              <img src={project.image} alt={project.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+            </div>
+            <div className="grid grid-cols-2 gap-8">
+              <div className="aspect-square overflow-hidden rounded-2xl shadow-xl border border-white/10">
+                <img src="https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/APOLO-ARES-3-1.jpg" alt="Detail" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+              </div>
+              <div className="aspect-square overflow-hidden rounded-2xl shadow-xl border border-white/10">
+                <img src="https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/APOLO-ARES-4-1.jpg" alt="Detail" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+export default function App() {
+  return (
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/proyectos" element={<Proyectos />} />
+          <Route path="/proyectos/:id" element={<ProjectDetail />} />
+          <Route path="/financiacion" element={<Financiacion />} />
+          <Route path="/nosotros" element={<Nosotros />} />
+          <Route path="/servicios" element={<Servicios />} />
+          <Route path="/contacto" element={<Contacto />} />
+        </Routes>
+      </Layout>
+    </Router>
+  );
+}

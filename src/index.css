@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-apolo-dark: #0a0a0a;
+  --color-apolo-green: #22c55e;
+  --color-apolo-orange: #f27d26;
+  --color-apolo-paper: #111111;
+  --color-apolo-line: rgba(255, 255, 255, 0.1);
+}
+
+@layer base {
+  body {
+    @apply font-sans text-white bg-apolo-paper antialiased;
+  }
+  h1, h2, h3 {
+    @apply font-sans font-bold tracking-tight;
+  }
+}
+
+.fine-border {
+  @apply border border-apolo-line;
+}
+
+.micro-label {
+  @apply text-[10px] uppercase tracking-[0.2em] font-semibold text-white/50;
+}
