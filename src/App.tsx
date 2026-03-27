@@ -341,19 +341,19 @@ const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselItems = [
     {
-      name: 'Viggo 91',
+      name: 'Apolo Ares',
       features: ['Espacios amplios', 'Luminosidad', 'Terminaciones de lujo'],
-      image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2022/05/Copia-de-1.8.jpg'
+      image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/APOLO-ARES.jpg'
     },
     {
-      name: 'Ares 6',
+      name: 'Nueva Fachada',
       features: ['Diseño minimalista', 'Ubicación premium', 'Vistas panorámicas'],
-      image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/APOLO-ARES-6-1.jpg'
+      image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2024/11/Copia-de-Nueva-Fachada.jpg'
     },
     {
-      name: 'Ares 22',
+      name: 'Orfeo',
       features: ['Entrega inmediata', 'Calidad Apolo', 'Diseño funcional'],
-      image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2024/11/IMG-20210405-WA0009.jpg'
+      image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/52c73f06-1843-44c7-be61-a318be8c1072-scaled.jpg'
     }
   ];
 
@@ -368,7 +368,7 @@ const Home = () => {
     <div className="bg-apolo-dark">
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <AnimatePresence mode="wait">
+          <AnimatePresence>
             <motion.img 
               key={currentIndex}
               src={carouselItems[currentIndex].image} 
@@ -380,7 +380,7 @@ const Home = () => {
                 opacity: { duration: 1.5, ease: "easeInOut" },
                 scale: { duration: 12, ease: "linear" }
               }}
-              className="w-full h-full object-cover brightness-75"
+              className="absolute inset-0 w-full h-full object-cover brightness-75"
               referrerPolicy="no-referrer"
             />
           </AnimatePresence>
