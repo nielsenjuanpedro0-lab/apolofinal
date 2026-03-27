@@ -51,7 +51,8 @@ const PROJECTS = [
     gallery: [
       '/optimized/APOLO-ARES-6-1.webp',
       '/optimized/APOLO-ARES-3-1.webp',
-      '/optimized/APOLO-ARES-4-1.webp'
+      '/optimized/APOLO-ARES-4-1.webp',
+      '/optimized/APOLO-ARES-1-1.webp'
     ]
   },
   {
@@ -66,7 +67,14 @@ const PROJECTS = [
     image: '/optimized/Copia-de-1.8.webp',
     gallery: [
       '/optimized/Copia-de-1.8.webp',
-      '/optimized/FOTOS-1D.webp'
+      '/optimized/52c73f06-1843-44c7-be61-a318be8c1072-1.webp',
+      '/optimized/2e5afdf1-5119-4591-bc96-3bd37dc07dae-1.webp',
+      '/optimized/2608ad0f-1069-49cf-8368-fcf595ae2613-1.webp',
+      '/optimized/6128e319-cc85-42ea-a78c-7b032da48ba0-1.webp',
+      '/optimized/8de5d505-9fdd-4e78-9b33-37b657611bde-1.webp',
+      '/optimized/4efcdd09-d9a2-4e73-a57a-8a36e30d61f6-1-1.webp',
+      '/optimized/f3c351ac-bfc1-4fe9-b6ec-243d7d21c868-1.webp',
+      '/optimized/28181947-4341-4094-84de-95157d4d66c6-1.webp'
     ]
   },
   {
@@ -78,10 +86,54 @@ const PROJECTS = [
     fullDescription: 'Desarrollo pensado para el confort familiar y la alta demanda, ofreciendo departamentos adaptables de 1, 2 y 3 ambientes. Se complementa de manera perfecta con patios propios y la disponibilidad exclusiva de cocheras.',
     features: ['Departamentos de 1, 2 y 3 ambientes Adaptables', 'Cocheras Disponibles', 'Patio propio', 'Diseño funcional'],
     financing: ['Financiación en hasta 24 cuotas', 'Posesión inmediata'],
-    image: '/optimized/IMG-20201120-WA0031.webp',
+    image: '/optimized/DAFNE-ENTREGADO.webp',
     gallery: [
+      '/optimized/DAFNE-ENTREGADO.webp',
       '/optimized/IMG-20201120-WA0031.webp',
-      '/optimized/Copia-de-Nueva-Fachada-1.webp'
+      '/optimized/IMG-20201120-WA0032.webp',
+      '/optimized/IMG-20201120-WA0033.webp',
+      '/optimized/IMG-20210405-WA0009.webp',
+      '/optimized/IMG-20210405-WA0010-1.webp',
+      '/optimized/IMG-20210405-WA0011.webp',
+      '/optimized/IMG-20210405-WA0012.webp',
+      '/optimized/IMG-20210405-WA0013.webp',
+      '/optimized/IMG-20210405-WA0014.webp',
+      '/optimized/IMG-20210405-WA0015.webp',
+      '/optimized/IMG-20210405-WA0016-1.webp',
+      '/optimized/IMG-20210405-WA0017.webp',
+      '/optimized/Fachada-PAGINA-PRINCIPAL-1.webp',
+      '/optimized/IMG_20221106_150650785_HDR.webp',
+      '/optimized/IMG-20230303-WA0200.webp',
+      '/optimized/IMG_20230705_195352_310.webp',
+      '/optimized/IMG_20221105_112328537_MF_PORTRAIT.webp',
+      '/optimized/IMG_20221106_150542803_HDR.webp',
+      '/optimized/IMG_20221106_151230141_MF_PORTRAIT.webp',
+      '/optimized/IMG_20221106_151234977_MF_PORTRAIT.webp',
+      '/optimized/IMG_20221106_151147282_MF_PORTRAIT.webp',
+      '/optimized/IMG_20221106_151502423_MF_PORTRAIT.webp',
+      '/optimized/IMG_20221106_151347052_MF_PORTRAIT.webp',
+      '/optimized/IMG_20221106_150904764.webp',
+      '/optimized/IMG_20221106_151138243_MF_PORTRAIT.webp',
+      '/optimized/IMG-20220316-WA0016.webp',
+      '/optimized/IMG_20220430_121604366_HDR.webp',
+      '/optimized/IMG_20210803_125321597.webp',
+      '/optimized/IMG_20210803_151629924.webp',
+      '/optimized/IMG_20210806_113913921_HDR.webp',
+      '/optimized/IMG-20210429-WA0011.webp',
+      '/optimized/IMG_20220430_121637706_HDR.webp',
+      '/optimized/IMG-20220323-WA0017.webp',
+      '/optimized/IMG-20220422-WA0025.webp',
+      '/optimized/IMG-20220422-WA0026.webp',
+      '/optimized/received_270039917990787.webp',
+      '/optimized/IMG-20210429-WA0015.webp',
+      '/optimized/IMG-20201212-WA0019.webp',
+      '/optimized/IMG-20201215-WA00041.webp',
+      '/optimized/IMG-20201230-WA0038.webp',
+      '/optimized/IMG-20210109-WA0012.webp',
+      '/optimized/IMG-20210224-WA0004.webp',
+      '/optimized/IMG-20210202-WA0028.webp',
+      '/optimized/IMG-20210109-WA0027.webp',
+      '/optimized/IMG-20210109-WA0019.webp'
     ]
   },
   {
@@ -93,10 +145,14 @@ const PROJECTS = [
     fullDescription: 'Ares 22 es un hermoso emprendimiento de diseño contemporáneo que ofrece la máxima rentabilidad. Proveé unidades funcionales pensadas milimétricamente para optimizar los espacios diarios y la luz natural.',
     features: ['Diseño moderno', 'Alta rentabilidad esperada', 'Unidades luminosas'],
     financing: ['Financiación directa', 'Fideicomiso'],
-    image: '/optimized/APOLO-ARES-2-1.webp',
+    image: '/optimized/APOLO-ARES-1-1.webp',
     gallery: [
+      '/optimized/APOLO-ARES-1-1.webp',
       '/optimized/APOLO-ARES-2-1.webp',
-      '/optimized/52c73f06-1843-44c7-be61-a318be8c1072-scaled.webp'
+      '/optimized/APOLO-ARES-3-1.webp',
+      '/optimized/APOLO-ARES-4-1.webp',
+      '/optimized/APOLO-ARES-5-1.webp',
+      '/optimized/APOLO-ARES-6-1.webp'
     ]
   },
   {
@@ -110,7 +166,18 @@ const PROJECTS = [
     financing: ['Financiación en hasta 24 cuotas', 'Venta desde el pozo'],
     image: '/optimized/Copia-de-Nueva-Fachada-1.webp',
     gallery: [
-      '/optimized/Copia-de-Nueva-Fachada-1.webp'
+      '/optimized/Copia-de-Nueva-Fachada-1.webp',
+      '/optimized/1.webp',
+      '/optimized/Copia-de-Nueva-Fachada-3.webp',
+      '/optimized/IMG-20210405-WA0009.webp',
+      '/optimized/IMG-20201120-WA0031.webp',
+      '/optimized/IMG-20210405-WA0013.webp',
+      '/optimized/4.webp',
+      '/optimized/2.webp',
+      '/optimized/3.webp',
+      '/optimized/5.webp',
+      '/optimized/6.webp',
+      '/optimized/86646b10-16cf-4a7a-bcc5-f3165513313d.webp'
     ]
   },
   {
@@ -122,9 +189,19 @@ const PROJECTS = [
     fullDescription: 'Unidades residenciales espaciosas pensadas para la vida moderna. Orfeo es sinónimo de calidad constructiva, donde la iluminación natural y los espacios verdes toman completo protagonismo.',
     features: ['Espacios verdes', 'Alta luminosidad y ventilación', 'Calidad constructiva premium'],
     financing: ['Financiación flexible', 'Adaptable a ingresos medios'],
-    image: '/optimized/52c73f06-1843-44c7-be61-a318be8c1072-scaled.webp',
+    image: '/optimized/FOTOS-1F.webp',
     gallery: [
-      '/optimized/52c73f06-1843-44c7-be61-a318be8c1072-scaled.webp'
+      '/optimized/FOTOS-1F.webp',
+      '/optimized/FOTOS-1D.webp',
+      '/optimized/FOTOS-1B.webp',
+      '/optimized/FB_IMG_1617231495038.webp',
+      '/optimized/FB_IMG_1617231483347.webp',
+      '/optimized/6-BLANCO.webp',
+      '/optimized/5-BLANCO.webp',
+      '/optimized/4-BLANCO.webp',
+      '/optimized/3-BLANCO.webp',
+      '/optimized/FOTOS-2.webp',
+      '/optimized/FOTOS-2A.webp'
     ]
   },
   {
@@ -136,9 +213,24 @@ const PROJECTS = [
     fullDescription: 'Un proyecto arquitectónico totalmente consolidado que refleja la confianza Apolo. Zeus 543 es la muestra ideal de nuestro compromiso inquebrantable con las líneas funcionales y la presteza en los plazos.',
     features: ['Entrega inmediata', 'Calidad de marca Apolo', 'Arquitectura funcional'],
     financing: ['Llave en mano', 'Consultar por unidades de reventa'],
-    image: '/optimized/IMG-20210405-WA0009.webp',
+    image: '/optimized/Foto-MINIATURA.webp',
     gallery: [
-      '/optimized/IMG-20210405-WA0009.webp'
+      '/optimized/Foto-MINIATURA.webp',
+      '/optimized/Copia-de-FB_IMG_1543263940429.webp',
+      '/optimized/Copia-de-FB_IMG_1543263943240.webp',
+      '/optimized/Copia-de-IMG_20181114_222343002.webp',
+      '/optimized/Copia-de-IMG_20190202_111248995.webp',
+      '/optimized/Copia-de-IMG_20190202_111331120.webp',
+      '/optimized/Copia-de-IMG_20190202_111441999.webp',
+      '/optimized/Copia-de-IMG_20190202_111559907.webp',
+      '/optimized/Copia-de-IMG_20190202_111714446.webp',
+      '/optimized/Copia-de-IMG_20190202_111737239.webp',
+      '/optimized/Copia-de-IMG_20190202_111805252.webp',
+      '/optimized/Copia-de-IMG_20190202_111808910.webp',
+      '/optimized/Copia-de-IMG_20190202_111814273.webp',
+      '/optimized/Copia-de-IMG_20190202_112036924.webp',
+      '/optimized/Copia-de-IMG_20190202_112038346.webp',
+      '/optimized/Copia-de-IMG_20191111_110334662.webp'
     ]
   }
 ];
@@ -1089,8 +1181,6 @@ const ProjectDetail = () => {
             </div>
           </div>
         )}
-          
-        </div>
       </div>
     </div>
   );
