@@ -966,34 +966,33 @@ const Contacto = () => {
 
 const ProjectDetail = () => {
   const { id } = useParams();
-  // We type cast or structure project properly if we had types, assuming JavaScript behavior is ok via any mapping.
   const project: any = PROJECTS.find(p => p.id === id);
 
-  if (!project) return <div className="pt-32 text-center text-white h-screen flex items-center justify-center text-2xl font-sans">Proyecto no encontrado</div>;
+  if (!project) return <div className="pt-32 text-center text-gray-900 h-screen flex items-center justify-center text-2xl font-sans">Proyecto no encontrado</div>;
 
   return (
-    <div className="bg-apolo-dark min-h-screen pt-32 pb-24 font-sans text-white">
+    <div className="bg-[#fafafa] min-h-screen pt-32 pb-24 font-sans text-gray-900">
       {/* Header Section */}
       <div className="max-w-7xl mx-auto px-6 mb-16">
-        <Link to="/proyectos" className="group inline-flex items-center gap-3 text-white/50 uppercase text-[10px] tracking-[0.3em] font-bold mb-10 hover:text-[#f27d26] transition-colors">
-          <div className="w-8 h-px bg-white/30 group-hover:bg-[#f27d26] group-hover:w-12 transition-all duration-300"></div>
+        <Link to="/proyectos" className="group inline-flex items-center gap-3 text-gray-400 uppercase text-[10px] tracking-[0.3em] font-bold mb-10 hover:text-[#f27d26] transition-colors">
+          <div className="w-8 h-px bg-gray-300 group-hover:bg-[#f27d26] group-hover:w-12 transition-all duration-300"></div>
           Volver a Proyectos
         </Link>
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-white/10 pb-12 mb-12">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-gray-200 pb-12 mb-12">
           <div>
             <div className="flex items-center gap-4 mb-6">
-              <span className="px-4 py-1.5 border border-[#f27d26] text-[#f27d26] rounded-full text-xs font-bold bg-[#f27d26]/10 uppercase tracking-widest">{project.status}</span>
-              <span className="px-4 py-1.5 bg-white/10 text-white rounded-full text-xs font-bold uppercase tracking-widest">{project.category}</span>
+              <span className="px-4 py-1.5 border border-[#f27d26] text-[#f27d26] rounded-full text-xs font-bold bg-[#f27d26]/5 uppercase tracking-widest">{project.status}</span>
+              <span className="px-4 py-1.5 bg-gray-100 text-gray-600 rounded-full text-xs font-bold uppercase tracking-widest">{project.category}</span>
             </div>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight mb-6 font-sans">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight mb-6 font-sans text-gray-900">
               {project.name}
             </h1>
-            <p className="text-xl md:text-2xl text-white/70 max-w-3xl leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl leading-relaxed">
               {project.description}
             </p>
           </div>
           <div className="shrink-0 flex gap-4 md:flex-col items-start md:items-end">
-            <a href="https://wa.me/5492262506588" target="_blank" rel="noreferrer" className="flex items-center justify-center px-8 py-4 bg-[#22c55e] hover:brightness-110 text-white font-bold rounded-md transition-all text-sm uppercase tracking-wider shadow-[0_0_20px_rgba(34,197,94,0.3)] hover:shadow-[0_0_30px_rgba(34,197,94,0.5)]">
+            <a href="https://wa.me/5492262506588" target="_blank" rel="noreferrer" className="flex items-center justify-center px-8 py-4 bg-[#22c55e] hover:bg-[#16a34a] text-white font-bold rounded-lg transition-all text-sm uppercase tracking-wider shadow-lg hover:shadow-xl hover:-translate-y-0.5">
               Consultar Proyecto
             </a>
           </div>
@@ -1009,21 +1008,21 @@ const ProjectDetail = () => {
             {/* Description */}
             <section>
               <h2 className="text-[#f27d26] text-[10px] uppercase tracking-[0.3em] font-bold mb-6">Sobre el Proyecto</h2>
-              <p className="text-lg md:text-xl text-white/80 leading-relaxed font-medium">
+              <p className="text-lg md:text-xl text-gray-700 leading-relaxed font-medium">
                 {project.fullDescription || project.description}
               </p>
             </section>
 
             {/* Features Info */}
-            <section className="bg-apolo-paper p-8 md:p-12 rounded-2xl border border-white/5 shadow-2xl">
-              <h2 className="text-white text-2xl font-bold mb-8 flex items-center gap-3">
+            <section className="bg-white p-8 md:p-12 rounded-3xl border border-gray-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)]">
+              <h2 className="text-gray-900 text-2xl font-bold mb-8 flex items-center gap-3">
                 <Building2 className="text-[#f27d26]" /> Características Destacadas
               </h2>
               <div className="grid sm:grid-cols-2 gap-6">
                 {project.features.map((f: string, i: number) => (
-                  <div key={i} className="flex items-start gap-4">
+                  <div key={i} className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 transition-colors">
                     <CheckCircle2 className="w-6 h-6 text-[#22c55e] shrink-0" />
-                    <span className="text-white/80 font-medium text-lg">{f}</span>
+                    <span className="text-gray-700 font-medium text-lg">{f}</span>
                   </div>
                 ))}
               </div>
@@ -1031,16 +1030,16 @@ const ProjectDetail = () => {
 
             {/* Financing Block */}
             {project.financing && project.financing.length > 0 && (
-              <section className="relative overflow-hidden bg-gradient-to-br from-apolo-dark to-black p-8 md:p-12 rounded-2xl border border-[#f27d26]/30 shadow-[0_0_50px_rgba(242,125,38,0.05)]">
-                <div className="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
-                  <Wallet size={120} />
+              <section className="relative overflow-hidden bg-gradient-to-br from-[#fff6f0] to-[#fffdfc] p-8 md:p-12 rounded-3xl border border-[#f27d26]/10 shadow-lg">
+                <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none text-[#f27d26]">
+                  <Wallet size={160} />
                 </div>
                 <h2 className="text-[#f27d26] text-[10px] uppercase tracking-[0.3em] font-bold mb-4">Inversión</h2>
-                <h3 className="text-white text-3xl font-bold mb-8">Opciones de Adquisición</h3>
-                <ul className="space-y-4 relative z-10">
+                <h3 className="text-gray-900 text-3xl font-bold mb-8 relative z-10">Opciones de Adquisición</h3>
+                <ul className="space-y-5 relative z-10">
                   {project.financing.map((f: string, i: number) => (
-                    <li key={i} className="flex items-center gap-4 text-lg text-white/90 font-medium">
-                      <div className="w-2 h-2 rounded-full bg-[#f27d26]" />
+                    <li key={i} className="flex items-center gap-4 text-lg text-gray-800 font-medium bg-white/60 backdrop-blur-sm p-4 rounded-xl border border-white">
+                      <div className="w-2.5 h-2.5 rounded-full bg-[#f27d26] shadow-[0_0_10px_rgba(242,125,38,0.5)]" />
                       {f}
                     </li>
                   ))}
@@ -1051,14 +1050,14 @@ const ProjectDetail = () => {
 
           {/* Media Column */}
           <div className="lg:col-span-5 space-y-8 lg:sticky lg:top-32">
-            <div className="aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl border border-white/10 group">
-              <img src={project.gallery?.[0] || project.image} alt={project.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" referrerPolicy="no-referrer" />
+            <div className="aspect-[4/5] overflow-hidden rounded-3xl shadow-xl border border-gray-100 group bg-white p-2">
+              <img src={project.gallery?.[0] || project.image} alt={project.name} className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-1000" referrerPolicy="no-referrer" />
             </div>
             {project.gallery && project.gallery.length > 1 && (
-              <div className="grid grid-cols-2 gap-8">
+              <div className="grid grid-cols-2 gap-6">
                 {project.gallery.slice(1, 3).map((img: string, i: number) => (
-                  <div key={i} className="aspect-square overflow-hidden rounded-2xl shadow-xl border border-white/10 group">
-                    <img src={img} alt={`Detail ${i}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" />
+                  <div key={i} className="aspect-square overflow-hidden rounded-3xl shadow-md border border-gray-100 group bg-white p-2">
+                    <img src={img} alt={`Detail ${i}`} className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" />
                   </div>
                 ))}
               </div>
