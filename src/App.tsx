@@ -179,6 +179,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               alt="Apolo Logo" 
               className="w-10 h-10 object-contain transition-transform duration-500 group-hover:scale-105"
               referrerPolicy="no-referrer"
+              fetchPriority="high"
             />
             <span className="font-bold text-lg tracking-wide hidden sm:block">APOLO CONSTRUCCIONES</span>
           </Link>
@@ -306,6 +307,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   alt="Apolo Logo" 
                   className="w-16 h-16 object-contain"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
                 />
               </Link>
               <p className="text-gray-600 max-w-sm text-lg font-medium leading-relaxed mb-10">
@@ -422,6 +424,7 @@ const Home = () => {
               }}
               className="absolute inset-0 w-full h-full object-cover brightness-75"
               referrerPolicy="no-referrer"
+              fetchPriority={currentIndex === 0 ? "high" : "auto"}
             />
           </AnimatePresence>
           <div className="absolute inset-0 bg-gradient-to-t from-apolo-dark via-apolo-dark/40 to-transparent z-10" />
@@ -832,7 +835,7 @@ const Nosotros = () => {
             </div>
           </div>
           <div className="aspect-[4/5] overflow-hidden rounded-3xl shadow-xl bg-white p-2 border border-gray-100">
-            <img src="https://apoloconstrucciones.com.ar/wp-content/uploads/2021/05/FOTOS-1D.jpg" alt="Nosotros" className="w-full h-full object-cover rounded-2xl" referrerPolicy="no-referrer" />
+            <img src="https://apoloconstrucciones.com.ar/wp-content/uploads/2021/05/FOTOS-1D.jpg" alt="Nosotros" className="w-full h-full object-cover rounded-2xl" referrerPolicy="no-referrer" loading="lazy" />
           </div>
         </motion.div>
       </div>
@@ -1049,13 +1052,13 @@ const ProjectDetail = () => {
           {/* Media Column */}
           <div className="lg:col-span-5 space-y-8 lg:sticky lg:top-32">
             <div className="aspect-[4/5] overflow-hidden rounded-3xl shadow-xl border border-gray-100 group bg-white p-2">
-              <img src={project.gallery?.[0] || project.image} alt={project.name} className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-1000" referrerPolicy="no-referrer" />
+              <img src={project.gallery?.[0] || project.image} alt={project.name} className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-1000" referrerPolicy="no-referrer" fetchPriority="high" />
             </div>
             {project.gallery && project.gallery.length > 1 && (
               <div className="grid grid-cols-2 gap-6">
                 {project.gallery.slice(1, 3).map((img: string, i: number) => (
                   <div key={i} className="aspect-square overflow-hidden rounded-3xl shadow-md border border-gray-100 group bg-white p-2">
-                    <img src={img} alt={`Detail ${i}`} className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" />
+                    <img src={img} alt={`Detail ${i}`} className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" loading="lazy" />
                   </div>
                 ))}
               </div>
