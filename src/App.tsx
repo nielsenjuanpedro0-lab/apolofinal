@@ -373,10 +373,13 @@ const Home = () => {
               key={currentIndex}
               src={carouselItems[currentIndex].image} 
               alt={carouselItems[currentIndex].name} 
-              initial={{ opacity: 0, scale: 1.1 }}
-              animate={{ opacity: 0.6, scale: 1 }}
+              initial={{ opacity: 0, scale: 1 }}
+              animate={{ opacity: 0.5, scale: 1.1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ 
+                opacity: { duration: 1.5, ease: "easeInOut" },
+                scale: { duration: 12, ease: "linear" }
+              }}
               className="w-full h-full object-cover brightness-75"
               referrerPolicy="no-referrer"
             />
