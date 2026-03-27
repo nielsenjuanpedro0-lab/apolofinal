@@ -44,8 +44,15 @@ const PROJECTS = [
     status: 'En construcción',
     category: 'En desarrollo',
     description: 'Departamentos de 2 ambientes ideales para alquiler temporario. Incluye local en planta baja y 9 cocheras cubiertas.',
-    features: ['Financiación 24 cuotas', 'Local en PB', '9 Cocheras cubiertas', 'Ideal inversión'],
-    image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/APOLO-ARES-6-1.jpg'
+    fullDescription: 'El proyecto Apolo Ares 6 está concebido como la opción ideal para quienes buscan una inversión segura o un espacio perfecto para alquiler temporario. Combina una arquitectura contemporánea con espacios adaptables a la vida moderna.',
+    features: ['Departamentos de 2 ambientes Adaptables', 'Local en planta baja', '9 Cocheras Disponibles Cubiertas', 'Ideal para alquiler temporario'],
+    financing: ['Financiación en hasta 24 cuotas', 'Venta desde el pozo y pre-venta', 'Fideicomiso al costo'],
+    image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/APOLO-ARES-6-1.jpg',
+    gallery: [
+      'https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/APOLO-ARES-6-1.jpg',
+      'https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/APOLO-ARES-3-1.jpg',
+      'https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/APOLO-ARES-4-1.jpg'
+    ]
   },
   {
     id: 'viggo-91',
@@ -53,35 +60,14 @@ const PROJECTS = [
     status: 'Próximo lanzamiento',
     category: 'En desarrollo',
     description: 'Viviendas modernas con la posibilidad única de pago con granos a futuro. Un procedimiento seguro y confiable.',
-    features: ['Pagá con granos', 'Diseño funcional', 'Sin expensas', 'Ubicación premium'],
-    image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2022/05/Copia-de-1.8.jpg'
-  },
-  {
-    id: 'ares-22',
-    name: 'Ares 22',
-    status: 'En desarrollo',
-    category: 'En desarrollo',
-    description: 'Proyecto de vanguardia con unidades funcionales y diseño contemporáneo.',
-    features: ['Diseño moderno', 'Alta rentabilidad', 'Financiación directa'],
-    image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/APOLO-ARES-2-1.jpg'
-  },
-  {
-    id: 'delfos-83',
-    name: 'Delfos 83',
-    status: 'En desarrollo',
-    category: 'En desarrollo',
-    description: 'Exclusividad y confort en una de las mejores zonas de Necochea.',
-    features: ['Terminaciones de lujo', 'Ubicación privilegiada', 'Seguridad'],
-    image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2024/11/Copia-de-Nueva-Fachada-1.jpg'
-  },
-  {
-    id: 'orfeo',
-    name: 'Orfeo',
-    status: 'En desarrollo',
-    category: 'En desarrollo',
-    description: 'Unidades pensadas para la vida moderna, con espacios amplios y luminosos.',
-    features: ['Espacios verdes', 'Luminosidad', 'Calidad constructiva'],
-    image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/2e5afdf1-5119-4591-bc96-3bd37dc07dae-scaled.jpg'
+    fullDescription: 'Viggo 91 redefine la forma de invertir en la ciudad. Este desarrollo moderno facilita el acceso a la vivienda mediante la posibilidad única de pago con granos a futuro. Es un procedimiento 100% seguro, ágil y libre de expensas.',
+    features: ['Pagá con granos a futuro', 'Servicios completos', 'Procedimiento seguro y confiable', 'Sin expensas'],
+    financing: ['Contacto directo sin intermediarios', 'PAGÁ CON GRANOS A FUTURO', 'Resguardo de valor en ladrillos'],
+    image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2022/05/Copia-de-1.8.jpg',
+    gallery: [
+      'https://apoloconstrucciones.com.ar/wp-content/uploads/2022/05/Copia-de-1.8.jpg',
+      'https://apoloconstrucciones.com.ar/wp-content/uploads/2021/05/FOTOS-1D.jpg'
+    ]
   },
   {
     id: 'dafne-42',
@@ -89,8 +75,57 @@ const PROJECTS = [
     status: 'Obra finalizada',
     category: 'Finalizados',
     description: 'Departamentos de 1, 2 y 3 ambientes con patio propio y cocheras disponibles. Entrega inmediata.',
-    features: ['Patio propio', '1, 2 y 3 ambientes', 'Cocheras disponibles', 'Terminaciones premium'],
-    image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2024/11/IMG-20201120-WA0031.jpg'
+    fullDescription: 'Desarrollo pensado para el confort familiar y la alta demanda, ofreciendo departamentos adaptables de 1, 2 y 3 ambientes. Se complementa de manera perfecta con patios propios y la disponibilidad exclusiva de cocheras.',
+    features: ['Departamentos de 1, 2 y 3 ambientes Adaptables', 'Cocheras Disponibles', 'Patio propio', 'Diseño funcional'],
+    financing: ['Financiación en hasta 24 cuotas', 'Posesión inmediata'],
+    image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2024/11/IMG-20201120-WA0031.jpg',
+    gallery: [
+      'https://apoloconstrucciones.com.ar/wp-content/uploads/2024/11/IMG-20201120-WA0031.jpg',
+      'https://apoloconstrucciones.com.ar/wp-content/uploads/2024/11/Copia-de-Nueva-Fachada-1.jpg'
+    ]
+  },
+  {
+    id: 'ares-22',
+    name: 'Ares 22',
+    status: 'En desarrollo',
+    category: 'En desarrollo',
+    description: 'Proyecto de vanguardia con unidades funcionales y diseño contemporáneo.',
+    fullDescription: 'Ares 22 es un hermoso emprendimiento de diseño contemporáneo que ofrece la máxima rentabilidad. Proveé unidades funcionales pensadas milimétricamente para optimizar los espacios diarios y la luz natural.',
+    features: ['Diseño moderno', 'Alta rentabilidad esperada', 'Unidades luminosas'],
+    financing: ['Financiación directa', 'Fideicomiso'],
+    image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/APOLO-ARES-2-1.jpg',
+    gallery: [
+      'https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/APOLO-ARES-2-1.jpg',
+      'https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/52c73f06-1843-44c7-be61-a318be8c1072-scaled.jpg'
+    ]
+  },
+  {
+    id: 'delfos-83',
+    name: 'Delfos 83',
+    status: 'En desarrollo',
+    category: 'En desarrollo',
+    description: 'Exclusividad y confort en una de las mejores zonas de Necochea.',
+    fullDescription: 'Delfos 83 representa la combinación de confort absoluto y exclusividad. Ubicado en una zona privilegiada, ofrece terminaciones únicas de lujo y la seguridad que demandan los estándares modernos.',
+    features: ['Terminaciones de lujo', 'Ubicación privilegiada', 'Seguridad garantizada'],
+    financing: ['Financiación en hasta 24 cuotas', 'Venta desde el pozo'],
+    image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2024/11/Copia-de-Nueva-Fachada-1.jpg',
+    gallery: [
+      'https://apoloconstrucciones.com.ar/wp-content/uploads/2024/11/Copia-de-Nueva-Fachada-1.jpg'
+    ]
+  },
+  {
+    id: 'orfeo',
+    name: 'Orfeo',
+    status: 'En desarrollo',
+    category: 'En desarrollo',
+    description: 'Unidades pensadas para la vida moderna, con espacios amplios y luminosos.',
+    fullDescription: 'Unidades residenciales espaciosas pensadas para la vida moderna. Orfeo es sinónimo de calidad constructiva, donde la iluminación natural y los espacios verdes toman completo protagonismo.',
+    features: ['Espacios verdes', 'Alta luminosidad y ventilación', 'Calidad constructiva premium'],
+    financing: ['Financiación flexible', 'Adaptable a ingresos medios'],
+    image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/52c73f06-1843-44c7-be61-a318be8c1072-scaled.jpg',
+    gallery: [
+      'https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/52c73f06-1843-44c7-be61-a318be8c1072-scaled.jpg'
+    ]
   },
   {
     id: 'zeus-543',
@@ -98,8 +133,13 @@ const PROJECTS = [
     status: 'Obra finalizada',
     category: 'Finalizados',
     description: 'Solidez y diseño en un proyecto ya entregado y consolidado.',
-    features: ['Entrega inmediata', 'Calidad Apolo', 'Diseño funcional'],
-    image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2024/11/IMG-20210405-WA0009.jpg'
+    fullDescription: 'Un proyecto arquitectónico totalmente consolidado que refleja la confianza Apolo. Zeus 543 es la muestra ideal de nuestro compromiso inquebrantable con las líneas funcionales y la presteza en los plazos.',
+    features: ['Entrega inmediata', 'Calidad de marca Apolo', 'Arquitectura funcional'],
+    financing: ['Llave en mano', 'Consultar por unidades de reventa'],
+    image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2024/11/IMG-20210405-WA0009.jpg',
+    gallery: [
+      'https://apoloconstrucciones.com.ar/wp-content/uploads/2024/11/IMG-20210405-WA0009.jpg'
+    ]
   }
 ];
 
@@ -926,61 +966,106 @@ const Contacto = () => {
 
 const ProjectDetail = () => {
   const { id } = useParams();
-  const project = PROJECTS.find(p => p.id === id);
+  // We type cast or structure project properly if we had types, assuming JavaScript behavior is ok via any mapping.
+  const project: any = PROJECTS.find(p => p.id === id);
 
-  if (!project) return <div className="pt-32 text-center text-white">Proyecto no encontrado</div>;
+  if (!project) return <div className="pt-32 text-center text-white h-screen flex items-center justify-center text-2xl font-sans">Proyecto no encontrado</div>;
 
   return (
-    <div className="pt-32 pb-24 bg-apolo-dark min-h-screen">
-      <div className="max-w-7xl mx-auto px-6">
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="grid lg:grid-cols-2 gap-16 items-start mb-24"
-        >
+    <div className="bg-apolo-dark min-h-screen pt-32 pb-24 font-sans text-white">
+      {/* Header Section */}
+      <div className="max-w-7xl mx-auto px-6 mb-16">
+        <Link to="/proyectos" className="group inline-flex items-center gap-3 text-white/50 uppercase text-[10px] tracking-[0.3em] font-bold mb-10 hover:text-[#f27d26] transition-colors">
+          <div className="w-8 h-px bg-white/30 group-hover:bg-[#f27d26] group-hover:w-12 transition-all duration-300"></div>
+          Volver a Proyectos
+        </Link>
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-white/10 pb-12 mb-12">
           <div>
-            <Link to="/proyectos" className="group flex items-center gap-4 text-white/50 uppercase text-[10px] tracking-[0.3em] font-bold mb-12 hover:text-[#f27d26] transition-colors">
-              <div className="w-8 h-px bg-white/30 group-hover:bg-[#f27d26] group-hover:w-12 transition-all duration-500"></div>
-              Volver a Proyectos
-            </Link>
-            <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-6">{project.status}</p>
-            <h1 className="text-6xl md:text-8xl mb-10 leading-tight tracking-tighter font-bold font-sans text-white">
+            <div className="flex items-center gap-4 mb-6">
+              <span className="px-4 py-1.5 border border-[#f27d26] text-[#f27d26] rounded-full text-xs font-bold bg-[#f27d26]/10 uppercase tracking-widest">{project.status}</span>
+              <span className="px-4 py-1.5 bg-white/10 text-white rounded-full text-xs font-bold uppercase tracking-widest">{project.category}</span>
+            </div>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight mb-6 font-sans">
               {project.name}
             </h1>
-            <p className="text-xl text-white/70 mb-12 leading-relaxed font-medium">
+            <p className="text-xl md:text-2xl text-white/70 max-w-3xl leading-relaxed">
               {project.description}
             </p>
-            <div className="space-y-8 mb-16">
-              <p className="text-white/50 text-[10px] uppercase tracking-[0.2em] font-semibold">Características Destacadas</p>
-              <div className="grid grid-cols-1 gap-6">
-                {project.features.map((f, i) => (
-                  <div key={i} className="flex items-start gap-4 font-medium text-white/70">
-                    <Check className="w-5 h-5 text-[#22c55e] shrink-0 mt-0.5" />
-                    <span>{f}</span>
+          </div>
+          <div className="shrink-0 flex gap-4 md:flex-col items-start md:items-end">
+            <a href="https://wa.me/5492262506588" target="_blank" rel="noreferrer" className="flex items-center justify-center px-8 py-4 bg-[#22c55e] hover:brightness-110 text-white font-bold rounded-md transition-all text-sm uppercase tracking-wider shadow-[0_0_20px_rgba(34,197,94,0.3)] hover:shadow-[0_0_30px_rgba(34,197,94,0.5)]">
+              Consultar Proyecto
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Media and Details Section */}
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid lg:grid-cols-12 gap-16 items-start">
+          
+          {/* Main Info Column */}
+          <div className="lg:col-span-7 space-y-16">
+            {/* Description */}
+            <section>
+              <h2 className="text-[#f27d26] text-[10px] uppercase tracking-[0.3em] font-bold mb-6">Sobre el Proyecto</h2>
+              <p className="text-lg md:text-xl text-white/80 leading-relaxed font-medium">
+                {project.fullDescription || project.description}
+              </p>
+            </section>
+
+            {/* Features Info */}
+            <section className="bg-apolo-paper p-8 md:p-12 rounded-2xl border border-white/5 shadow-2xl">
+              <h2 className="text-white text-2xl font-bold mb-8 flex items-center gap-3">
+                <Building2 className="text-[#f27d26]" /> Características Destacadas
+              </h2>
+              <div className="grid sm:grid-cols-2 gap-6">
+                {project.features.map((f: string, i: number) => (
+                  <div key={i} className="flex items-start gap-4">
+                    <CheckCircle2 className="w-6 h-6 text-[#22c55e] shrink-0" />
+                    <span className="text-white/80 font-medium text-lg">{f}</span>
                   </div>
                 ))}
               </div>
-            </div>
-            <a href="https://wa.me/5492262506588" target="_blank" rel="noreferrer" className="w-max px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded transition-colors text-sm uppercase tracking-wider inline-block">
-              Consultar Disponibilidad
-            </a>
+            </section>
+
+            {/* Financing Block */}
+            {project.financing && project.financing.length > 0 && (
+              <section className="relative overflow-hidden bg-gradient-to-br from-apolo-dark to-black p-8 md:p-12 rounded-2xl border border-[#f27d26]/30 shadow-[0_0_50px_rgba(242,125,38,0.05)]">
+                <div className="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
+                  <Wallet size={120} />
+                </div>
+                <h2 className="text-[#f27d26] text-[10px] uppercase tracking-[0.3em] font-bold mb-4">Inversión</h2>
+                <h3 className="text-white text-3xl font-bold mb-8">Opciones de Adquisición</h3>
+                <ul className="space-y-4 relative z-10">
+                  {project.financing.map((f: string, i: number) => (
+                    <li key={i} className="flex items-center gap-4 text-lg text-white/90 font-medium">
+                      <div className="w-2 h-2 rounded-full bg-[#f27d26]" />
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
           </div>
-          <div className="space-y-12">
-            <div className="aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl border border-white/10">
-              <img src={project.image} alt={project.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+
+          {/* Media Column */}
+          <div className="lg:col-span-5 space-y-8 lg:sticky lg:top-32">
+            <div className="aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl border border-white/10 group">
+              <img src={project.gallery?.[0] || project.image} alt={project.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" referrerPolicy="no-referrer" />
             </div>
-            <div className="grid grid-cols-2 gap-8">
-              <div className="aspect-square overflow-hidden rounded-2xl shadow-xl border border-white/10">
-                <img src="https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/APOLO-ARES-3-1.jpg" alt="Detail" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+            {project.gallery && project.gallery.length > 1 && (
+              <div className="grid grid-cols-2 gap-8">
+                {project.gallery.slice(1, 3).map((img: string, i: number) => (
+                  <div key={i} className="aspect-square overflow-hidden rounded-2xl shadow-xl border border-white/10 group">
+                    <img src={img} alt={`Detail ${i}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" />
+                  </div>
+                ))}
               </div>
-              <div className="aspect-square overflow-hidden rounded-2xl shadow-xl border border-white/10">
-                <img src="https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/APOLO-ARES-4-1.jpg" alt="Detail" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
-              </div>
-            </div>
+            )}
           </div>
-        </motion.div>
+          
+        </div>
       </div>
     </div>
   );
