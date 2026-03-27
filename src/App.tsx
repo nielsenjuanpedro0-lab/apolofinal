@@ -1050,20 +1050,45 @@ const ProjectDetail = () => {
           </div>
 
           {/* Media Column */}
-          <div className="lg:col-span-5 space-y-8 lg:sticky lg:top-32">
-            <div className="aspect-[4/5] overflow-hidden rounded-3xl shadow-xl border border-gray-100 group bg-white p-2">
+          <div className="lg:col-span-5 lg:sticky lg:top-32">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              className="aspect-[4/5] overflow-hidden rounded-3xl shadow-xl border border-gray-100 group bg-white p-2"
+            >
               <img src={project.gallery?.[0] || project.image} alt={project.name} className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-1000" referrerPolicy="no-referrer" fetchPriority="high" />
-            </div>
-            {project.gallery && project.gallery.length > 1 && (
-              <div className="grid grid-cols-2 gap-6">
-                {project.gallery.slice(1, 3).map((img: string, i: number) => (
-                  <div key={i} className="aspect-square overflow-hidden rounded-3xl shadow-md border border-gray-100 group bg-white p-2">
-                    <img src={img} alt={`Detail ${i}`} className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" loading="lazy" />
-                  </div>
-                ))}
-              </div>
-            )}
+            </motion.div>
           </div>
+          
+        </div>
+
+        {/* Full Gallery Section */}
+        {project.gallery && project.gallery.length > 1 && (
+          <div className="mt-32 border-t border-gray-200 pt-24">
+            <div className="flex flex-col items-center text-center mb-16">
+              <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.3em] font-bold mb-4">Registro Visual</p>
+              <h2 className="text-4xl md:text-5xl font-black font-sans text-gray-900 mb-6">Galería del Proyecto</h2>
+              <p className="text-gray-500 max-w-2xl text-lg font-medium">Explorá cada detalle arquitectónico y los espacios diseñados para tu confort en esta galería completa.</p>
+            </div>
+            
+            <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+              {project.gallery.slice(1).map((img: string, i: number) => (
+                <motion.div 
+                  key={i} 
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                  className="break-inside-avoid shadow-lg rounded-3xl overflow-hidden border border-gray-100 group bg-white p-2 relative"
+                >
+                  <img src={img} alt={`Gallery Detail ${i + 1}`} className="w-full h-auto object-cover rounded-2xl group-hover:scale-[1.03] transition-transform duration-700" referrerPolicy="no-referrer" loading="lazy" />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500 rounded-3xl m-2 pointer-events-none" />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        )}
           
         </div>
       </div>
