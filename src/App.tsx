@@ -170,17 +170,17 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   const isDarkPage = location.pathname === '/' && !scrolled;
 
   return (
-    <div className="min-h-screen flex flex-col bg-apolo-paper">
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-apolo-paper/95 backdrop-blur-md py-4 shadow-lg border-b border-white/10' : 'bg-transparent py-6'}`}>
+    <div className="min-h-screen flex flex-col bg-[#fafafa] font-sans">
+      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md py-4 shadow-sm border-b border-gray-100 text-gray-900' : 'bg-transparent py-6 text-white'}`}>
         <div className="max-w-7xl mx-auto px-6 md:px-8 flex justify-between items-center">
           <Link to="/" className="flex items-center gap-4 group">
             <img 
               src="https://apoloconstrucciones.com.ar/wp-content/uploads/2021/09/LOGO-APOLO2-768x766-1.png" 
               alt="Apolo Logo" 
-              className="w-10 h-10 object-contain transition-transform duration-500 group-hover:scale-105"
+              className={`w-10 h-10 object-contain transition-transform duration-500 group-hover:scale-105 ${scrolled ? 'invert' : ''}`}
               referrerPolicy="no-referrer"
             />
-            <span className="text-white font-bold text-lg tracking-wide hidden sm:block">APOLO CONSTRUCCIONES</span>
+            <span className="font-bold text-lg tracking-wide hidden sm:block">APOLO CONSTRUCCIONES</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
@@ -189,10 +189,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <Link 
                   key={link.name} 
                   to={link.path}
-                  className={`relative text-sm font-medium transition-all duration-300 group ${
+                  className={`relative text-sm font-medium transition-all duration-300 group hover:text-[#f27d26] ${
                     location.pathname === link.path 
                       ? 'text-[#f27d26]' 
-                      : 'text-white/70 hover:text-white'
+                      : (scrolled ? 'text-gray-600' : 'text-white/80')
                   }`}
                 >
                   {link.name}
@@ -201,10 +201,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               ))}
               <Link 
                 to="/contacto"
-                className={`relative text-sm font-medium transition-all duration-300 group ${
+                className={`relative text-sm font-medium transition-all duration-300 group hover:text-[#f27d26] ${
                   location.pathname === '/contacto' 
                     ? 'text-[#f27d26]' 
-                    : 'text-white/70 hover:text-white'
+                    : (scrolled ? 'text-gray-600' : 'text-white/80')
                 }`}
               >
                 Contacto
@@ -213,7 +213,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             </div>
             <Link 
               to="/contacto"
-              className="px-6 py-2.5 bg-[#22c55e] hover:bg-[#16a34a] hover:-translate-y-0.5 hover:shadow-[0_8px_20px_-6px_rgba(34,197,94,0.5)] active:scale-95 transition-all duration-300 text-sm font-bold text-white rounded shadow-lg"
+              className="px-6 py-2.5 bg-[#22c55e] hover:bg-[#16a34a] hover:-translate-y-0.5 hover:shadow-[0_8px_20px_-6px_rgba(34,197,94,0.5)] active:scale-95 transition-all duration-300 text-sm font-bold text-white rounded-md shadow-md"
             >
               Contactanos
             </Link>
@@ -227,15 +227,15 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <div className="flex flex-col gap-1.5 items-end">
               <motion.div 
                 animate={isMenuOpen ? { rotate: 45, y: 8, width: 24 } : { rotate: 0, y: 0, width: 24 }}
-                className="h-px bg-white transition-all duration-300"
+                className={`h-px transition-all duration-300 ${scrolled || isMenuOpen ? 'bg-gray-900' : 'bg-white'}`}
               />
               <motion.div 
                 animate={isMenuOpen ? { opacity: 0, x: 10 } : { opacity: 1, x: 0, width: 16 }}
-                className="h-px bg-white transition-all duration-300"
+                className={`h-px transition-all duration-300 ${scrolled || isMenuOpen ? 'bg-gray-900' : 'bg-white'}`}
               />
               <motion.div 
                 animate={isMenuOpen ? { rotate: -45, y: -8, width: 24 } : { rotate: 0, y: 0, width: 24 }}
-                className="h-px bg-white transition-all duration-300"
+                className={`h-px transition-all duration-300 ${scrolled || isMenuOpen ? 'bg-gray-900' : 'bg-white'}`}
               />
             </div>
           </button>
@@ -249,7 +249,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 z-40 bg-apolo-paper/95 backdrop-blur-xl flex flex-col md:hidden pt-32 pb-12"
+            className="fixed inset-0 z-40 bg-white/95 backdrop-blur-xl flex flex-col md:hidden pt-32 pb-12"
           >
             <div className="flex-grow flex flex-col items-center justify-center gap-10 px-8">
               {[...navLinks, { name: 'Contacto', path: '/contacto' }].map((link, i) => (
@@ -263,7 +263,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                     to={link.path}
                     onClick={() => setIsMenuOpen(false)}
                     className={`text-3xl font-bold tracking-wide transition-all duration-300 ${
-                      location.pathname === link.path ? 'text-[#f27d26]' : 'text-white hover:text-[#f27d26]'
+                      location.pathname === link.path ? 'text-[#f27d26]' : 'text-gray-900 hover:text-[#f27d26]'
                     }`}
                   >
                     {link.name}
@@ -278,14 +278,14 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               transition={{ delay: 0.6 }}
               className="flex justify-center gap-8 mt-auto"
             >
-              <a href="https://www.instagram.com/apolo.construcciones/" target="_blank" rel="noreferrer" className="text-white/50 hover:text-[#f27d26] transition-colors">
-                <Instagram size={24} />
+              <a href="https://www.instagram.com/apolo.construcciones/" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#f27d26] transition-colors">
+                <Instagram size={28} />
               </a>
-              <a href="https://www.facebook.com/apoloconstructora" target="_blank" rel="noreferrer" className="text-white/50 hover:text-[#f27d26] transition-colors">
-                <Facebook size={24} />
+              <a href="https://www.facebook.com/apoloconstructora" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#f27d26] transition-colors">
+                <Facebook size={28} />
               </a>
-              <a href="https://wa.me/5492262506588" target="_blank" rel="noreferrer" className="text-white/50 hover:text-[#f27d26] transition-colors">
-                <MessageCircle size={24} />
+              <a href="https://wa.me/5492262506588" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#f27d26] transition-colors">
+                <MessageCircle size={28} />
               </a>
             </motion.div>
           </motion.div>
@@ -296,7 +296,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         {children}
       </main>
 
-      <footer className="bg-apolo-dark text-white pt-32 pb-16 border-t border-white/10">
+      <footer className="bg-white text-gray-900 pt-32 pb-16 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-12 gap-16 mb-24">
             <div className="md:col-span-5">
@@ -304,51 +304,51 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <img 
                   src="https://apoloconstrucciones.com.ar/wp-content/uploads/2021/09/LOGO-APOLO2-768x766-1.png" 
                   alt="Apolo Logo" 
-                  className="w-16 h-16 object-contain"
+                  className="w-16 h-16 object-contain invert"
                   referrerPolicy="no-referrer"
                 />
               </Link>
-              <p className="text-white/70 max-w-sm text-lg font-medium leading-relaxed mb-10">
+              <p className="text-gray-600 max-w-sm text-lg font-medium leading-relaxed mb-10">
                 Desarrollamos el futuro de Necochea con una visión arquitectónica que prioriza la calidad y el diseño.
               </p>
               <div className="flex gap-6">
-                <a href="https://www.facebook.com/apoloconstructora" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#f27d26] hover:text-white hover:border-[#f27d26] transition-all text-white/70">
+                <a href="https://www.facebook.com/apoloconstructora" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-[#f27d26] hover:text-white hover:border-[#f27d26] transition-all text-gray-500">
                   <Facebook size={18} />
                 </a>
-                <a href="https://www.instagram.com/apolo.construcciones/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#f27d26] hover:text-white hover:border-[#f27d26] transition-all text-white/70">
+                <a href="https://www.instagram.com/apolo.construcciones/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-[#f27d26] hover:text-white hover:border-[#f27d26] transition-all text-gray-500">
                   <Instagram size={18} />
                 </a>
               </div>
             </div>
             <div className="md:col-span-2">
-              <p className="text-white/50 text-[10px] uppercase tracking-[0.2em] font-semibold mb-8">Navegación</p>
-              <ul className="space-y-4 font-medium text-white/70">
+              <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-8">Navegación</p>
+              <ul className="space-y-4 font-medium text-gray-600">
                 {navLinks.map(link => (
                   <li key={link.name}><Link to={link.path} className="hover:text-[#f27d26] transition-colors">{link.name}</Link></li>
                 ))}
               </ul>
             </div>
             <div className="md:col-span-5">
-              <p className="text-white/50 text-[10px] uppercase tracking-[0.2em] font-semibold mb-8">Contacto</p>
+              <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-8">Contacto</p>
               <div className="grid grid-cols-1 gap-8">
                 <div>
-                  <p className="text-white/50 text-[10px] uppercase tracking-[0.2em] font-semibold mb-2">Oficina</p>
-                  <p className="text-xl font-bold text-white">Calle 62 N° 3124, Necochea</p>
+                  <p className="text-gray-400 text-[10px] uppercase tracking-[0.2em] font-semibold mb-2">Oficina</p>
+                  <p className="text-xl font-bold text-gray-900">Calle 62 N° 3124, Necochea</p>
                 </div>
                 <div className="flex flex-col md:flex-row gap-8 md:gap-16">
                   <div>
-                    <p className="text-white/50 text-[10px] uppercase tracking-[0.2em] font-semibold mb-2">Llamanos</p>
-                    <p className="text-xl font-bold text-white">+54 9 2262 506588</p>
+                    <p className="text-gray-400 text-[10px] uppercase tracking-[0.2em] font-semibold mb-2">Llamanos</p>
+                    <p className="text-xl font-bold text-gray-900">+54 9 2262 506588</p>
                   </div>
                   <div>
-                    <p className="text-white/50 text-[10px] uppercase tracking-[0.2em] font-semibold mb-2">Email</p>
-                    <p className="text-xl font-bold text-white">info@apoloconstrucciones.com.ar</p>
+                    <p className="text-gray-400 text-[10px] uppercase tracking-[0.2em] font-semibold mb-2">Email</p>
+                    <p className="text-xl font-bold text-gray-900">info@apoloconstrucciones.com.ar</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/50 font-medium">
+          <div className="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500 font-medium">
             <p>&copy; {new Date().getFullYear()} Apolo Construcciones. Todos los derechos reservados.</p>
             <div className="flex gap-6">
               <a href="#" className="hover:text-[#f27d26] transition-colors">Términos y Condiciones</a>
@@ -367,7 +367,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor" stroke="none">
           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.405-.883-.733-1.48-1.638-1.653-1.935-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
         </svg>
-        <span className="absolute right-full mr-4 bg-apolo-paper text-white px-4 py-2 rounded-lg text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-xl border border-white/10">
+        <span className="absolute right-full mr-4 bg-white text-gray-900 px-4 py-2 rounded-lg text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-xl border border-gray-100">
           ¿En qué podemos ayudarte?
         </span>
       </a>
@@ -502,7 +502,7 @@ const Home = () => {
         </motion.div>
       </section>
 
-      <section className="py-24 bg-apolo-paper overflow-hidden">
+      <section className="py-24 bg-[#fafafa] overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div 
             initial={{ opacity: 0, y: 40 }}
@@ -512,7 +512,7 @@ const Home = () => {
             className="grid md:grid-cols-2 gap-16 items-center"
           >
             <div className="relative">
-              <div className="aspect-[4/5] overflow-hidden rounded-2xl">
+              <div className="aspect-[4/5] overflow-hidden rounded-3xl shadow-xl">
                 <img 
                   src="https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/APOLO-ARES-6-1.jpg" 
                   alt="Architecture" 
@@ -520,24 +520,24 @@ const Home = () => {
                   referrerPolicy="no-referrer"
                 />
               </div>
-              <div className="absolute -bottom-12 -right-12 w-64 h-80 bg-apolo-dark shadow-2xl border border-white/10 p-12 flex flex-col justify-end hidden md:flex rounded-2xl">
-                <p className="text-white/50 text-[10px] uppercase tracking-[0.2em] font-semibold mb-4">Trayectoria</p>
-                <h4 className="text-white text-4xl font-bold text-[#f27d26]">+15</h4>
-                <p className="text-white/70 text-xs uppercase tracking-widest mt-2">Años de Excelencia</p>
+              <div className="absolute -bottom-12 -right-12 w-64 h-80 bg-white shadow-2xl border border-gray-100 p-12 flex flex-col justify-end hidden md:flex rounded-3xl">
+                <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-4">Trayectoria</p>
+                <h4 className="text-gray-900 text-4xl font-bold">+15</h4>
+                <p className="text-gray-500 text-xs uppercase tracking-widest mt-2">Años de Excelencia</p>
               </div>
             </div>
             <div>
               <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-6">Sobre Nosotros</p>
-              <h2 className="text-4xl md:text-6xl mb-8 leading-tight text-white font-bold tracking-tight">
+              <h2 className="text-4xl md:text-6xl mb-8 leading-tight text-gray-900 font-bold tracking-tight">
                 Construimos <br /><span className="text-[#f27d26]">Legados.</span>
               </h2>
-              <p className="text-lg text-white/70 mb-6 leading-relaxed font-medium">
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed font-medium">
                 En Apolo Construcciones, no solo edificamos estructuras; creamos hogares y oportunidades de inversión que perduran. Nuestra filosofía se basa en la honestidad, la calidad constructiva y el respeto por el entorno.
               </p>
-              <p className="text-lg text-white/70 mb-10 leading-relaxed font-medium">
-                Cada proyecto es una pieza única de arquitectura contemporánea, diseñada para maximizar el confort y la plusvalía de nuestros clientes en Necochea.
+              <p className="text-lg text-gray-600 mb-10 leading-relaxed font-medium">
+                Cada proyecto es una pieza única de arquitectura contemporánea, diseñada para maximizar el confort y la rentabilidad de nuestros clientes en Necochea.
               </p>
-              <Link to="/nosotros" className="group flex items-center gap-4 text-white uppercase text-[10px] tracking-[0.3em] font-bold">
+              <Link to="/nosotros" className="group flex items-center gap-4 text-gray-900 uppercase text-[10px] tracking-[0.3em] font-bold">
                 Nuestra Historia
                 <div className="w-12 h-px bg-[#f27d26] group-hover:w-20 transition-all duration-500"></div>
               </Link>
@@ -546,7 +546,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-24 bg-apolo-dark overflow-hidden">
+      <section className="py-24 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
@@ -555,7 +555,7 @@ const Home = () => {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
               Nuestros Emprendimientos
             </h2>
           </motion.div>
@@ -567,35 +567,34 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.8, delay: index * 0.2, ease: [0.22, 1, 0.36, 1] }}
-                className="bg-apolo-paper rounded-2xl shadow-lg border border-white/10 overflow-hidden flex flex-col hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(242,125,38,0.15)] transition-all duration-500 group"
+                className="bg-[#fafafa] rounded-3xl shadow-md border border-gray-100 overflow-hidden flex flex-col hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(242,125,38,0.15)] transition-all duration-500 group"
               >
-                <div className="aspect-[4/3] overflow-hidden relative">
-                  <img src={project.image} alt={project.name} className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110" referrerPolicy="no-referrer" loading="lazy" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-apolo-paper via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="aspect-[4/3] overflow-hidden relative bg-white p-2">
+                  <img src={project.image} alt={project.name} className="w-full h-full object-cover rounded-2xl transition-transform duration-[1.5s] ease-out group-hover:scale-110" referrerPolicy="no-referrer" loading="lazy" />
                 </div>
                 <div className="p-8 flex flex-col flex-grow z-10 relative">
                   <div className="flex flex-wrap gap-2 mb-4">
-                    <span className="px-3 py-1 bg-black/40 text-[#f27d26] rounded-full text-xs font-bold border border-[#f27d26]/30">Venta desde el pozo</span>
-                    <span className="px-3 py-1 bg-black/40 text-[#f27d26] rounded-full text-xs font-bold border border-[#f27d26]/30">Fideicomiso</span>
+                    <span className="px-3 py-1 bg-white text-[#f27d26] rounded-full text-xs font-bold border border-[#f27d26]/20 shadow-sm">{project.status}</span>
+                    <span className="px-3 py-1 bg-white text-gray-500 rounded-full text-xs font-bold border border-gray-200 shadow-sm">{project.category}</span>
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-6 uppercase group-hover:text-[#f27d26] transition-colors duration-300">{project.name}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6 uppercase group-hover:text-[#f27d26] transition-colors duration-300">{project.name}</h3>
                   <div className="flex flex-col gap-3 mb-8">
                     {project.features.map((feature, i) => (
-                      <div key={i} className="flex items-start gap-3 text-white/70 text-sm font-medium group-hover:text-white/90 transition-colors duration-300">
+                      <div key={i} className="flex items-start gap-3 text-gray-600 text-sm font-medium group-hover:text-gray-900 transition-colors duration-300">
                         <Check className="w-4 h-4 text-[#22c55e] shrink-0 mt-0.5" />
                         <span>{feature}</span>
                       </div>
                     ))}
                   </div>
-                  <Link to={`/proyectos/${project.id}`} className="mt-auto w-max px-6 py-3 bg-white/10 hover:bg-[#f27d26] text-white font-bold rounded transition-colors text-sm group-hover:shadow-[0_4px_14px_0_rgba(242,125,38,0.39)]">
-                    Me interesa
+                  <Link to={`/proyectos/${project.id}`} className="mt-auto w-max px-6 py-3 bg-white border border-gray-200 hover:border-[#f27d26] hover:bg-[#f27d26] text-gray-900 hover:text-white font-bold rounded-lg transition-colors text-sm group-hover:shadow-lg">
+                    Ver Detalles
                   </Link>
                 </div>
               </motion.div>
             ))}
           </div>
           <div className="mt-16 text-center">
-            <Link to="/proyectos" className="inline-flex items-center gap-4 text-white uppercase text-[10px] tracking-[0.3em] font-bold group">
+            <Link to="/proyectos" className="inline-flex items-center gap-4 text-gray-900 uppercase text-[10px] tracking-[0.3em] font-bold group">
               Ver Todos Los Proyectos
               <div className="w-12 h-px bg-[#f27d26] group-hover:w-20 transition-all duration-500"></div>
             </Link>
@@ -603,7 +602,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-24 bg-apolo-paper overflow-hidden relative">
+      <section className="py-24 bg-[#fafafa] overflow-hidden relative border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <motion.div 
             initial={{ opacity: 0, y: 40 }}
@@ -614,33 +613,33 @@ const Home = () => {
           >
             <div>
               <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-6">Financiación Exclusiva</p>
-              <h2 className="text-4xl md:text-6xl mb-8 leading-tight text-white font-bold tracking-tight">
+              <h2 className="text-4xl md:text-6xl mb-8 leading-tight text-gray-900 font-bold tracking-tight">
                 Pagá con <br /><span className="text-[#f27d26]">Granos a Futuro.</span>
               </h2>
-              <p className="text-lg text-white/70 mb-10 leading-relaxed font-medium">
+              <p className="text-lg text-gray-600 mb-10 leading-relaxed font-medium">
                 Un procedimiento seguro y confiable pensado para el sector agropecuario. Asegurá tu propiedad hoy y cancelá con tu producción futura.
               </p>
               <div className="grid grid-cols-1 gap-5 mb-10">
-                <div className="flex items-center gap-4 text-white/70 font-medium">
+                <div className="flex items-center gap-4 text-gray-700 font-medium bg-white px-4 py-3 rounded-lg shadow-sm border border-gray-100">
                   <Check className="w-5 h-5 text-[#22c55e]" />
                   Procedimiento seguro y transparente
                 </div>
-                <div className="flex items-center gap-4 text-white/70 font-medium">
+                <div className="flex items-center gap-4 text-gray-700 font-medium bg-white px-4 py-3 rounded-lg shadow-sm border border-gray-100">
                   <Check className="w-5 h-5 text-[#22c55e]" />
                   Sin intermediarios bancarios
                 </div>
-                <div className="flex items-center gap-4 text-white/70 font-medium">
+                <div className="flex items-center gap-4 text-gray-700 font-medium bg-white px-4 py-3 rounded-lg shadow-sm border border-gray-100">
                   <Check className="w-5 h-5 text-[#22c55e]" />
-                  Capitalización inmediata
+                  Capitalización inmediata en M2
                 </div>
               </div>
-              <Link to="/financiacion" className="px-8 py-4 bg-[#22c55e] text-white hover:bg-[#16a34a] uppercase text-[10px] tracking-[0.3em] font-bold rounded transition-all inline-block shadow-lg">
+              <Link to="/financiacion" className="px-8 py-4 bg-[#22c55e] text-white hover:bg-[#16a34a] uppercase text-[10px] tracking-[0.3em] font-bold rounded-lg transition-all inline-block shadow-lg hover:shadow-xl hover:-translate-y-0.5">
                 Más sobre financiación
               </Link>
             </div>
             <div className="relative">
-              <div className="aspect-square overflow-hidden rounded-2xl">
-                <img src="https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/APOLO-ARES-5-1.jpg" alt="Agro" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+              <div className="aspect-square overflow-hidden rounded-3xl shadow-xl bg-white p-2">
+                <img src="https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/APOLO-ARES-5-1.jpg" alt="Agro" className="w-full h-full object-cover rounded-2xl hover:scale-105 transition-transform duration-1000" referrerPolicy="no-referrer" />
               </div>
             </div>
           </motion.div>
@@ -659,21 +658,21 @@ const Proyectos = () => {
     : PROJECTS.filter(p => p.category === filter);
 
   return (
-    <div className="pt-32 pb-24 bg-apolo-dark min-h-screen">
+    <div className="pt-32 pb-24 bg-[#fcfcfc] min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-24 gap-8 md:gap-12">
           <div className="max-w-2xl">
             <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-4 md:mb-6">Nuestros Desarrollos</p>
-            <h1 className="text-5xl md:text-8xl mb-8 leading-tight tracking-tighter font-bold font-sans text-white">
+            <h1 className="text-5xl md:text-8xl mb-8 leading-tight tracking-tighter font-bold font-sans text-gray-900">
               Proyectos <br /><span className="text-[#f27d26] font-bold">Inmobiliarios.</span>
             </h1>
           </div>
-          <div className="flex gap-6 md:gap-8 border-b border-white/10 pb-4 w-full md:w-auto overflow-x-auto no-scrollbar">
+          <div className="flex gap-6 md:gap-8 border-b border-gray-200 pb-4 w-full md:w-auto overflow-x-auto no-scrollbar">
             {categories.map(cat => (
               <button 
                 key={cat} 
                 onClick={() => setFilter(cat)}
-                className={`uppercase text-[10px] tracking-[0.3em] font-bold transition-all whitespace-nowrap ${filter === cat ? 'text-[#f27d26]' : 'text-white/50 hover:text-white/70'}`}
+                className={`uppercase text-[10px] tracking-[0.3em] font-bold transition-all whitespace-nowrap ${filter === cat ? 'text-[#f27d26]' : 'text-gray-400 hover:text-gray-600'}`}
               >
                 {cat}
               </button>
@@ -689,28 +688,27 @@ const Proyectos = () => {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="bg-apolo-paper rounded-2xl shadow-lg border border-white/10 overflow-hidden flex flex-col hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(242,125,38,0.15)] transition-all duration-500 group"
+              className="bg-white rounded-3xl shadow-[0_10px_40px_-20px_rgba(0,0,0,0.1)] border border-gray-100 overflow-hidden flex flex-col hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(242,125,38,0.15)] transition-all duration-500 group"
             >
-              <div className="aspect-[4/3] overflow-hidden relative">
-                <img src={project.image} alt={project.name} className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110" referrerPolicy="no-referrer" loading="lazy" />
-                <div className="absolute inset-0 bg-gradient-to-t from-apolo-paper via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="aspect-[4/3] overflow-hidden relative bg-white p-2">
+                <img src={project.image} alt={project.name} className="w-full h-full object-cover rounded-2xl transition-transform duration-[1.5s] ease-out group-hover:scale-110" referrerPolicy="no-referrer" loading="lazy" />
               </div>
               <div className="p-8 flex flex-col flex-grow z-10 relative">
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-3 py-1 bg-black/40 text-[#f27d26] rounded-full text-xs font-bold border border-[#f27d26]/30">{project.status}</span>
-                  <span className="px-3 py-1 bg-black/40 text-[#f27d26] rounded-full text-xs font-bold border border-[#f27d26]/30">{project.category}</span>
+                  <span className="px-3 py-1 bg-white text-[#f27d26] rounded-full text-xs font-bold border border-[#f27d26]/20 shadow-sm">{project.status}</span>
+                  <span className="px-3 py-1 bg-white text-gray-500 rounded-full text-xs font-bold border border-gray-200 shadow-sm">{project.category}</span>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-6 uppercase group-hover:text-[#f27d26] transition-colors duration-300">{project.name}</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 uppercase group-hover:text-[#f27d26] transition-colors duration-300">{project.name}</h3>
                 <div className="flex flex-col gap-3 mb-8">
                   {project.features.map((feature, i) => (
-                    <div key={i} className="flex items-start gap-3 text-white/70 text-sm font-medium group-hover:text-white/90 transition-colors duration-300">
+                    <div key={i} className="flex items-start gap-3 text-gray-600 text-sm font-medium group-hover:text-gray-900 transition-colors duration-300">
                       <Check className="w-4 h-4 text-[#22c55e] shrink-0 mt-0.5" />
                       <span>{feature}</span>
                     </div>
                   ))}
                 </div>
-                <Link to={`/proyectos/${project.id}`} className="mt-auto w-max px-6 py-3 bg-white/10 hover:bg-[#f27d26] text-white font-bold rounded transition-colors text-sm group-hover:shadow-[0_4px_14px_0_rgba(242,125,38,0.39)]">
-                  Me interesa
+                <Link to={`/proyectos/${project.id}`} className="mt-auto w-max px-6 py-3 bg-white border border-gray-200 hover:border-[#f27d26] hover:bg-[#f27d26] text-gray-900 hover:text-white font-bold rounded-lg transition-colors text-sm group-hover:shadow-lg">
+                  Ver Detalles
                 </Link>
               </div>
             </motion.div>
@@ -723,14 +721,14 @@ const Proyectos = () => {
 
 const Financiacion = () => {
   return (
-    <div className="pt-32 pb-24 bg-apolo-paper min-h-screen">
+    <div className="pt-32 pb-24 bg-[#fafafa] min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
         <div className="max-w-3xl mb-24">
           <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-6">Inversión y Resguardo</p>
-          <h1 className="text-6xl md:text-8xl mb-8 leading-tight tracking-tighter font-bold font-sans text-white">
+          <h1 className="text-6xl md:text-8xl mb-8 leading-tight tracking-tighter font-bold font-sans text-gray-900">
             Opciones de <br /><span className="text-[#f27d26] font-bold">Financiación.</span>
           </h1>
-          <p className="text-xl text-white/70 font-medium leading-relaxed">
+          <p className="text-xl text-gray-600 font-medium leading-relaxed">
             Facilitamos el camino hacia tu nuevo hogar con opciones flexibles y seguras, diseñadas para el inversor.
           </p>
         </div>
@@ -741,28 +739,28 @@ const Financiacion = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="bg-apolo-dark p-8 md:p-16 rounded-2xl border border-white/10 flex flex-col h-full hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(242,125,38,0.1)] transition-all duration-500 group"
+            className="bg-white p-8 md:p-16 rounded-3xl border border-gray-100 flex flex-col h-full hover:-translate-y-2 shadow-xl hover:shadow-[0_20px_40px_-15px_rgba(242,125,38,0.15)] transition-all duration-500 group"
           >
-            <p className="text-white/50 text-[10px] uppercase tracking-[0.2em] font-semibold mb-8">Plan Tradicional</p>
-            <h2 className="text-3xl md:text-4xl mb-8 font-bold font-sans text-white">Hasta 24 Cuotas</h2>
-            <p className="text-white/70 text-lg mb-12 leading-relaxed font-medium">
+            <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-8">Plan Tradicional</p>
+            <h2 className="text-3xl md:text-4xl mb-8 font-bold font-sans text-gray-900">Hasta 24 Cuotas</h2>
+            <p className="text-gray-600 text-lg mb-12 leading-relaxed font-medium">
               Financiación directa con Apolo Construcciones. Planes adaptados a tu medida para que puedas invertir con tranquilidad y previsibilidad.
             </p>
             <div className="space-y-6 mb-16 flex-grow">
-              <div className="flex items-start gap-4 font-medium text-white/70">
+              <div className="flex items-start gap-4 font-medium text-gray-700 bg-gray-50/50 p-3 rounded-lg">
                 <Check className="w-5 h-5 text-[#22c55e] shrink-0 mt-0.5" />
                 <span>Cuotas fijas en pesos o dólares</span>
               </div>
-              <div className="flex items-start gap-4 font-medium text-white/70">
+              <div className="flex items-start gap-4 font-medium text-gray-700 bg-gray-50/50 p-3 rounded-lg">
                 <Check className="w-5 h-5 text-[#22c55e] shrink-0 mt-0.5" />
                 <span>Sin requisitos bancarios complejos</span>
               </div>
-              <div className="flex items-start gap-4 font-medium text-white/70">
+              <div className="flex items-start gap-4 font-medium text-gray-700 bg-gray-50/50 p-3 rounded-lg">
                 <Check className="w-5 h-5 text-[#22c55e] shrink-0 mt-0.5" />
                 <span>Posesión inmediata en obras finalizadas</span>
               </div>
             </div>
-            <Link to="/contacto" className="w-max px-8 py-4 bg-white/10 hover:bg-white/20 hover:-translate-y-1 hover:shadow-lg active:scale-95 text-white font-bold rounded transition-all duration-300 text-sm uppercase tracking-wider">
+            <Link to="/contacto" className="w-max px-8 py-4 bg-gray-900 hover:bg-black hover:-translate-y-1 hover:shadow-lg active:scale-95 text-white font-bold rounded-lg transition-all duration-300 text-sm uppercase tracking-wider">
               Consultar Plan
             </Link>
           </motion.div>
@@ -772,28 +770,28 @@ const Financiacion = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="bg-apolo-paper p-8 md:p-16 rounded-2xl border border-white/10 flex flex-col h-full shadow-2xl hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(34,197,94,0.15)] transition-all duration-500 group"
+            className="bg-gradient-to-br from-[#f8faf8] to-white p-8 md:p-16 rounded-3xl border border-gray-100 flex flex-col h-full shadow-xl hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(34,197,94,0.15)] transition-all duration-500 group"
           >
-            <p className="text-[#f27d26]/80 text-[10px] uppercase tracking-[0.2em] font-semibold mb-8">Plan Agro</p>
-            <h2 className="text-3xl md:text-4xl mb-8 font-bold font-sans text-white">Canje de Granos</h2>
-            <p className="text-white/70 text-lg mb-12 leading-relaxed font-medium">
+            <p className="text-[#22c55e] text-[10px] uppercase tracking-[0.2em] font-semibold mb-8">Plan Agro</p>
+            <h2 className="text-3xl md:text-4xl mb-8 font-bold font-sans text-gray-900">Canje de Granos</h2>
+            <p className="text-gray-600 text-lg mb-12 leading-relaxed font-medium">
               Utilizá tu producción agropecuaria como moneda de cambio. Un sistema ágil y seguro para el productor de hoy, optimizando su capitalización.
             </p>
             <div className="space-y-6 mb-16 flex-grow">
-              <div className="flex items-start gap-4 font-medium text-white/70">
+              <div className="flex items-start gap-4 font-medium text-gray-700 bg-white p-3 rounded-lg shadow-sm border border-gray-100/50">
                 <Check className="w-5 h-5 text-[#22c55e] shrink-0 mt-0.5" />
                 <span>Canje directo por granos a futuro</span>
               </div>
-              <div className="flex items-start gap-4 font-medium text-white/70">
+              <div className="flex items-start gap-4 font-medium text-gray-700 bg-white p-3 rounded-lg shadow-sm border border-gray-100/50">
                 <Check className="w-5 h-5 text-[#22c55e] shrink-0 mt-0.5" />
                 <span>Importantes beneficios impositivos</span>
               </div>
-              <div className="flex items-start gap-4 font-medium text-white/70">
+              <div className="flex items-start gap-4 font-medium text-gray-700 bg-white p-3 rounded-lg shadow-sm border border-gray-100/50">
                 <Check className="w-5 h-5 text-[#22c55e] shrink-0 mt-0.5" />
                 <span>Resguardo de valor en ladrillos</span>
               </div>
             </div>
-            <a href="https://www.agrocanje.com.ar/" target="_blank" rel="noreferrer" className="w-max px-8 py-4 bg-[#22c55e] hover:bg-[#16a34a] hover:-translate-y-1 shadow-[0_10px_30px_-10px_rgba(34,197,94,0.5)] hover:shadow-[0_15px_40px_-10px_rgba(34,197,94,0.6)] active:scale-95 text-white font-bold rounded transition-all duration-300 text-sm uppercase tracking-wider items-center flex gap-2">
+            <a href="https://www.agrocanje.com.ar/" target="_blank" rel="noreferrer" className="w-max px-8 py-4 bg-[#22c55e] hover:bg-[#16a34a] hover:-translate-y-1 shadow-[0_10px_30px_-10px_rgba(34,197,94,0.5)] hover:shadow-[0_15px_40px_-10px_rgba(34,197,94,0.6)] active:scale-95 text-white font-bold rounded-lg transition-all duration-300 text-sm uppercase tracking-wider items-center flex gap-2">
               Ver Agrocanje <ArrowRight size={18} />
             </a>
           </motion.div>
@@ -805,7 +803,7 @@ const Financiacion = () => {
 
 const Nosotros = () => {
   return (
-    <div className="pt-32 pb-24 bg-apolo-dark min-h-screen">
+    <div className="pt-32 pb-24 bg-[#fcfcfc] min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
@@ -816,25 +814,25 @@ const Nosotros = () => {
         >
           <div>
             <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-6">Nuestra Historia</p>
-            <h1 className="text-6xl md:text-8xl mb-10 leading-tight tracking-tighter font-bold font-sans text-white">
+            <h1 className="text-6xl md:text-8xl mb-10 leading-tight tracking-tighter font-bold font-sans text-gray-900">
               Sobre <br /><span className="text-[#f27d26] font-bold">Nosotros.</span>
             </h1>
-            <p className="text-xl text-white/70 mb-12 leading-relaxed font-medium">
+            <p className="text-xl text-gray-600 mb-12 leading-relaxed font-medium">
               En Apolo Construcciones, no solo levantamos paredes; creamos espacios donde las familias construyen su futuro. Con más de 15 años en el mercado de Necochea, nos hemos consolidado como referentes en calidad y cumplimiento.
             </p>
             <div className="grid grid-cols-2 gap-12">
               <div>
                 <div className="text-5xl font-bold text-[#f27d26] mb-2">+15</div>
-                <div className="text-white/50 text-[10px] uppercase tracking-[0.2em] font-semibold">Años de trayectoria</div>
+                <div className="text-gray-400 text-[10px] uppercase tracking-[0.2em] font-semibold">Años de trayectoria</div>
               </div>
               <div>
                 <div className="text-5xl font-bold text-[#f27d26] mb-2">+500</div>
-                <div className="text-white/50 text-[10px] uppercase tracking-[0.2em] font-semibold">Hogares entregados</div>
+                <div className="text-gray-400 text-[10px] uppercase tracking-[0.2em] font-semibold">Hogares entregados</div>
               </div>
             </div>
           </div>
-          <div className="aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl border border-white/10">
-            <img src="https://apoloconstrucciones.com.ar/wp-content/uploads/2021/05/FOTOS-1D.jpg" alt="Nosotros" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+          <div className="aspect-[4/5] overflow-hidden rounded-3xl shadow-xl bg-white p-2 border border-gray-100">
+            <img src="https://apoloconstrucciones.com.ar/wp-content/uploads/2021/05/FOTOS-1D.jpg" alt="Nosotros" className="w-full h-full object-cover rounded-2xl" referrerPolicy="no-referrer" />
           </div>
         </motion.div>
       </div>
@@ -844,14 +842,14 @@ const Nosotros = () => {
 
 const Servicios = () => {
   return (
-    <div className="pt-32 pb-24 bg-apolo-paper min-h-screen">
+    <div className="pt-32 pb-24 bg-[#fafafa] min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
         <div className="max-w-3xl mb-24">
           <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-6">Nuestra Propuesta</p>
-          <h1 className="text-6xl md:text-8xl mb-10 leading-tight tracking-tighter font-bold font-sans text-white">
+          <h1 className="text-6xl md:text-8xl mb-10 leading-tight tracking-tighter font-bold font-sans text-gray-900">
             Nuestros <br /><span className="text-[#f27d26] font-bold">Servicios.</span>
           </h1>
-          <p className="text-xl text-white/70 mb-12 leading-relaxed font-medium">
+          <p className="text-xl text-gray-600 mb-12 leading-relaxed font-medium">
             Acompañamos a nuestros clientes en cada etapa del proceso, desde la concepción del proyecto hasta la entrega de llaves y el servicio posventa.
           </p>
         </div>
@@ -877,11 +875,11 @@ const Servicios = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8, delay: i * 0.2, ease: [0.22, 1, 0.36, 1] }}
-              className="p-8 md:p-12 bg-apolo-dark rounded-2xl shadow-lg border border-white/10 hover:border-white/20 transition-all duration-300 group"
+              className="p-8 md:p-12 bg-white rounded-3xl shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] border border-gray-100 hover:border-[#f27d26]/30 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group"
             >
-              <p className="text-white/30 text-[10px] uppercase tracking-[0.2em] font-bold mb-12 group-hover:text-[#f27d26] transition-colors">0{i + 1}</p>
-              <h3 className="text-2xl mb-6 font-bold font-sans text-white">{s.title}</h3>
-              <p className="text-white/70 leading-relaxed font-medium">{s.desc}</p>
+              <p className="text-gray-200 text-[10px] uppercase tracking-[0.2em] font-bold mb-12 group-hover:text-[#f27d26]/40 transition-colors">0{i + 1}</p>
+              <h3 className="text-2xl mb-6 font-bold font-sans text-gray-900">{s.title}</h3>
+              <p className="text-gray-600 leading-relaxed font-medium">{s.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -892,11 +890,11 @@ const Servicios = () => {
 
 const Contacto = () => {
   return (
-    <div className="pt-32 pb-24 bg-apolo-dark min-h-screen">
+    <div className="pt-32 pb-24 bg-white min-h-screen border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-6">
         <div className="max-w-3xl mb-24">
           <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-6">Estamos a su disposición</p>
-          <h1 className="text-6xl md:text-8xl mb-10 leading-tight tracking-tighter font-bold font-sans text-white">
+          <h1 className="text-6xl md:text-8xl mb-10 leading-tight tracking-tighter font-bold font-sans text-gray-900">
             Hablemos de su <br /><span className="text-[#f27d26] font-bold">Próximo Proyecto.</span>
           </h1>
         </div>
@@ -910,22 +908,22 @@ const Contacto = () => {
             className="space-y-12 md:space-y-16"
           >
             <div>
-              <p className="text-white/50 text-[10px] uppercase tracking-[0.2em] font-semibold mb-4">Teléfono</p>
-              <p className="text-xl md:text-2xl font-bold font-sans text-white">+54 9 2262 506588</p>
+              <p className="text-gray-400 text-[10px] uppercase tracking-[0.2em] font-semibold mb-4">Teléfono</p>
+              <p className="text-xl md:text-2xl font-bold font-sans text-gray-900">+54 9 2262 506588</p>
             </div>
             <div>
-              <p className="text-white/50 text-[10px] uppercase tracking-[0.2em] font-semibold mb-4">Email</p>
-              <p className="text-xl md:text-2xl font-bold font-sans text-white">info@apoloconstrucciones.com.ar</p>
+              <p className="text-gray-400 text-[10px] uppercase tracking-[0.2em] font-semibold mb-4">Email</p>
+              <p className="text-xl md:text-2xl font-bold font-sans text-gray-900">info@apoloconstrucciones.com.ar</p>
             </div>
             <div>
-              <p className="text-white/50 text-[10px] uppercase tracking-[0.2em] font-semibold mb-4">Ubicación</p>
-              <p className="text-xl md:text-2xl font-bold font-sans text-white">Calle 62 N° 3124, Necochea</p>
+              <p className="text-gray-400 text-[10px] uppercase tracking-[0.2em] font-semibold mb-4">Ubicación</p>
+              <p className="text-xl md:text-2xl font-bold font-sans text-gray-900">Calle 62 N° 3124, Necochea</p>
             </div>
             <div className="pt-4 md:pt-8 flex gap-6">
-              <a href="https://www.instagram.com/apolo.construcciones/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 hover:text-white hover:border-white/20 transition-all text-white/70">
+              <a href="https://www.instagram.com/apolo.construcciones/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-50 text-gray-500 hover:text-[#f27d26] hover:border-[#f27d26]/30 transition-all">
                 <Instagram size={18} />
               </a>
-              <a href="https://www.facebook.com/apoloconstructora" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 hover:text-white hover:border-white/20 transition-all text-white/70">
+              <a href="https://www.facebook.com/apoloconstructora" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-50 text-gray-500 hover:text-[#f27d26] hover:border-[#f27d26]/30 transition-all">
                 <Facebook size={18} />
               </a>
             </div>
@@ -941,19 +939,19 @@ const Contacto = () => {
             <form className="grid gap-8 md:gap-12">
               <div className="grid md:grid-cols-2 gap-8 md:gap-12">
                 <div className="relative">
-                  <input type="text" placeholder="Nombre" className="w-full bg-transparent border-b border-white/10 py-4 outline-none focus:border-[#f27d26] transition-all font-medium text-white placeholder:text-white/50" />
+                  <input type="text" placeholder="Nombre" className="w-full bg-transparent border-b border-gray-200 py-4 outline-none focus:border-[#f27d26] transition-all font-medium text-gray-900 placeholder:text-gray-400" />
                 </div>
                 <div className="relative">
-                  <input type="email" placeholder="Email" className="w-full bg-transparent border-b border-white/10 py-4 outline-none focus:border-[#f27d26] transition-all font-medium text-white placeholder:text-white/50" />
+                  <input type="email" placeholder="Email" className="w-full bg-transparent border-b border-gray-200 py-4 outline-none focus:border-[#f27d26] transition-all font-medium text-gray-900 placeholder:text-gray-400" />
                 </div>
               </div>
               <div className="relative">
-                <input type="text" placeholder="Asunto" className="w-full bg-transparent border-b border-white/10 py-4 outline-none focus:border-[#f27d26] transition-all font-medium text-white placeholder:text-white/50" />
+                <input type="text" placeholder="Asunto" className="w-full bg-transparent border-b border-gray-200 py-4 outline-none focus:border-[#f27d26] transition-all font-medium text-gray-900 placeholder:text-gray-400" />
               </div>
               <div className="relative">
-                <textarea rows={4} placeholder="Mensaje" className="w-full bg-transparent border-b border-white/10 py-4 outline-none focus:border-[#f27d26] transition-all font-medium resize-none text-white placeholder:text-white/50"></textarea>
+                <textarea rows={4} placeholder="Mensaje" className="w-full bg-transparent border-b border-gray-200 py-4 outline-none focus:border-[#f27d26] transition-all font-medium resize-none text-gray-900 placeholder:text-gray-400"></textarea>
               </div>
-              <button className="w-max px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded transition-colors text-sm uppercase tracking-wider mt-4 md:mt-8">
+              <button className="w-max px-8 py-4 bg-gray-900 hover:bg-black text-white hover:-translate-y-1 hover:shadow-lg active:scale-95 font-bold rounded-lg transition-all text-sm uppercase tracking-wider mt-4 md:mt-8">
                 Enviar Mensaje
               </button>
             </form>
