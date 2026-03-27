@@ -47,11 +47,11 @@ const PROJECTS = [
     fullDescription: 'El proyecto Apolo Ares 6 está concebido como la opción ideal para quienes buscan una inversión segura o un espacio perfecto para alquiler temporario. Combina una arquitectura contemporánea con espacios adaptables a la vida moderna.',
     features: ['Departamentos de 2 ambientes Adaptables', 'Local en planta baja', '9 Cocheras Disponibles Cubiertas', 'Ideal para alquiler temporario'],
     financing: ['Financiación en hasta 24 cuotas', 'Venta desde el pozo y pre-venta', 'Fideicomiso al costo'],
-    image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/APOLO-ARES-6-1.jpg',
+    image: '/optimized/APOLO-ARES-6-1.webp',
     gallery: [
-      'https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/APOLO-ARES-6-1.jpg',
-      'https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/APOLO-ARES-3-1.jpg',
-      'https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/APOLO-ARES-4-1.jpg'
+      '/optimized/APOLO-ARES-6-1.webp',
+      '/optimized/APOLO-ARES-3-1.webp',
+      '/optimized/APOLO-ARES-4-1.webp'
     ]
   },
   {
@@ -63,10 +63,10 @@ const PROJECTS = [
     fullDescription: 'Viggo 91 redefine la forma de invertir en la ciudad. Este desarrollo moderno facilita el acceso a la vivienda mediante la posibilidad única de pago con granos a futuro. Es un procedimiento 100% seguro, ágil y libre de expensas.',
     features: ['Pagá con granos a futuro', 'Servicios completos', 'Procedimiento seguro y confiable', 'Sin expensas'],
     financing: ['Contacto directo sin intermediarios', 'PAGÁ CON GRANOS A FUTURO', 'Resguardo de valor en ladrillos'],
-    image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2022/05/Copia-de-1.8.jpg',
+    image: '/optimized/Copia-de-1.8.webp',
     gallery: [
-      'https://apoloconstrucciones.com.ar/wp-content/uploads/2022/05/Copia-de-1.8.jpg',
-      'https://apoloconstrucciones.com.ar/wp-content/uploads/2021/05/FOTOS-1D.jpg'
+      '/optimized/Copia-de-1.8.webp',
+      '/optimized/FOTOS-1D.webp'
     ]
   },
   {
@@ -78,10 +78,10 @@ const PROJECTS = [
     fullDescription: 'Desarrollo pensado para el confort familiar y la alta demanda, ofreciendo departamentos adaptables de 1, 2 y 3 ambientes. Se complementa de manera perfecta con patios propios y la disponibilidad exclusiva de cocheras.',
     features: ['Departamentos de 1, 2 y 3 ambientes Adaptables', 'Cocheras Disponibles', 'Patio propio', 'Diseño funcional'],
     financing: ['Financiación en hasta 24 cuotas', 'Posesión inmediata'],
-    image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2024/11/IMG-20201120-WA0031.jpg',
+    image: '/optimized/IMG-20201120-WA0031.webp',
     gallery: [
-      'https://apoloconstrucciones.com.ar/wp-content/uploads/2024/11/IMG-20201120-WA0031.jpg',
-      'https://apoloconstrucciones.com.ar/wp-content/uploads/2024/11/Copia-de-Nueva-Fachada-1.jpg'
+      '/optimized/IMG-20201120-WA0031.webp',
+      '/optimized/Copia-de-Nueva-Fachada-1.webp'
     ]
   },
   {
@@ -93,10 +93,10 @@ const PROJECTS = [
     fullDescription: 'Ares 22 es un hermoso emprendimiento de diseño contemporáneo que ofrece la máxima rentabilidad. Proveé unidades funcionales pensadas milimétricamente para optimizar los espacios diarios y la luz natural.',
     features: ['Diseño moderno', 'Alta rentabilidad esperada', 'Unidades luminosas'],
     financing: ['Financiación directa', 'Fideicomiso'],
-    image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/APOLO-ARES-2-1.jpg',
+    image: '/optimized/APOLO-ARES-2-1.webp',
     gallery: [
-      'https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/APOLO-ARES-2-1.jpg',
-      'https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/52c73f06-1843-44c7-be61-a318be8c1072-scaled.jpg'
+      '/optimized/APOLO-ARES-2-1.webp',
+      '/optimized/52c73f06-1843-44c7-be61-a318be8c1072-scaled.webp'
     ]
   },
   {
@@ -108,9 +108,9 @@ const PROJECTS = [
     fullDescription: 'Delfos 83 representa la combinación de confort absoluto y exclusividad. Ubicado en una zona privilegiada, ofrece terminaciones únicas de lujo y la seguridad que demandan los estándares modernos.',
     features: ['Terminaciones de lujo', 'Ubicación privilegiada', 'Seguridad garantizada'],
     financing: ['Financiación en hasta 24 cuotas', 'Venta desde el pozo'],
-    image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2024/11/Copia-de-Nueva-Fachada-1.jpg',
+    image: '/optimized/Copia-de-Nueva-Fachada-1.webp',
     gallery: [
-      'https://apoloconstrucciones.com.ar/wp-content/uploads/2024/11/Copia-de-Nueva-Fachada-1.jpg'
+      '/optimized/Copia-de-Nueva-Fachada-1.webp'
     ]
   },
   {
@@ -122,9 +122,9 @@ const PROJECTS = [
     fullDescription: 'Unidades residenciales espaciosas pensadas para la vida moderna. Orfeo es sinónimo de calidad constructiva, donde la iluminación natural y los espacios verdes toman completo protagonismo.',
     features: ['Espacios verdes', 'Alta luminosidad y ventilación', 'Calidad constructiva premium'],
     financing: ['Financiación flexible', 'Adaptable a ingresos medios'],
-    image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/52c73f06-1843-44c7-be61-a318be8c1072-scaled.jpg',
+    image: '/optimized/52c73f06-1843-44c7-be61-a318be8c1072-scaled.webp',
     gallery: [
-      'https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/52c73f06-1843-44c7-be61-a318be8c1072-scaled.jpg'
+      '/optimized/52c73f06-1843-44c7-be61-a318be8c1072-scaled.webp'
     ]
   },
   {
@@ -136,9 +136,9 @@ const PROJECTS = [
     fullDescription: 'Un proyecto arquitectónico totalmente consolidado que refleja la confianza Apolo. Zeus 543 es la muestra ideal de nuestro compromiso inquebrantable con las líneas funcionales y la presteza en los plazos.',
     features: ['Entrega inmediata', 'Calidad de marca Apolo', 'Arquitectura funcional'],
     financing: ['Llave en mano', 'Consultar por unidades de reventa'],
-    image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2024/11/IMG-20210405-WA0009.jpg',
+    image: '/optimized/IMG-20210405-WA0009.webp',
     gallery: [
-      'https://apoloconstrucciones.com.ar/wp-content/uploads/2024/11/IMG-20210405-WA0009.jpg'
+      '/optimized/IMG-20210405-WA0009.webp'
     ]
   }
 ];
@@ -175,7 +175,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <div className="max-w-7xl mx-auto px-6 md:px-8 flex justify-between items-center">
           <Link to="/" className="flex items-center gap-4 group">
             <img 
-              src="https://apoloconstrucciones.com.ar/wp-content/uploads/2021/09/LOGO-APOLO2-768x766-1.png" 
+              src="/optimized/LOGO-APOLO2-768x766-1.webp" 
               alt="Apolo Logo" 
               className="w-10 h-10 object-contain transition-transform duration-500 group-hover:scale-105"
               referrerPolicy="no-referrer"
@@ -303,7 +303,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <div className="md:col-span-5">
               <Link to="/" className="inline-block mb-10">
                 <img 
-                  src="https://apoloconstrucciones.com.ar/wp-content/uploads/2021/09/LOGO-APOLO2-768x766-1.png" 
+                  src="/optimized/LOGO-APOLO2-768x766-1.webp" 
                   alt="Apolo Logo" 
                   className="w-16 h-16 object-contain"
                   referrerPolicy="no-referrer"
@@ -385,17 +385,17 @@ const Home = () => {
     {
       name: 'Apolo Ares',
       features: ['Espacios amplios', 'Luminosidad', 'Terminaciones de lujo'],
-      image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/APOLO-ARES.jpg'
+      image: '/optimized/APOLO-ARES.webp'
     },
     {
       name: 'Nueva Fachada',
       features: ['Diseño minimalista', 'Ubicación premium', 'Vistas panorámicas'],
-      image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2024/11/Copia-de-Nueva-Fachada.jpg'
+      image: '/optimized/Copia-de-Nueva-Fachada.webp'
     },
     {
       name: 'Orfeo',
       features: ['Entrega inmediata', 'Calidad Apolo', 'Diseño funcional'],
-      image: 'https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/52c73f06-1843-44c7-be61-a318be8c1072-scaled.jpg'
+      image: '/optimized/52c73f06-1843-44c7-be61-a318be8c1072-scaled.webp'
     }
   ];
 
@@ -517,7 +517,7 @@ const Home = () => {
             <div className="relative">
               <div className="aspect-[4/5] overflow-hidden rounded-3xl shadow-xl">
                 <img 
-                  src="https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/APOLO-ARES-6-1.jpg" 
+                  src="/optimized/APOLO-ARES-6-1.webp" 
                   alt="Architecture" 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
                   referrerPolicy="no-referrer"
@@ -835,7 +835,7 @@ const Nosotros = () => {
             </div>
           </div>
           <div className="aspect-[4/5] overflow-hidden rounded-3xl shadow-xl bg-white p-2 border border-gray-100">
-            <img src="https://apoloconstrucciones.com.ar/wp-content/uploads/2021/05/FOTOS-1D.jpg" alt="Nosotros" className="w-full h-full object-cover rounded-2xl" referrerPolicy="no-referrer" loading="lazy" />
+            <img src="/optimized/FOTOS-1D.webp" alt="Nosotros" className="w-full h-full object-cover rounded-2xl" referrerPolicy="no-referrer" loading="lazy" />
           </div>
         </motion.div>
       </div>
