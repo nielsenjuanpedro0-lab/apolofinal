@@ -387,7 +387,7 @@ const Home = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-apolo-dark via-apolo-dark/40 to-transparent z-10" />
         </div>
         
-        <div className="relative z-20 text-center px-6 max-w-5xl mx-auto pt-24 md:pt-32">
+        <div className="relative z-20 flex flex-col items-center justify-center h-full text-center px-5 max-w-5xl mx-auto pt-24 md:pt-32">
           <motion.div 
             initial="hidden"
             animate="visible"
@@ -399,14 +399,14 @@ const Home = () => {
           >
             <motion.h1 
               variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } } }}
-              className="text-4xl md:text-6xl lg:text-7xl text-white font-bold mb-8 tracking-tight drop-shadow-lg font-sans text-center"
+              className="text-4xl md:text-6xl lg:text-7xl font-sans font-black text-white leading-tight mb-4"
             >
               Descubrí tu Casa Propia.
             </motion.h1>
 
             <motion.p 
               variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } } }}
-              className="text-lg md:text-2xl text-white/90 mb-16 max-w-3xl mx-auto font-medium drop-shadow-md font-sans text-center px-4"
+              className="text-white/80 text-lg md:text-xl max-w-2xl mb-8 font-sans"
             >
               Departamentos y Emprendimientos en Pozo — Necochea
             </motion.p>
@@ -414,7 +414,7 @@ const Home = () => {
             <motion.div variants={{ hidden: { opacity: 0, scale: 0.9 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } } }}>
               <Link 
                 to="/contacto" 
-                className="inline-block px-8 py-4 bg-[#22c55e] hover:bg-[#16a34a] hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_rgba(34,197,94,0.6)] active:scale-95 text-white text-lg font-bold rounded transition-all duration-300 shadow-lg mb-16"
+                className="bg-[#22c55e] text-white px-8 py-4 rounded-md text-base font-semibold hover:brightness-110 transition-all mb-6 inline-block"
               >
                 Quiero que me contacten
               </Link>
@@ -422,12 +422,12 @@ const Home = () => {
 
             <motion.div 
               variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } } }}
-              className="flex flex-wrap justify-center gap-6 px-4"
+              className="flex gap-3 flex-wrap justify-center"
             >
-              <span className="px-6 py-2 border border-[#f27d26] text-[#f27d26] rounded-full text-sm font-medium bg-black/40 backdrop-blur-sm hover:bg-[#f27d26]/10 hover:border-[#f27d26] transition-colors cursor-default">
+              <span className="px-6 py-2 border border-[#f27d26] text-[#f27d26] rounded-full text-sm font-medium bg-black/40 backdrop-blur-sm">
                 Venta desde el pozo
               </span>
-              <span className="px-6 py-2 border border-[#f27d26] text-[#f27d26] rounded-full text-sm font-medium bg-black/40 backdrop-blur-sm hover:bg-[#f27d26]/10 hover:border-[#f27d26] transition-colors cursor-default">
+              <span className="px-6 py-2 border border-[#f27d26] text-[#f27d26] rounded-full text-sm font-medium bg-black/40 backdrop-blur-sm">
                 Fideicomiso al costo
               </span>
             </motion.div>
