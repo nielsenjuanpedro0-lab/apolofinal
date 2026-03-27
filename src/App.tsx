@@ -374,7 +374,7 @@ const Home = () => {
               src={carouselItems[currentIndex].image} 
               alt={carouselItems[currentIndex].name} 
               initial={{ opacity: 0, scale: 1 }}
-              animate={{ opacity: 0.5, scale: 1.1 }}
+              animate={{ opacity: 0.85, scale: 1.1 }}
               exit={{ opacity: 0 }}
               transition={{ 
                 opacity: { duration: 1.5, ease: "easeInOut" },
