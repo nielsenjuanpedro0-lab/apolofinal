@@ -177,7 +177,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <img 
               src="https://apoloconstrucciones.com.ar/wp-content/uploads/2021/09/LOGO-APOLO2-768x766-1.png" 
               alt="Apolo Logo" 
-              className={`w-10 h-10 object-contain transition-transform duration-500 group-hover:scale-105 ${scrolled ? 'invert' : ''}`}
+              className="w-10 h-10 object-contain transition-transform duration-500 group-hover:scale-105"
               referrerPolicy="no-referrer"
             />
             <span className="font-bold text-lg tracking-wide hidden sm:block">APOLO CONSTRUCCIONES</span>
@@ -304,7 +304,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <img 
                   src="https://apoloconstrucciones.com.ar/wp-content/uploads/2021/09/LOGO-APOLO2-768x766-1.png" 
                   alt="Apolo Logo" 
-                  className="w-16 h-16 object-contain invert"
+                  className="w-16 h-16 object-contain"
                   referrerPolicy="no-referrer"
                 />
               </Link>
