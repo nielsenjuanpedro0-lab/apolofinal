@@ -167,11 +167,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     { name: 'Proceso', path: '/servicios' },
   ];
 
-  const isDarkPage = location.pathname === '/' && !scrolled;
+  const isHomePage = location.pathname === '/';
 
   return (
     <div className="min-h-screen flex flex-col bg-[#fafafa] font-sans">
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md py-4 shadow-sm border-b border-gray-100 text-gray-900' : 'bg-transparent py-6 text-white'}`}>
+      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md py-4 shadow-sm border-b border-gray-100 text-gray-900' : `bg-transparent py-6 ${isHomePage ? 'text-white' : 'text-gray-900'}`}`}>
         <div className="max-w-7xl mx-auto px-6 md:px-8 flex justify-between items-center">
           <Link to="/" className="flex items-center gap-4 group">
             <img 
@@ -193,7 +193,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   className={`relative text-sm font-medium transition-all duration-300 group hover:text-[#f27d26] ${
                     location.pathname === link.path 
                       ? 'text-[#f27d26]' 
-                      : (scrolled ? 'text-gray-600' : 'text-white/80')
+                      : (scrolled || !isHomePage ? 'text-gray-600' : 'text-white/80')
                   }`}
                 >
                   {link.name}
@@ -205,7 +205,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 className={`relative text-sm font-medium transition-all duration-300 group hover:text-[#f27d26] ${
                   location.pathname === '/contacto' 
                     ? 'text-[#f27d26]' 
-                    : (scrolled ? 'text-gray-600' : 'text-white/80')
+                    : (scrolled || !isHomePage ? 'text-gray-600' : 'text-white/80')
                 }`}
               >
                 Contacto
@@ -228,15 +228,15 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <div className="flex flex-col gap-1.5 items-end">
               <motion.div 
                 animate={isMenuOpen ? { rotate: 45, y: 8, width: 24 } : { rotate: 0, y: 0, width: 24 }}
-                className={`h-px transition-all duration-300 ${scrolled || isMenuOpen ? 'bg-gray-900' : 'bg-white'}`}
+                className={`h-px transition-all duration-300 ${scrolled || isMenuOpen || !isHomePage ? 'bg-gray-900' : 'bg-white'}`}
               />
               <motion.div 
                 animate={isMenuOpen ? { opacity: 0, x: 10 } : { opacity: 1, x: 0, width: 16 }}
-                className={`h-px transition-all duration-300 ${scrolled || isMenuOpen ? 'bg-gray-900' : 'bg-white'}`}
+                className={`h-px transition-all duration-300 ${scrolled || isMenuOpen || !isHomePage ? 'bg-gray-900' : 'bg-white'}`}
               />
               <motion.div 
                 animate={isMenuOpen ? { rotate: -45, y: -8, width: 24 } : { rotate: 0, y: 0, width: 24 }}
-                className={`h-px transition-all duration-300 ${scrolled || isMenuOpen ? 'bg-gray-900' : 'bg-white'}`}
+                className={`h-px transition-all duration-300 ${scrolled || isMenuOpen || !isHomePage ? 'bg-gray-900' : 'bg-white'}`}
               />
             </div>
           </button>
