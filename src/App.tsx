@@ -365,8 +365,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               alt="Apolo Logo" 
               className="w-10 h-10 object-contain transition-transform duration-500 group-hover:scale-105"
               referrerPolicy="no-referrer"
-              fetchPriority="high"
-            />
+              fetchPriority="high" decoding="async" />
             <span className="font-bold text-lg tracking-wide hidden sm:block">APOLO CONSTRUCCIONES</span>
           </Link>
 
@@ -493,8 +492,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   alt="Apolo Logo" 
                   className="w-16 h-16 object-contain"
                   referrerPolicy="no-referrer"
-                  loading="lazy"
-                />
+                  loading="lazy" decoding="async"/>
               </Link>
               <p className="text-gray-600 max-w-sm text-lg font-medium leading-relaxed mb-10">
                 Desarrollamos el futuro de Necochea con una visión arquitectónica que prioriza la calidad y el diseño.
@@ -610,8 +608,7 @@ const Home = () => {
               }}
               className="absolute inset-0 w-full h-full object-cover brightness-75"
               referrerPolicy="no-referrer"
-              fetchPriority={currentIndex === 0 ? "high" : "auto"}
-            />
+              fetchPriority={currentIndex === 0 ? "high" : "auto"} decoding="async" />
           </AnimatePresence>
           <div className="absolute inset-0 bg-gradient-to-t from-apolo-dark via-apolo-dark/40 to-transparent z-10" />
         </div>
@@ -696,7 +693,7 @@ const Home = () => {
           <motion.div 
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "0px" }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="grid md:grid-cols-2 gap-16 items-center"
           >
@@ -706,8 +703,7 @@ const Home = () => {
                   src="/optimized/APOLO-ARES-6-1.webp" 
                   alt="Architecture" 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
-                  referrerPolicy="no-referrer"
-                />
+                  referrerPolicy="no-referrer" loading="lazy" decoding="async" />
               </div>
               <div className="absolute -bottom-12 -right-12 w-64 h-80 bg-white shadow-2xl border border-gray-100 p-12 flex flex-col justify-end hidden md:flex rounded-3xl">
                 <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-4">Trayectoria</p>
@@ -740,7 +736,7 @@ const Home = () => {
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "0px" }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="text-center mb-16"
           >
@@ -754,12 +750,12 @@ const Home = () => {
                 key={project.id} 
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
+                viewport={{ once: true, margin: "0px" }}
                 transition={{ duration: 0.8, delay: index * 0.2, ease: [0.22, 1, 0.36, 1] }}
                 className="bg-[#fafafa] rounded-3xl shadow-md border border-gray-100 overflow-hidden flex flex-col hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(242,125,38,0.15)] transition-all duration-500 group"
               >
                 <div className="aspect-[4/3] overflow-hidden relative bg-white p-2">
-                  <img src={project.image} alt={project.name} className="w-full h-full object-cover rounded-2xl transition-transform duration-[1.5s] ease-out group-hover:scale-110" referrerPolicy="no-referrer" loading="lazy" />
+                  <img src={project.image} alt={project.name} className="w-full h-full object-cover rounded-2xl transition-transform duration-700 ease-out group-hover:scale-110" referrerPolicy="no-referrer" loading="lazy" decoding="async"/>
                 </div>
                 <div className="p-8 flex flex-col flex-grow z-10 relative">
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -796,7 +792,7 @@ const Home = () => {
           <motion.div 
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "0px" }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="grid md:grid-cols-2 gap-16 items-center"
           >
@@ -828,7 +824,7 @@ const Home = () => {
             </div>
             <div className="relative">
               <div className="aspect-square overflow-hidden rounded-3xl shadow-xl bg-white p-2">
-                <img src="https://apoloconstrucciones.com.ar/wp-content/uploads/2025/06/APOLO-ARES-5-1.jpg" alt="Agro" className="w-full h-full object-cover rounded-2xl hover:scale-105 transition-transform duration-1000" referrerPolicy="no-referrer" />
+                <img src="/optimized/APOLO-ARES-5-1.webp" alt="Agro" className="w-full h-full object-cover rounded-2xl hover:scale-105 transition-transform duration-1000" referrerPolicy="no-referrer" loading="lazy" decoding="async" />
               </div>
             </div>
           </motion.div>
@@ -880,7 +876,7 @@ const Proyectos = () => {
               className="bg-white rounded-3xl shadow-[0_10px_40px_-20px_rgba(0,0,0,0.1)] border border-gray-100 overflow-hidden flex flex-col hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(242,125,38,0.15)] transition-all duration-500 group"
             >
               <div className="aspect-[4/3] overflow-hidden relative bg-white p-2">
-                <img src={project.image} alt={project.name} className="w-full h-full object-cover rounded-2xl transition-transform duration-[1.5s] ease-out group-hover:scale-110" referrerPolicy="no-referrer" loading="lazy" />
+                <img src={project.image} alt={project.name} className="w-full h-full object-cover rounded-2xl transition-transform duration-700 ease-out group-hover:scale-110" referrerPolicy="no-referrer" loading="lazy" decoding="async"/>
               </div>
               <div className="p-8 flex flex-col flex-grow z-10 relative">
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -926,7 +922,7 @@ const Financiacion = () => {
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true, margin: "0px" }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="bg-white p-8 md:p-16 rounded-3xl border border-gray-100 flex flex-col h-full hover:-translate-y-2 shadow-xl hover:shadow-[0_20px_40px_-15px_rgba(242,125,38,0.15)] transition-all duration-500 group"
           >
@@ -957,7 +953,7 @@ const Financiacion = () => {
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true, margin: "0px" }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="bg-gradient-to-br from-[#f8faf8] to-white p-8 md:p-16 rounded-3xl border border-gray-100 flex flex-col h-full shadow-xl hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(34,197,94,0.15)] transition-all duration-500 group"
           >
@@ -997,7 +993,7 @@ const Nosotros = () => {
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "0px" }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="grid lg:grid-cols-2 gap-16 items-center mb-24"
         >
@@ -1021,7 +1017,7 @@ const Nosotros = () => {
             </div>
           </div>
           <div className="aspect-[4/5] overflow-hidden rounded-3xl shadow-xl bg-white p-2 border border-gray-100">
-            <img src="/optimized/FOTOS-1D.webp" alt="Nosotros" className="w-full h-full object-cover rounded-2xl" referrerPolicy="no-referrer" loading="lazy" />
+            <img src="/optimized/FOTOS-1D.webp" alt="Nosotros" className="w-full h-full object-cover rounded-2xl" referrerPolicy="no-referrer" loading="lazy" decoding="async"/>
           </div>
         </motion.div>
       </div>
@@ -1062,7 +1058,7 @@ const Servicios = () => {
               key={i} 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true, margin: "0px" }}
               transition={{ duration: 0.8, delay: i * 0.2, ease: [0.22, 1, 0.36, 1] }}
               className="p-8 md:p-12 bg-white rounded-3xl shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] border border-gray-100 hover:border-[#f27d26]/30 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group"
             >
@@ -1092,7 +1088,7 @@ const Contacto = () => {
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true, margin: "0px" }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="space-y-12 md:space-y-16"
           >
@@ -1121,7 +1117,7 @@ const Contacto = () => {
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true, margin: "0px" }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-2"
           >
@@ -1244,7 +1240,7 @@ const ProjectDetail = () => {
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
               className="aspect-[4/5] overflow-hidden rounded-3xl shadow-xl border border-gray-100 group bg-white p-2"
             >
-              <img src={project.gallery?.[0] || project.image} alt={project.name} className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-1000" referrerPolicy="no-referrer" fetchPriority="high" />
+              <img src={project.gallery?.[0] || project.image} alt={project.name} className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-1000" referrerPolicy="no-referrer" fetchPriority="high" decoding="async" />
             </motion.div>
           </div>
           
@@ -1265,11 +1261,11 @@ const ProjectDetail = () => {
                   key={i} 
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
+                  viewport={{ once: true, margin: "0px" }}
                   transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                  className="break-inside-avoid shadow-lg rounded-3xl overflow-hidden border border-gray-100 group bg-white p-2 relative"
+                  className="break-inside-avoid shadow-sm rounded-3xl overflow-hidden border border-gray-100 group bg-white p-2 relative min-h-[250px] mb-6"
                 >
-                  <img src={img} alt={`Gallery Detail ${i + 1}`} className="w-full h-auto object-cover rounded-2xl group-hover:scale-[1.03] transition-transform duration-700" referrerPolicy="no-referrer" loading="lazy" />
+                  <img src={img} alt={`Gallery Detail ${i + 1}`} className="w-full h-auto object-cover rounded-2xl group-hover:scale-[1.03] transition-transform duration-700" referrerPolicy="no-referrer" loading="lazy" decoding="async"/>
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500 rounded-3xl m-2 pointer-events-none" />
                 </motion.div>
               ))}
