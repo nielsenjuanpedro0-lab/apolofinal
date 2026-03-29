@@ -33,7 +33,7 @@ import {
   Wrench,
   Check
 } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence, MotionConfig } from 'motion/react';
 
 // --- Data ---
 
@@ -1277,8 +1277,21 @@ const ProjectDetail = () => {
   );
 };
 
+
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth < 768 : false);
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  return isMobile;
+};
+
 export default function App() {
+  const isMobile = useIsMobile();
   return (
+    <MotionConfig reducedMotion={isMobile ? "always" : "user"}>
     <Router>
       <Layout>
         <Routes>
@@ -1292,5 +1305,6 @@ export default function App() {
         </Routes>
       </Layout>
     </Router>
+    </MotionConfig>
   );
 }
