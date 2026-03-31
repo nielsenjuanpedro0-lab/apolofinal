@@ -43,7 +43,7 @@ const PROJECTS = [
     name: 'Viggo 91',
     status: 'En venta',
     category: 'En venta',
-    description: 'Viviendas modernas con la posibilidad única de pago con granos a futuro. Un procedimiento seguro y confiable.',
+    description: 'Viviendas modernas en una ubicación privilegiada. Un procedimiento seguro y confiable.',
     fullDescriptionHtml: `
 <p class="mb-4">Venta desde el pozo de dos espectaculares dúplex ubicados sobre la importante Av. 91 entre las calles 42 y 40.</p>
       <p class="mb-4">Un lugar privilegiado a pocas cuadras del mágico parque Miguel Lillo, en Necochea, Prov. de Buenos Aires.</p>
@@ -58,7 +58,7 @@ const PROJECTS = [
       <p class="font-bold text-[#f27d26] mt-6">Costos de mantenimiento: sin expensas.</p>
     `,
     features: ['3 ambientes con balcón', 'Doble cochera', 'Patio propio', 'Financiación del 70%'],
-    financing: ['Contacto directo sin intermediarios', 'PAGÁ CON GRANOS A FUTURO', 'Resguardo de valor en ladrillos'],
+    financing: ['Contacto directo sin intermediarios', 'Excelente rentabilidad', 'Resguardo de valor en ladrillos'],
     image: '/optimized/Copia-de-1.8.webp',
     gallery: [
       '/optimized/Copia-de-1.8.webp',
@@ -162,14 +162,14 @@ const PROJECTS = [
       <h3 class="text-xl font-bold text-gray-100 mt-8 mb-3">Rentabilidad Asegurada</h3>
       <p class="mb-4">«Ares 22» combina excelencia y rentabilidad. Con departamentos de dos ambientes y nueve cocheras disponibles, esta es una oportunidad inmejorable para ingresar al mercado inmobiliario con éxito garantizado.</p>
       <h3 class="text-xl font-bold text-gray-100 mt-8 mb-3">FINANCIACIÓN EXCLUSIVA DESDE EL POZO</h3>
-      <p class="mb-4">Solo por esta oportunidad, con tan solo una <strong>RESERVA DEL 20%</strong> podés adquirir tu unidad mas una financiación de 24 cuotas en PESOS.</p>
+      <p class="mb-4">Solo por esta oportunidad, con tan solo una <strong>RESERVA DEL 20%</strong> podés adquirir tu unidad mas una financiación de 24 cuotas en <strong>PESOS</strong>.</p>
       <h3 class="text-xl font-bold text-gray-100 mt-8 mb-3">Ubicación Estratégica</h3>
       <p class="mb-4">Situado en la calle 22, entre las calles 77 y 79, este proyecto se encuentra a tan solo tres cuadras y media de la vital Avenida 10, que representa el principal corredor peatonal de la ciudad y a 7 cuadras de la playa. Aprovechando el crecimiento dinámico hacia la costa, este desarrollo atrae tanto a turistas como a residentes locales.</p>
       <h3 class="text-xl font-bold text-gray-100 mt-8 mb-3">Diseño y Calidad</h3>
       <p class="mb-4">Ofrecemos departamentos de más de 45 m², cada uno con balcones orientados tanto al frente como al contrafrente, además de cocheras y servicios esenciales como agua, cloacas, electricidad y gas. Tu inversión se traduce en comodidad y funcionalidad.</p>
       <p class="font-bold text-[#f27d26] mt-6">Costos de mantenimiento: sin expensas.</p>
     `,
-    features: ['Rentabilidad del 30%', 'Ideal alquiler temporario', 'Financiación 10 años en pesos'],
+    features: ['Rentabilidad del 30%', 'Ideal alquiler temporario', 'Financiación 10 años en <strong>PESOS</strong>'],
     financing: ['Financiación directa', 'Fideicomiso'],
     image: '/optimized/APOLO-ARES-1-1.webp',
     gallery: [
@@ -194,7 +194,7 @@ const PROJECTS = [
       <p class="mb-4">En plena calle 83 entre calles 24 y 26 se emplaza a solo 3 cuadras y media de la importantísima Av. 10, la cual es el sendero peatonal mas importante de la cuidad. Este proyecto aprovecha el crecimiento dinámico de la ciudad hacia la playa en donde capta justo el publico turístico como el local.</p>
       <p class="font-bold text-[#f27d26] mt-6">Costos de mantenimiento: sin expensas.</p>
     `,
-    features: ['Entrega noviembre del 2026', 'Ubicación privilegiada', 'Financiación en 48 cuotas en pesos'],
+    features: ['Entrega noviembre del 2026', 'Ubicación privilegiada', 'Financiación en 48 cuotas en <strong>PESOS</strong>'],
     financing: ['Financiación en hasta 24 cuotas', 'Venta desde el pozo'],
     image: '/optimized/Copia-de-Nueva-Fachada-1.webp',
     gallery: [
@@ -722,49 +722,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-24 bg-[#3b3b3b] overflow-hidden relative border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <motion.div 
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "0px" }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="grid md:grid-cols-2 gap-16 items-center"
-          >
-            <div>
-              <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-6">Financiación Exclusiva</p>
-              <h2 className="text-4xl md:text-6xl mb-8 leading-tight text-gray-100 font-bold tracking-tight">
-                Pagá con <br /><span className="text-[#f27d26]">Granos a Futuro.</span>
-              </h2>
-              <p className="text-lg text-gray-400 mb-10 leading-relaxed font-medium">
-                Un procedimiento seguro y confiable pensado para el sector agropecuario. Asegurá tu propiedad hoy y cancelá con tu producción futura.
-              </p>
-              <div className="grid grid-cols-1 gap-5 mb-10">
-                <div className="flex items-center gap-4 text-gray-300 font-medium bg-[#4a4a4a] px-4 py-3 rounded-lg shadow-sm border border-gray-800">
-                  <Check className="w-5 h-5 text-[#22c55e]" />
-                  Procedimiento seguro y transparente
-                </div>
-                <div className="flex items-center gap-4 text-gray-300 font-medium bg-[#4a4a4a] px-4 py-3 rounded-lg shadow-sm border border-gray-800">
-                  <Check className="w-5 h-5 text-[#22c55e]" />
-                  Sin intermediarios bancarios
-                </div>
-                <div className="flex items-center gap-4 text-gray-300 font-medium bg-[#4a4a4a] px-4 py-3 rounded-lg shadow-sm border border-gray-800">
-                  <Check className="w-5 h-5 text-[#22c55e]" />
-                  Capitalización inmediata en M2
-                </div>
-              </div>
-              <Link to="/financiacion" className="px-8 py-4 bg-[#22c55e] text-white hover:bg-[#16a34a] uppercase text-[10px] tracking-[0.3em] font-bold rounded-lg transition-all inline-block shadow-lg hover:shadow-xl hover:-translate-y-0.5">
-                Más sobre financiación
-              </Link>
-            </div>
-            <div className="relative">
-              <div className="aspect-square overflow-hidden rounded-3xl shadow-xl bg-[#4a4a4a] p-2">
-                <img src="/optimized/pago-con-granos-harvest.png" alt="Agro" className="w-full h-full object-cover rounded-2xl hover:scale-105 transition-transform duration-1000" referrerPolicy="no-referrer" loading="lazy" decoding="async" />
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+
 
       <section className="py-24 bg-[#3b3b3b] overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
@@ -917,7 +875,7 @@ const Financiacion = () => {
             <div className="space-y-6 mb-16 flex-grow">
               <div className="flex items-start gap-4 font-medium text-gray-300 bg-[#2A2A2A]/50 p-3 rounded-lg">
                 <Check className="w-5 h-5 text-[#22c55e] shrink-0 mt-0.5" />
-                <span>Cuotas fijas en pesos o dólares</span>
+                <span>Cuotas fijas en <strong>PESOS</strong> o dólares</span>
               </div>
               <div className="flex items-start gap-4 font-medium text-gray-300 bg-[#2A2A2A]/50 p-3 rounded-lg">
                 <Check className="w-5 h-5 text-[#22c55e] shrink-0 mt-0.5" />
@@ -933,36 +891,7 @@ const Financiacion = () => {
             </Link>
           </motion.div>
 
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "0px" }}
-            transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="bg-gradient-to-br from-[#f8faf8] to-white p-8 md:p-16 rounded-3xl border border-gray-800 flex flex-col h-full shadow-xl hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(34,197,94,0.15)] transition-all duration-500 group"
-          >
-            <p className="text-[#22c55e] text-[10px] uppercase tracking-[0.2em] font-semibold mb-8">Plan Agro</p>
-            <h2 className="text-3xl md:text-4xl mb-8 font-bold font-sans text-gray-100">Canje de Granos</h2>
-            <p className="text-gray-400 text-lg mb-12 leading-relaxed font-medium">
-              Utilizá tu producción agropecuaria como moneda de cambio. Un sistema ágil y seguro para el productor de hoy, optimizando su capitalización.
-            </p>
-            <div className="space-y-6 mb-16 flex-grow">
-              <div className="flex items-start gap-4 font-medium text-gray-300 bg-[#4a4a4a] p-3 rounded-lg shadow-sm border border-gray-800/50">
-                <Check className="w-5 h-5 text-[#22c55e] shrink-0 mt-0.5" />
-                <span>Canje directo por granos a futuro</span>
-              </div>
-              <div className="flex items-start gap-4 font-medium text-gray-300 bg-[#4a4a4a] p-3 rounded-lg shadow-sm border border-gray-800/50">
-                <Check className="w-5 h-5 text-[#22c55e] shrink-0 mt-0.5" />
-                <span>Importantes beneficios impositivos</span>
-              </div>
-              <div className="flex items-start gap-4 font-medium text-gray-300 bg-[#4a4a4a] p-3 rounded-lg shadow-sm border border-gray-800/50">
-                <Check className="w-5 h-5 text-[#22c55e] shrink-0 mt-0.5" />
-                <span>Resguardo de valor en ladrillos</span>
-              </div>
-            </div>
-            <a href="https://www.agrocanje.com.ar/" target="_blank" rel="noreferrer" className="w-max px-8 py-4 bg-[#22c55e] hover:bg-[#16a34a] hover:-translate-y-1 shadow-[0_10px_30px_-10px_rgba(34,197,94,0.5)] hover:shadow-[0_15px_40px_-10px_rgba(34,197,94,0.6)] active:scale-95 text-white font-bold rounded-lg transition-all duration-300 text-sm uppercase tracking-wider items-center flex gap-2">
-              Ver Agrocanje <ArrowRight size={18} />
-            </a>
-          </motion.div>
+
         </div>
       </div>
     </div>
