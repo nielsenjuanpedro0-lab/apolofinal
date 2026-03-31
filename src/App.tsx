@@ -759,7 +759,7 @@ const Home = () => {
             </div>
             <div className="relative">
               <div className="aspect-square overflow-hidden rounded-3xl shadow-xl bg-[#4a4a4a] p-2">
-                <img src="/optimized/APOLO-ARES-5-1.webp" alt="Agro" className="w-full h-full object-cover rounded-2xl hover:scale-105 transition-transform duration-1000" referrerPolicy="no-referrer" loading="lazy" decoding="async" />
+                <img src="/optimized/pago-con-granos-harvest.png" alt="Agro" className="w-full h-full object-cover rounded-2xl hover:scale-105 transition-transform duration-1000" referrerPolicy="no-referrer" loading="lazy" decoding="async" />
               </div>
             </div>
           </motion.div>
