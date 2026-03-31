@@ -39,33 +39,6 @@ import { motion, AnimatePresence, MotionConfig } from 'motion/react';
 
 const PROJECTS = [
   {
-    id: 'ares-6',
-    name: 'Ares 6',
-    status: 'Finalizado',
-    category: 'Finalizados',
-    description: 'Departamentos de 2 ambientes ideales para alquiler temporario. Incluye local en planta baja y 9 cocheras cubiertas.',
-    fullDescriptionHtml: `
-<p class="mb-4">El proyecto <strong>Apolo Ares 6</strong> está concebido como la opción ideal para quienes buscan una inversión segura o un espacio perfecto para alquiler temporario.</p>
-      <p class="mb-4">Combina una arquitectura contemporánea con espacios adaptables a la vida moderna, ofreciendo departamentos de 2 ambientes totalmente funcionales.</p>
-      <ul class="list-disc pl-5 mb-4 space-y-2">
-        <li>Departamentos de 2 ambientes.</li>
-        <li>Ideal para alquiler temporario.</li>
-        <li>Local en planta baja.</li>
-        <li>9 Cocheras Disponibles Cubiertas.</li>
-      </ul>
-      <p class="font-bold text-[#f27d26] mt-6">Financiación en hasta 24 cuotas. Venta desde el pozo y pre-venta.</p>
-    `,
-    features: ['Departamentos de 2 ambientes Adaptables', 'Local en planta baja', '9 Cocheras Disponibles Cubiertas', 'Ideal para alquiler temporario'],
-    financing: ['Financiación en hasta 24 cuotas', 'Venta desde el pozo y pre-venta', 'Fideicomiso al costo'],
-    image: '/optimized/APOLO-ARES-6-1.webp',
-    gallery: [
-      '/optimized/APOLO-ARES-6-1.webp',
-      '/optimized/APOLO-ARES-3-1.webp',
-      '/optimized/APOLO-ARES-4-1.webp',
-      '/optimized/APOLO-ARES-1-1.webp'
-    ]
-  },
-  {
     id: 'viggo-91',
     name: 'Viggo 91',
     status: 'En venta',
@@ -240,8 +213,8 @@ const PROJECTS = [
     ]
   },
   {
-    id: 'orfeo',
-    name: 'Orfeo',
+    id: 'morfeo',
+    name: 'Morfeo',
     status: 'Finalizado',
     category: 'Finalizados',
     description: 'Unidades pensadas para la vida moderna, con espacios amplios y luminosos.',
@@ -324,7 +297,7 @@ const PROJECTS = [
   }
 ];
 
-const orderArr = ['viggo-91', 'ares-22', 'delfos-83', 'zeus-543', 'orfeo', 'dafne-42'];
+const orderArr = ['viggo-91', 'ares-22', 'delfos-83', 'zeus-543', 'morfeo', 'dafne-42'];
 PROJECTS.sort((a, b) => { const indexA = orderArr.indexOf(a.id); const indexB = orderArr.indexOf(b.id); if (indexA === -1) return 1; if (indexB === -1) return -1; return indexA - indexB; });
 
 // --- Components ---
@@ -716,10 +689,13 @@ const Home = () => {
                 </Link>
                 <div className="p-8 flex flex-col flex-grow z-10 relative">
                   <div className="flex flex-wrap gap-2 mb-4">
-                    <span className="px-3 py-1 bg-[#3b3b3b] text-[#f27d26] rounded-full text-[10px] tracking-wider font-bold border border-[#f27d26]/20 shadow-sm">{project.status}</span>
-                  {project.category !== project.status && (
-                    <span className="px-3 py-1 bg-[#4a4a4a] text-gray-300 rounded-full text-[10px] tracking-wider font-bold border border-gray-600 shadow-sm">{project.category}</span>
-                  )}
+                    <span className={`px-3 py-1 rounded-full text-[10px] tracking-wider font-bold shadow-sm ${
+                      project.status === 'En venta'
+                        ? 'bg-[#22c55e]/10 text-[#22c55e] border border-[#22c55e]/30'
+                        : project.status === 'En desarrollo'
+                        ? 'bg-[#f27d26]/10 text-[#f27d26] border border-[#f27d26]/20'
+                        : 'bg-[#3b3b3b] text-gray-300 border border-gray-600'
+                    }`}>{project.status}</span>
                   </div>
                   <h3 className="text-2xl font-bold text-gray-100 mb-6 uppercase group-hover:text-[#f27d26] transition-colors duration-300">{project.name}</h3>
                   <div className="flex flex-col gap-3 mb-8">
@@ -882,10 +858,13 @@ const Proyectos = () => {
                 </Link>
               <div className="p-8 flex flex-col flex-grow z-10 relative">
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-3 py-1 bg-[#3b3b3b] text-[#f27d26] rounded-full text-[10px] tracking-wider font-bold border border-[#f27d26]/20 shadow-sm">{project.status}</span>
-                  {project.category !== project.status && (
-                    <span className="px-3 py-1 bg-[#4a4a4a] text-gray-300 rounded-full text-[10px] tracking-wider font-bold border border-gray-600 shadow-sm">{project.category}</span>
-                  )}
+                  <span className={`px-3 py-1 rounded-full text-[10px] tracking-wider font-bold shadow-sm ${
+                    project.status === 'En venta'
+                      ? 'bg-[#22c55e]/10 text-[#22c55e] border border-[#22c55e]/30'
+                      : project.status === 'En desarrollo'
+                      ? 'bg-[#f27d26]/10 text-[#f27d26] border border-[#f27d26]/20'
+                      : 'bg-[#3b3b3b] text-gray-300 border border-gray-600'
+                  }`}>{project.status}</span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-100 mb-6 uppercase group-hover:text-[#f27d26] transition-colors duration-300">{project.name}</h3>
                 <div className="flex flex-col gap-3 mb-8">
@@ -1168,10 +1147,13 @@ const ProjectDetail = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-gray-700 pb-12 mb-12">
           <div>
             <div className="flex items-center gap-4 mb-6">
-              <span className="px-4 py-1.5 border border-[#f27d26] text-[#f27d26] rounded-full text-xs font-bold bg-[#f27d26]/5 uppercase tracking-widest">{project.status}</span>
-              {project.category !== project.status && (
-                <span className="px-4 py-1.5 bg-[#404040] text-gray-400 rounded-full text-xs font-bold uppercase tracking-widest">{project.category}</span>
-              )}
+              <span className={`px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest ${
+                project.status === 'En venta'
+                  ? 'bg-[#22c55e]/10 text-[#22c55e] border border-[#22c55e]/30'
+                  : project.status === 'En desarrollo'
+                  ? 'bg-[#f27d26]/10 text-[#f27d26] border border-[#f27d26]/20'
+                  : 'bg-[#404040] text-gray-300 border border-gray-700'
+              }`}>{project.status}</span>
             </div>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight mb-6 font-sans text-gray-100">
               {project.name}
