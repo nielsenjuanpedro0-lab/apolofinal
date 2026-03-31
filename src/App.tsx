@@ -41,8 +41,8 @@ const PROJECTS = [
   {
     id: 'ares-6',
     name: 'Ares 6',
-    status: 'En construcción',
-    category: 'En desarrollo',
+    status: 'Finalizado',
+    category: 'Finalizados',
     description: 'Departamentos de 2 ambientes ideales para alquiler temporario. Incluye local en planta baja y 9 cocheras cubiertas.',
     fullDescriptionHtml: `
 <p class="mb-4">El proyecto <strong>Apolo Ares 6</strong> está concebido como la opción ideal para quienes buscan una inversión segura o un espacio perfecto para alquiler temporario.</p>
@@ -68,13 +68,13 @@ const PROJECTS = [
   {
     id: 'viggo-91',
     name: 'Viggo 91',
-    status: 'Próximo lanzamiento',
-    category: 'En desarrollo',
+    status: 'En venta',
+    category: 'En venta',
     description: 'Viviendas modernas con la posibilidad única de pago con granos a futuro. Un procedimiento seguro y confiable.',
     fullDescriptionHtml: `
 <p class="mb-4">Venta desde el pozo de dos espectaculares dúplex ubicados sobre la importante Av. 91 entre las calles 42 y 40.</p>
       <p class="mb-4">Un lugar privilegiado a pocas cuadras del mágico parque Miguel Lillo, en Necochea, Prov. de Buenos Aires.</p>
-      <h3 class="text-xl font-bold text-gray-900 mt-8 mb-3">Detalles</h3>
+      <h3 class="text-xl font-bold text-gray-100 mt-8 mb-3">Detalles</h3>
       <ul class="list-disc pl-5 mb-4 space-y-2">
         <li><strong>Ubicación:</strong> Av. 91 N° 1781 e/ 87 y 85.</li>
         <li><strong>Metros cuadrados cubiertos:</strong> 105m² y 95m² respectivamente.</li>
@@ -84,7 +84,7 @@ const PROJECTS = [
       </ul>
       <p class="font-bold text-[#f27d26] mt-6">Costos de mantenimiento: sin expensas.</p>
     `,
-    features: ['Pagá con granos a futuro', 'Servicios completos', 'Procedimiento seguro y confiable', 'Sin expensas'],
+    features: ['3 ambientes con balcón', 'Doble cochera', 'Patio propio', 'Financiación del 70%'],
     financing: ['Contacto directo sin intermediarios', 'PAGÁ CON GRANOS A FUTURO', 'Resguardo de valor en ladrillos'],
     image: '/optimized/Copia-de-1.8.webp',
     gallery: [
@@ -102,18 +102,18 @@ const PROJECTS = [
   {
     id: 'dafne-42',
     name: 'Dafne 42',
-    status: 'Obra finalizada',
+    status: 'Finalizado',
     category: 'Finalizados',
     description: 'Departamentos de 1, 2 y 3 ambientes con patio propio y cocheras disponibles. Entrega inmediata.',
     fullDescriptionHtml: `
-<h3 class="text-xl font-bold text-gray-900 mb-3">Departamentos a estrenar</h3>
+<h3 class="text-xl font-bold text-gray-100 mb-3">Departamentos a estrenar</h3>
       <p class="mb-4">Balcón a la avenida. Cerca del parque Miguel Lillo y de la playa.</p>
       <ul class="list-disc pl-5 mb-4 space-y-2">
         <li><strong>Tipo:</strong> DEPARTAMENTO</li>
         <li><strong>Ambientes:</strong> 2</li>
         <li><strong>Metros cuadrados cubiertos:</strong> 50m²</li>
       </ul>
-      <h3 class="text-xl font-bold text-gray-900 mt-8 mb-3">Terminaciones</h3>
+      <h3 class="text-xl font-bold text-gray-100 mt-8 mb-3">Terminaciones</h3>
       <ul class="list-disc pl-5 mb-4 space-y-2">
         <li>Pisos de Porcelanato.</li>
         <li>Cocina con alacena y bajo mesada hecha a medida.</li>
@@ -186,22 +186,17 @@ const PROJECTS = [
     description: 'Proyecto de vanguardia con unidades funcionales y diseño contemporáneo.',
     fullDescriptionHtml: `
 <p class="mb-4">Presentamos <strong>«Ares 22»</strong>, una auténtica joya del sector inmobiliario a 7 cuadras de la playa de NECOCHEA. Este proyecto representa una oportunidad única para inversores con una visión prospectiva.</p>
-      
-      <h3 class="text-xl font-bold text-gray-900 mt-8 mb-3">Rentabilidad Asegurada</h3>
+      <h3 class="text-xl font-bold text-gray-100 mt-8 mb-3">Rentabilidad Asegurada</h3>
       <p class="mb-4">«Ares 22» combina excelencia y rentabilidad. Con departamentos de dos ambientes y nueve cocheras disponibles, esta es una oportunidad inmejorable para ingresar al mercado inmobiliario con éxito garantizado.</p>
-      
-      <h3 class="text-xl font-bold text-gray-900 mt-8 mb-3">FINANCIACIÓN EXCLUSIVA DESDE EL POZO</h3>
+      <h3 class="text-xl font-bold text-gray-100 mt-8 mb-3">FINANCIACIÓN EXCLUSIVA DESDE EL POZO</h3>
       <p class="mb-4">Solo por esta oportunidad, con tan solo una <strong>RESERVA DEL 20%</strong> podés adquirir tu unidad mas una financiación de 24 cuotas en PESOS.</p>
-      
-      <h3 class="text-xl font-bold text-gray-900 mt-8 mb-3">Ubicación Estratégica</h3>
+      <h3 class="text-xl font-bold text-gray-100 mt-8 mb-3">Ubicación Estratégica</h3>
       <p class="mb-4">Situado en la calle 22, entre las calles 77 y 79, este proyecto se encuentra a tan solo tres cuadras y media de la vital Avenida 10, que representa el principal corredor peatonal de la ciudad y a 7 cuadras de la playa. Aprovechando el crecimiento dinámico hacia la costa, este desarrollo atrae tanto a turistas como a residentes locales.</p>
-      
-      <h3 class="text-xl font-bold text-gray-900 mt-8 mb-3">Diseño y Calidad</h3>
+      <h3 class="text-xl font-bold text-gray-100 mt-8 mb-3">Diseño y Calidad</h3>
       <p class="mb-4">Ofrecemos departamentos de más de 45 m², cada uno con balcones orientados tanto al frente como al contrafrente, además de cocheras y servicios esenciales como agua, cloacas, electricidad y gas. Tu inversión se traduce en comodidad y funcionalidad.</p>
-      
       <p class="font-bold text-[#f27d26] mt-6">Costos de mantenimiento: sin expensas.</p>
     `,
-    features: ['Diseño moderno', 'Alta rentabilidad esperada', 'Unidades luminosas'],
+    features: ['Rentabilidad del 30%', 'Ideal alquiler temporario', 'Financiación 10 años en pesos'],
     financing: ['Financiación directa', 'Fideicomiso'],
     image: '/optimized/APOLO-ARES-1-1.webp',
     gallery: [
@@ -226,7 +221,7 @@ const PROJECTS = [
       <p class="mb-4">En plena calle 83 entre calles 24 y 26 se emplaza a solo 3 cuadras y media de la importantísima Av. 10, la cual es el sendero peatonal mas importante de la cuidad. Este proyecto aprovecha el crecimiento dinámico de la ciudad hacia la playa en donde capta justo el publico turístico como el local.</p>
       <p class="font-bold text-[#f27d26] mt-6">Costos de mantenimiento: sin expensas.</p>
     `,
-    features: ['Terminaciones de lujo', 'Ubicación privilegiada', 'Seguridad garantizada'],
+    features: ['Entrega noviembre del 2026', 'Ubicación privilegiada', 'Financiación en 48 cuotas en pesos'],
     financing: ['Financiación en hasta 24 cuotas', 'Venta desde el pozo'],
     image: '/optimized/Copia-de-Nueva-Fachada-1.webp',
     gallery: [
@@ -247,11 +242,11 @@ const PROJECTS = [
   {
     id: 'orfeo',
     name: 'Orfeo',
-    status: 'En desarrollo',
-    category: 'En desarrollo',
+    status: 'Finalizado',
+    category: 'Finalizados',
     description: 'Unidades pensadas para la vida moderna, con espacios amplios y luminosos.',
     fullDescriptionHtml: `
-<h3 class="text-xl font-bold text-gray-900 mb-3">En Venta - Posesión inmediata</h3>
+<h3 class="text-xl font-bold text-gray-100 mb-3">En Venta - Posesión inmediata</h3>
       <ul class="list-disc pl-5 mb-4 space-y-2">
         <li>Todos los servicios.</li>
         <li>Unidad a estrenar sin expensas.</li>
@@ -259,14 +254,14 @@ const PROJECTS = [
         <li>Entrada para dos vehículos chicos o camioneta.</li>
         <li>Patio trasero de 13 metros de largo cerrado.</li>
       </ul>
-      <h3 class="text-xl font-bold text-gray-900 mt-8 mb-3">Detalles del Inmueble</h3>
+      <h3 class="text-xl font-bold text-gray-100 mt-8 mb-3">Detalles del Inmueble</h3>
       <ul class="list-disc pl-5 mb-4 space-y-2">
         <li><strong>Tipo:</strong> DEPARTAMENTO</li>
         <li><strong>Ambientes:</strong> 2</li>
         <li><strong>Metros cubiertos:</strong> 50m²</li>
         <li><strong>Metros semicubiertos:</strong> 45m²</li>
       </ul>
-      <h3 class="text-xl font-bold text-gray-900 mt-8 mb-3">Terminaciones</h3>
+      <h3 class="text-xl font-bold text-gray-100 mt-8 mb-3">Terminaciones</h3>
       <ul class="list-disc pl-5 mb-4 space-y-2">
         <li>Pisos de Porcelanatos.</li>
         <li>Cocina con alacena y bajo mesada hecha a medida.</li>
@@ -297,7 +292,7 @@ const PROJECTS = [
   {
     id: 'zeus-543',
     name: 'Zeus 543',
-    status: 'Obra finalizada',
+    status: 'Finalizado',
     category: 'Finalizados',
     description: 'Solidez y diseño en un proyecto ya entregado y consolidado.',
     fullDescriptionHtml: `
@@ -329,6 +324,9 @@ const PROJECTS = [
   }
 ];
 
+const orderArr = ['viggo-91', 'ares-22', 'delfos-83', 'zeus-543', 'orfeo', 'dafne-42'];
+PROJECTS.sort((a, b) => { const indexA = orderArr.indexOf(a.id); const indexB = orderArr.indexOf(b.id); if (indexA === -1) return 1; if (indexB === -1) return -1; return indexA - indexB; });
+
 // --- Components ---
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
@@ -356,8 +354,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   const isHomePage = location.pathname === '/';
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#fafafa] font-sans">
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md py-4 shadow-sm border-b border-gray-100 text-gray-900' : `bg-transparent py-6 ${isHomePage ? 'text-white' : 'text-gray-900'}`}`}>
+    <div className="min-h-screen flex flex-col bg-[#3b3b3b] font-sans">
+      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-[#4a4a4a]/95 backdrop-blur-md py-4 shadow-sm border-b border-gray-800 text-gray-100' : `bg-transparent py-6 ${isHomePage ? 'text-white' : 'text-gray-100'}`}`}>
         <div className="max-w-7xl mx-auto px-6 md:px-8 flex justify-between items-center">
           <Link to="/" className="flex items-center gap-4 group">
             <img 
@@ -378,7 +376,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   className={`relative text-sm font-medium transition-all duration-300 group hover:text-[#f27d26] ${
                     location.pathname === link.path 
                       ? 'text-[#f27d26]' 
-                      : (scrolled || !isHomePage ? 'text-gray-600' : 'text-white/80')
+                      : (scrolled || !isHomePage ? 'text-gray-400' : 'text-white/80')
                   }`}
                 >
                   {link.name}
@@ -390,7 +388,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 className={`relative text-sm font-medium transition-all duration-300 group hover:text-[#f27d26] ${
                   location.pathname === '/contacto' 
                     ? 'text-[#f27d26]' 
-                    : (scrolled || !isHomePage ? 'text-gray-600' : 'text-white/80')
+                    : (scrolled || !isHomePage ? 'text-gray-400' : 'text-white/80')
                 }`}
               >
                 Contacto
@@ -413,15 +411,15 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <div className="flex flex-col gap-1.5 items-end">
               <motion.div 
                 animate={isMenuOpen ? { rotate: 45, y: 8, width: 24 } : { rotate: 0, y: 0, width: 24 }}
-                className={`h-px transition-all duration-300 ${scrolled || isMenuOpen || !isHomePage ? 'bg-gray-900' : 'bg-white'}`}
+                className={`h-px transition-all duration-300 ${scrolled || isMenuOpen || !isHomePage ? 'bg-gray-900' : 'bg-[#4a4a4a]'}`}
               />
               <motion.div 
                 animate={isMenuOpen ? { opacity: 0, x: 10 } : { opacity: 1, x: 0, width: 16 }}
-                className={`h-px transition-all duration-300 ${scrolled || isMenuOpen || !isHomePage ? 'bg-gray-900' : 'bg-white'}`}
+                className={`h-px transition-all duration-300 ${scrolled || isMenuOpen || !isHomePage ? 'bg-gray-900' : 'bg-[#4a4a4a]'}`}
               />
               <motion.div 
                 animate={isMenuOpen ? { rotate: -45, y: -8, width: 24 } : { rotate: 0, y: 0, width: 24 }}
-                className={`h-px transition-all duration-300 ${scrolled || isMenuOpen || !isHomePage ? 'bg-gray-900' : 'bg-white'}`}
+                className={`h-px transition-all duration-300 ${scrolled || isMenuOpen || !isHomePage ? 'bg-gray-900' : 'bg-[#4a4a4a]'}`}
               />
             </div>
           </button>
@@ -435,7 +433,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 z-40 bg-white/95 backdrop-blur-xl flex flex-col md:hidden pt-32 pb-12"
+            className="fixed inset-0 z-40 bg-[#4a4a4a]/95 backdrop-blur-xl flex flex-col md:hidden pt-32 pb-12"
           >
             <div className="flex-grow flex flex-col items-center justify-center gap-10 px-8">
               {[...navLinks, { name: 'Contacto', path: '/contacto' }].map((link, i) => (
@@ -449,7 +447,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                     to={link.path}
                     onClick={() => setIsMenuOpen(false)}
                     className={`text-3xl font-bold tracking-wide transition-all duration-300 ${
-                      location.pathname === link.path ? 'text-[#f27d26]' : 'text-gray-900 hover:text-[#f27d26]'
+                      location.pathname === link.path ? 'text-[#f27d26]' : 'text-gray-100 hover:text-[#f27d26]'
                     }`}
                   >
                     {link.name}
@@ -482,7 +480,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         {children}
       </main>
 
-      <footer className="bg-white text-gray-900 pt-32 pb-16 border-t border-gray-200">
+      <footer className="bg-[#4a4a4a] text-gray-100 pt-32 pb-16 border-t border-gray-700">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-12 gap-16 mb-24">
             <div className="md:col-span-5">
@@ -494,21 +492,21 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   referrerPolicy="no-referrer"
                   loading="lazy" decoding="async"/>
               </Link>
-              <p className="text-gray-600 max-w-sm text-lg font-medium leading-relaxed mb-10">
-                Desarrollamos el futuro de Necochea con una visión arquitectónica que prioriza la calidad y el diseño.
+              <p className="text-gray-400 max-w-sm text-lg font-medium leading-relaxed mb-10">
+                Desarrollamos el futuro de Necochea con una visión arquitectónica que prioriza la calidad, el diseño y la rentabilidad de nuestros inversores.
               </p>
               <div className="flex gap-6">
-                <a href="https://www.facebook.com/apoloconstructora" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-[#f27d26] hover:text-white hover:border-[#f27d26] transition-all text-gray-500">
+                <a href="https://www.facebook.com/apoloconstructora" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-[#f27d26] hover:text-white hover:border-[#f27d26] transition-all text-gray-500">
                   <Facebook size={18} />
                 </a>
-                <a href="https://www.instagram.com/apolo.construcciones/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-[#f27d26] hover:text-white hover:border-[#f27d26] transition-all text-gray-500">
+                <a href="https://www.instagram.com/apolo.construcciones/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-[#f27d26] hover:text-white hover:border-[#f27d26] transition-all text-gray-500">
                   <Instagram size={18} />
                 </a>
               </div>
             </div>
             <div className="md:col-span-2">
               <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-8">Navegación</p>
-              <ul className="space-y-4 font-medium text-gray-600">
+              <ul className="space-y-4 font-medium text-gray-400">
                 {navLinks.map(link => (
                   <li key={link.name}><Link to={link.path} className="hover:text-[#f27d26] transition-colors">{link.name}</Link></li>
                 ))}
@@ -519,22 +517,22 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               <div className="grid grid-cols-1 gap-8">
                 <div>
                   <p className="text-gray-400 text-[10px] uppercase tracking-[0.2em] font-semibold mb-2">Oficina</p>
-                  <p className="text-xl font-bold text-gray-900">Calle 62 N° 3124, Necochea</p>
+                  <p className="text-xl font-bold text-gray-100">Av. 91 1779, Necochea</p>
                 </div>
                 <div className="flex flex-col md:flex-row gap-8 md:gap-16">
                   <div>
                     <p className="text-gray-400 text-[10px] uppercase tracking-[0.2em] font-semibold mb-2">Llamanos</p>
-                    <p className="text-xl font-bold text-gray-900">+54 9 2262 506588</p>
+                    <p className="text-xl font-bold text-gray-100">+54 9 2262 506588</p>
                   </div>
                   <div>
                     <p className="text-gray-400 text-[10px] uppercase tracking-[0.2em] font-semibold mb-2">Email</p>
-                    <p className="text-xl font-bold text-gray-900">info@apoloconstrucciones.com.ar</p>
+                    <p className="text-xl font-bold text-gray-100">info@apoloconstrucciones.com.ar</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500 font-medium">
+          <div className="pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500 font-medium">
             <p>&copy; {new Date().getFullYear()} Apolo Construcciones. Todos los derechos reservados.</p>
             <div className="flex gap-6">
               <a href="#" className="hover:text-[#f27d26] transition-colors">Términos y Condiciones</a>
@@ -553,7 +551,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor" stroke="none">
           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.405-.883-.733-1.48-1.638-1.653-1.935-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
         </svg>
-        <span className="absolute right-full mr-4 bg-white text-gray-900 px-4 py-2 rounded-lg text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-xl border border-gray-100">
+        <span className="absolute right-full mr-4 bg-[#4a4a4a] text-gray-100 px-4 py-2 rounded-lg text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-xl border border-gray-800">
           ¿En qué podemos ayudarte?
         </span>
       </a>
@@ -591,7 +589,7 @@ const Home = () => {
   }, [carouselItems.length]);
 
   return (
-    <div className="bg-apolo-dark">
+    <div className="bg-[#4a4a4a]">
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <AnimatePresence>
@@ -627,7 +625,7 @@ const Home = () => {
               variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } } }}
               className="text-4xl md:text-6xl lg:text-7xl font-sans font-black text-white leading-tight mb-4"
             >
-              Descubrí tu Casa Propia.
+              Tu Proxima Inversión
             </motion.h1>
 
             <motion.p 
@@ -670,7 +668,7 @@ const Home = () => {
               aria-label={`Go to slide ${index + 1}`}
             >
               <div className={`h-2 rounded-full transition-all duration-500 ${
-                index === currentIndex ? 'w-8 bg-[#f27d26]' : 'w-2 bg-white/50 group-hover:bg-white/80'
+                index === currentIndex ? 'w-8 bg-[#f27d26]' : 'w-2 bg-[#4a4a4a]/50 group-hover:bg-[#4a4a4a]/80'
               }`} />
             </button>
           ))}
@@ -688,50 +686,9 @@ const Home = () => {
         </motion.div>
       </section>
 
-      <section className="py-24 bg-[#fafafa] overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div 
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "0px" }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="grid md:grid-cols-2 gap-16 items-center"
-          >
-            <div className="relative">
-              <div className="aspect-[4/5] overflow-hidden rounded-3xl shadow-xl">
-                <img 
-                  src="/optimized/APOLO-ARES-6-1.webp" 
-                  alt="Architecture" 
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
-                  referrerPolicy="no-referrer" loading="lazy" decoding="async" />
-              </div>
-              <div className="absolute -bottom-12 -right-12 w-64 h-80 bg-white shadow-2xl border border-gray-100 p-12 flex flex-col justify-end hidden md:flex rounded-3xl">
-                <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-4">Trayectoria</p>
-                <h4 className="text-gray-900 text-4xl font-bold">+15</h4>
-                <p className="text-gray-500 text-xs uppercase tracking-widest mt-2">Años de Excelencia</p>
-              </div>
-            </div>
-            <div>
-              <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-6">Sobre Nosotros</p>
-              <h2 className="text-4xl md:text-6xl mb-8 leading-tight text-gray-900 font-bold tracking-tight">
-                Construimos <br /><span className="text-[#f27d26]">Legados.</span>
-              </h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed font-medium">
-                En Apolo Construcciones, no solo edificamos estructuras; creamos hogares y oportunidades de inversión que perduran. Nuestra filosofía se basa en la honestidad, la calidad constructiva y el respeto por el entorno.
-              </p>
-              <p className="text-lg text-gray-600 mb-10 leading-relaxed font-medium">
-                Cada proyecto es una pieza única de arquitectura contemporánea, diseñada para maximizar el confort y la rentabilidad de nuestros clientes en Necochea.
-              </p>
-              <Link to="/nosotros" className="group flex items-center gap-4 text-gray-900 uppercase text-[10px] tracking-[0.3em] font-bold">
-                Nuestra Historia
-                <div className="w-12 h-px bg-[#f27d26] group-hover:w-20 transition-all duration-500"></div>
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      
 
-      <section className="py-24 bg-white overflow-hidden">
+      <section className="py-24 bg-[#4a4a4a] overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
@@ -740,7 +697,7 @@ const Home = () => {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-100 tracking-tight">
               Nuestros Emprendimientos
             </h2>
           </motion.div>
@@ -752,26 +709,28 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "0px" }}
                 transition={{ duration: 0.8, delay: index * 0.2, ease: [0.22, 1, 0.36, 1] }}
-                className="bg-[#fafafa] rounded-3xl shadow-md border border-gray-100 overflow-hidden flex flex-col hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(242,125,38,0.15)] transition-all duration-500 group"
+                className="bg-[#3b3b3b] rounded-3xl shadow-md border border-gray-800 overflow-hidden flex flex-col hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(242,125,38,0.15)] transition-all duration-500 group"
               >
-                <div className="aspect-[4/3] overflow-hidden relative bg-white p-2">
+                <Link to={`/proyectos/${project.id}`} className="block aspect-[4/3] overflow-hidden relative bg-[#3b3b3b] p-2 group shadow-inner">
                   <img src={project.image} alt={project.name} className="w-full h-full object-cover rounded-2xl transition-transform duration-700 ease-out group-hover:scale-110" referrerPolicy="no-referrer" loading="lazy" decoding="async"/>
-                </div>
+                </Link>
                 <div className="p-8 flex flex-col flex-grow z-10 relative">
                   <div className="flex flex-wrap gap-2 mb-4">
-                    <span className="px-3 py-1 bg-white text-[#f27d26] rounded-full text-xs font-bold border border-[#f27d26]/20 shadow-sm">{project.status}</span>
-                    <span className="px-3 py-1 bg-white text-gray-500 rounded-full text-xs font-bold border border-gray-200 shadow-sm">{project.category}</span>
+                    <span className="px-3 py-1 bg-[#3b3b3b] text-[#f27d26] rounded-full text-[10px] tracking-wider font-bold border border-[#f27d26]/20 shadow-sm">{project.status}</span>
+                  {project.category !== project.status && (
+                    <span className="px-3 py-1 bg-[#4a4a4a] text-gray-300 rounded-full text-[10px] tracking-wider font-bold border border-gray-600 shadow-sm">{project.category}</span>
+                  )}
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6 uppercase group-hover:text-[#f27d26] transition-colors duration-300">{project.name}</h3>
+                  <h3 className="text-2xl font-bold text-gray-100 mb-6 uppercase group-hover:text-[#f27d26] transition-colors duration-300">{project.name}</h3>
                   <div className="flex flex-col gap-3 mb-8">
                     {project.features.map((feature, i) => (
-                      <div key={i} className="flex items-start gap-3 text-gray-600 text-sm font-medium group-hover:text-gray-900 transition-colors duration-300">
+                      <div key={i} className="flex items-start gap-3 text-gray-400 text-sm font-medium group-hover:text-gray-100 transition-colors duration-300">
                         <Check className="w-4 h-4 text-[#22c55e] shrink-0 mt-0.5" />
                         <span>{feature}</span>
                       </div>
                     ))}
                   </div>
-                  <Link to={`/proyectos/${project.id}`} className="mt-auto w-max px-6 py-3 bg-white border border-gray-200 hover:border-[#f27d26] hover:bg-[#f27d26] text-gray-900 hover:text-white font-bold rounded-lg transition-colors text-sm group-hover:shadow-lg">
+                  <Link to={`/proyectos/${project.id}`} className="mt-auto w-max px-6 py-3 bg-[#4a4a4a] border border-gray-700 hover:border-[#f27d26] hover:bg-[#f27d26] text-gray-100 hover:text-white font-bold rounded-lg transition-colors text-sm group-hover:shadow-lg">
                     Ver Detalles
                   </Link>
                 </div>
@@ -779,7 +738,7 @@ const Home = () => {
             ))}
           </div>
           <div className="mt-16 text-center">
-            <Link to="/proyectos" className="inline-flex items-center gap-4 text-gray-900 uppercase text-[10px] tracking-[0.3em] font-bold group">
+            <Link to="/proyectos" className="inline-flex items-center gap-4 text-gray-100 uppercase text-[10px] tracking-[0.3em] font-bold group">
               Ver Todos Los Proyectos
               <div className="w-12 h-px bg-[#f27d26] group-hover:w-20 transition-all duration-500"></div>
             </Link>
@@ -787,7 +746,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-24 bg-[#fafafa] overflow-hidden relative border-t border-gray-100">
+      <section className="py-24 bg-[#3b3b3b] overflow-hidden relative border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <motion.div 
             initial={{ opacity: 0, y: 40 }}
@@ -798,22 +757,22 @@ const Home = () => {
           >
             <div>
               <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-6">Financiación Exclusiva</p>
-              <h2 className="text-4xl md:text-6xl mb-8 leading-tight text-gray-900 font-bold tracking-tight">
+              <h2 className="text-4xl md:text-6xl mb-8 leading-tight text-gray-100 font-bold tracking-tight">
                 Pagá con <br /><span className="text-[#f27d26]">Granos a Futuro.</span>
               </h2>
-              <p className="text-lg text-gray-600 mb-10 leading-relaxed font-medium">
+              <p className="text-lg text-gray-400 mb-10 leading-relaxed font-medium">
                 Un procedimiento seguro y confiable pensado para el sector agropecuario. Asegurá tu propiedad hoy y cancelá con tu producción futura.
               </p>
               <div className="grid grid-cols-1 gap-5 mb-10">
-                <div className="flex items-center gap-4 text-gray-700 font-medium bg-white px-4 py-3 rounded-lg shadow-sm border border-gray-100">
+                <div className="flex items-center gap-4 text-gray-300 font-medium bg-[#4a4a4a] px-4 py-3 rounded-lg shadow-sm border border-gray-800">
                   <Check className="w-5 h-5 text-[#22c55e]" />
                   Procedimiento seguro y transparente
                 </div>
-                <div className="flex items-center gap-4 text-gray-700 font-medium bg-white px-4 py-3 rounded-lg shadow-sm border border-gray-100">
+                <div className="flex items-center gap-4 text-gray-300 font-medium bg-[#4a4a4a] px-4 py-3 rounded-lg shadow-sm border border-gray-800">
                   <Check className="w-5 h-5 text-[#22c55e]" />
                   Sin intermediarios bancarios
                 </div>
-                <div className="flex items-center gap-4 text-gray-700 font-medium bg-white px-4 py-3 rounded-lg shadow-sm border border-gray-100">
+                <div className="flex items-center gap-4 text-gray-300 font-medium bg-[#4a4a4a] px-4 py-3 rounded-lg shadow-sm border border-gray-800">
                   <Check className="w-5 h-5 text-[#22c55e]" />
                   Capitalización inmediata en M2
                 </div>
@@ -823,9 +782,52 @@ const Home = () => {
               </Link>
             </div>
             <div className="relative">
-              <div className="aspect-square overflow-hidden rounded-3xl shadow-xl bg-white p-2">
+              <div className="aspect-square overflow-hidden rounded-3xl shadow-xl bg-[#4a4a4a] p-2">
                 <img src="/optimized/APOLO-ARES-5-1.webp" alt="Agro" className="w-full h-full object-cover rounded-2xl hover:scale-105 transition-transform duration-1000" referrerPolicy="no-referrer" loading="lazy" decoding="async" />
               </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-[#3b3b3b] overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div 
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "0px" }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            className="grid md:grid-cols-2 gap-16 items-center"
+          >
+            <div className="relative">
+              <div className="aspect-[4/5] overflow-hidden rounded-3xl shadow-xl">
+                <img 
+                  src="/optimized/APOLO-ARES-5-1.webp" 
+                  alt="Architecture" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
+                  referrerPolicy="no-referrer" loading="lazy" decoding="async" />
+              </div>
+              <div className="absolute -bottom-12 -right-12 w-64 h-80 bg-[#4a4a4a] shadow-2xl border border-gray-800 p-12 flex flex-col justify-end hidden md:flex rounded-3xl">
+                <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-4">Trayectoria</p>
+                <h4 className="text-gray-100 text-4xl font-bold">+15</h4>
+                <p className="text-gray-500 text-xs uppercase tracking-widest mt-2">Años de Excelencia</p>
+              </div>
+            </div>
+            <div>
+              <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-6">Sobre Nosotros</p>
+              <h2 className="text-4xl md:text-6xl mb-8 leading-tight text-gray-100 font-bold tracking-tight">
+                Construimos <br /><span className="text-[#f27d26]">Legados.</span>
+              </h2>
+              <p className="text-lg text-gray-400 mb-6 leading-relaxed font-medium">
+                En Apolo Construcciones, no solo edificamos estructuras; creamos hogares y oportunidades de inversión que perduran. Nuestra filosofía se basa en la honestidad, la calidad constructiva y el respeto por el entorno.
+              </p>
+              <p className="text-lg text-gray-400 mb-10 leading-relaxed font-medium">
+                Cada proyecto es una pieza única de arquitectura contemporánea, diseñada para maximizar el confort y la rentabilidad de nuestros clientes en Necochea.
+              </p>
+              <Link to="/nosotros" className="group flex items-center gap-4 text-gray-100 uppercase text-[10px] tracking-[0.3em] font-bold">
+                Nuestra Historia
+                <div className="w-12 h-px bg-[#f27d26] group-hover:w-20 transition-all duration-500"></div>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -836,28 +838,28 @@ const Home = () => {
 
 const Proyectos = () => {
   const [filter, setFilter] = useState('Todos');
-  const categories = ['Todos', 'En desarrollo', 'Finalizados'];
+  const categories = ['Todos', 'En venta', 'En desarrollo', 'Finalizados'];
   
   const filteredProjects = filter === 'Todos' 
     ? PROJECTS 
     : PROJECTS.filter(p => p.category === filter);
 
   return (
-    <div className="pt-32 pb-24 bg-[#fcfcfc] min-h-screen">
+    <div className="pt-32 pb-24 bg-[#333333] min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-24 gap-8 md:gap-12">
           <div className="max-w-2xl">
             <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-4 md:mb-6">Nuestros Desarrollos</p>
-            <h1 className="text-5xl md:text-8xl mb-8 leading-tight tracking-tighter font-bold font-sans text-gray-900">
+            <h1 className="text-5xl md:text-8xl mb-8 leading-tight tracking-tighter font-bold font-sans text-gray-100">
               Proyectos <br /><span className="text-[#f27d26] font-bold">Inmobiliarios.</span>
             </h1>
           </div>
-          <div className="flex gap-6 md:gap-8 border-b border-gray-200 pb-4 w-full md:w-auto overflow-x-auto no-scrollbar">
+          <div className="flex gap-6 md:gap-8 border-b border-gray-700 pb-4 w-full md:w-auto overflow-x-auto no-scrollbar">
             {categories.map(cat => (
               <button 
                 key={cat} 
                 onClick={() => setFilter(cat)}
-                className={`uppercase text-[10px] tracking-[0.3em] font-bold transition-all whitespace-nowrap ${filter === cat ? 'text-[#f27d26]' : 'text-gray-400 hover:text-gray-600'}`}
+                className={`uppercase text-[10px] tracking-[0.3em] font-bold transition-all whitespace-nowrap ${filter === cat ? 'text-[#f27d26]' : 'text-gray-400 hover:text-gray-400'}`}
               >
                 {cat}
               </button>
@@ -873,26 +875,28 @@ const Proyectos = () => {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="bg-white rounded-3xl shadow-[0_10px_40px_-20px_rgba(0,0,0,0.1)] border border-gray-100 overflow-hidden flex flex-col hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(242,125,38,0.15)] transition-all duration-500 group"
+              className="bg-[#4a4a4a] rounded-3xl shadow-[0_10px_40px_-20px_rgba(0,0,0,0.1)] border border-gray-800 overflow-hidden flex flex-col hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(242,125,38,0.15)] transition-all duration-500 group"
             >
-              <div className="aspect-[4/3] overflow-hidden relative bg-white p-2">
-                <img src={project.image} alt={project.name} className="w-full h-full object-cover rounded-2xl transition-transform duration-700 ease-out group-hover:scale-110" referrerPolicy="no-referrer" loading="lazy" decoding="async"/>
-              </div>
+              <Link to={`/proyectos/${project.id}`} className="block aspect-[4/3] overflow-hidden relative bg-[#3b3b3b] p-2 group shadow-inner">
+                  <img src={project.image} alt={project.name} className="w-full h-full object-cover rounded-2xl transition-transform duration-700 ease-out group-hover:scale-110" referrerPolicy="no-referrer" loading="lazy" decoding="async"/>
+                </Link>
               <div className="p-8 flex flex-col flex-grow z-10 relative">
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-3 py-1 bg-white text-[#f27d26] rounded-full text-xs font-bold border border-[#f27d26]/20 shadow-sm">{project.status}</span>
-                  <span className="px-3 py-1 bg-white text-gray-500 rounded-full text-xs font-bold border border-gray-200 shadow-sm">{project.category}</span>
+                  <span className="px-3 py-1 bg-[#3b3b3b] text-[#f27d26] rounded-full text-[10px] tracking-wider font-bold border border-[#f27d26]/20 shadow-sm">{project.status}</span>
+                  {project.category !== project.status && (
+                    <span className="px-3 py-1 bg-[#4a4a4a] text-gray-300 rounded-full text-[10px] tracking-wider font-bold border border-gray-600 shadow-sm">{project.category}</span>
+                  )}
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 uppercase group-hover:text-[#f27d26] transition-colors duration-300">{project.name}</h3>
+                <h3 className="text-2xl font-bold text-gray-100 mb-6 uppercase group-hover:text-[#f27d26] transition-colors duration-300">{project.name}</h3>
                 <div className="flex flex-col gap-3 mb-8">
                   {project.features.map((feature, i) => (
-                    <div key={i} className="flex items-start gap-3 text-gray-600 text-sm font-medium group-hover:text-gray-900 transition-colors duration-300">
+                    <div key={i} className="flex items-start gap-3 text-gray-400 text-sm font-medium group-hover:text-gray-100 transition-colors duration-300">
                       <Check className="w-4 h-4 text-[#22c55e] shrink-0 mt-0.5" />
                       <span>{feature}</span>
                     </div>
                   ))}
                 </div>
-                <Link to={`/proyectos/${project.id}`} className="mt-auto w-max px-6 py-3 bg-white border border-gray-200 hover:border-[#f27d26] hover:bg-[#f27d26] text-gray-900 hover:text-white font-bold rounded-lg transition-colors text-sm group-hover:shadow-lg">
+                <Link to={`/proyectos/${project.id}`} className="mt-auto w-max px-6 py-3 bg-[#4a4a4a] border border-gray-700 hover:border-[#f27d26] hover:bg-[#f27d26] text-gray-100 hover:text-white font-bold rounded-lg transition-colors text-sm group-hover:shadow-lg">
                   Ver Detalles
                 </Link>
               </div>
@@ -906,14 +910,14 @@ const Proyectos = () => {
 
 const Financiacion = () => {
   return (
-    <div className="pt-32 pb-24 bg-[#fafafa] min-h-screen">
+    <div className="pt-32 pb-24 bg-[#3b3b3b] min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
         <div className="max-w-3xl mb-24">
           <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-6">Inversión y Resguardo</p>
-          <h1 className="text-6xl md:text-8xl mb-8 leading-tight tracking-tighter font-bold font-sans text-gray-900">
+          <h1 className="text-6xl md:text-8xl mb-8 leading-tight tracking-tighter font-bold font-sans text-gray-100">
             Opciones de <br /><span className="text-[#f27d26] font-bold">Financiación.</span>
           </h1>
-          <p className="text-xl text-gray-600 font-medium leading-relaxed">
+          <p className="text-xl text-gray-400 font-medium leading-relaxed">
             Facilitamos el camino hacia tu nuevo hogar con opciones flexibles y seguras, diseñadas para el inversor.
           </p>
         </div>
@@ -924,23 +928,23 @@ const Financiacion = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "0px" }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="bg-white p-8 md:p-16 rounded-3xl border border-gray-100 flex flex-col h-full hover:-translate-y-2 shadow-xl hover:shadow-[0_20px_40px_-15px_rgba(242,125,38,0.15)] transition-all duration-500 group"
+            className="bg-[#4a4a4a] p-8 md:p-16 rounded-3xl border border-gray-800 flex flex-col h-full hover:-translate-y-2 shadow-xl hover:shadow-[0_20px_40px_-15px_rgba(242,125,38,0.15)] transition-all duration-500 group"
           >
             <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-8">Plan Tradicional</p>
-            <h2 className="text-3xl md:text-4xl mb-8 font-bold font-sans text-gray-900">Hasta 24 Cuotas</h2>
-            <p className="text-gray-600 text-lg mb-12 leading-relaxed font-medium">
+            <h2 className="text-3xl md:text-4xl mb-8 font-bold font-sans text-gray-100">Hasta 24 Cuotas</h2>
+            <p className="text-gray-400 text-lg mb-12 leading-relaxed font-medium">
               Financiación directa con Apolo Construcciones. Planes adaptados a tu medida para que puedas invertir con tranquilidad y previsibilidad.
             </p>
             <div className="space-y-6 mb-16 flex-grow">
-              <div className="flex items-start gap-4 font-medium text-gray-700 bg-gray-50/50 p-3 rounded-lg">
+              <div className="flex items-start gap-4 font-medium text-gray-300 bg-[#2A2A2A]/50 p-3 rounded-lg">
                 <Check className="w-5 h-5 text-[#22c55e] shrink-0 mt-0.5" />
                 <span>Cuotas fijas en pesos o dólares</span>
               </div>
-              <div className="flex items-start gap-4 font-medium text-gray-700 bg-gray-50/50 p-3 rounded-lg">
+              <div className="flex items-start gap-4 font-medium text-gray-300 bg-[#2A2A2A]/50 p-3 rounded-lg">
                 <Check className="w-5 h-5 text-[#22c55e] shrink-0 mt-0.5" />
                 <span>Sin requisitos bancarios complejos</span>
               </div>
-              <div className="flex items-start gap-4 font-medium text-gray-700 bg-gray-50/50 p-3 rounded-lg">
+              <div className="flex items-start gap-4 font-medium text-gray-300 bg-[#2A2A2A]/50 p-3 rounded-lg">
                 <Check className="w-5 h-5 text-[#22c55e] shrink-0 mt-0.5" />
                 <span>Posesión inmediata en obras finalizadas</span>
               </div>
@@ -955,23 +959,23 @@ const Financiacion = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "0px" }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="bg-gradient-to-br from-[#f8faf8] to-white p-8 md:p-16 rounded-3xl border border-gray-100 flex flex-col h-full shadow-xl hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(34,197,94,0.15)] transition-all duration-500 group"
+            className="bg-gradient-to-br from-[#f8faf8] to-white p-8 md:p-16 rounded-3xl border border-gray-800 flex flex-col h-full shadow-xl hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(34,197,94,0.15)] transition-all duration-500 group"
           >
             <p className="text-[#22c55e] text-[10px] uppercase tracking-[0.2em] font-semibold mb-8">Plan Agro</p>
-            <h2 className="text-3xl md:text-4xl mb-8 font-bold font-sans text-gray-900">Canje de Granos</h2>
-            <p className="text-gray-600 text-lg mb-12 leading-relaxed font-medium">
+            <h2 className="text-3xl md:text-4xl mb-8 font-bold font-sans text-gray-100">Canje de Granos</h2>
+            <p className="text-gray-400 text-lg mb-12 leading-relaxed font-medium">
               Utilizá tu producción agropecuaria como moneda de cambio. Un sistema ágil y seguro para el productor de hoy, optimizando su capitalización.
             </p>
             <div className="space-y-6 mb-16 flex-grow">
-              <div className="flex items-start gap-4 font-medium text-gray-700 bg-white p-3 rounded-lg shadow-sm border border-gray-100/50">
+              <div className="flex items-start gap-4 font-medium text-gray-300 bg-[#4a4a4a] p-3 rounded-lg shadow-sm border border-gray-800/50">
                 <Check className="w-5 h-5 text-[#22c55e] shrink-0 mt-0.5" />
                 <span>Canje directo por granos a futuro</span>
               </div>
-              <div className="flex items-start gap-4 font-medium text-gray-700 bg-white p-3 rounded-lg shadow-sm border border-gray-100/50">
+              <div className="flex items-start gap-4 font-medium text-gray-300 bg-[#4a4a4a] p-3 rounded-lg shadow-sm border border-gray-800/50">
                 <Check className="w-5 h-5 text-[#22c55e] shrink-0 mt-0.5" />
                 <span>Importantes beneficios impositivos</span>
               </div>
-              <div className="flex items-start gap-4 font-medium text-gray-700 bg-white p-3 rounded-lg shadow-sm border border-gray-100/50">
+              <div className="flex items-start gap-4 font-medium text-gray-300 bg-[#4a4a4a] p-3 rounded-lg shadow-sm border border-gray-800/50">
                 <Check className="w-5 h-5 text-[#22c55e] shrink-0 mt-0.5" />
                 <span>Resguardo de valor en ladrillos</span>
               </div>
@@ -988,7 +992,7 @@ const Financiacion = () => {
 
 const Nosotros = () => {
   return (
-    <div className="pt-32 pb-24 bg-[#fcfcfc] min-h-screen">
+    <div className="pt-32 pb-24 bg-[#333333] min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
@@ -999,10 +1003,10 @@ const Nosotros = () => {
         >
           <div>
             <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-6">Nuestra Historia</p>
-            <h1 className="text-6xl md:text-8xl mb-10 leading-tight tracking-tighter font-bold font-sans text-gray-900">
+            <h1 className="text-6xl md:text-8xl mb-10 leading-tight tracking-tighter font-bold font-sans text-gray-100">
               Sobre <br /><span className="text-[#f27d26] font-bold">Nosotros.</span>
             </h1>
-            <p className="text-xl text-gray-600 mb-12 leading-relaxed font-medium">
+            <p className="text-xl text-gray-400 mb-12 leading-relaxed font-medium">
               En Apolo Construcciones, no solo levantamos paredes; creamos espacios donde las familias construyen su futuro. Con más de 15 años en el mercado de Necochea, nos hemos consolidado como referentes en calidad y cumplimiento.
             </p>
             <div className="grid grid-cols-2 gap-12">
@@ -1016,7 +1020,7 @@ const Nosotros = () => {
               </div>
             </div>
           </div>
-          <div className="aspect-[4/5] overflow-hidden rounded-3xl shadow-xl bg-white p-2 border border-gray-100">
+          <div className="aspect-[4/5] overflow-hidden rounded-3xl shadow-xl bg-[#4a4a4a] p-2 border border-gray-800">
             <img src="/optimized/FOTOS-1D.webp" alt="Nosotros" className="w-full h-full object-cover rounded-2xl" referrerPolicy="no-referrer" loading="lazy" decoding="async"/>
           </div>
         </motion.div>
@@ -1027,14 +1031,14 @@ const Nosotros = () => {
 
 const Servicios = () => {
   return (
-    <div className="pt-32 pb-24 bg-[#fafafa] min-h-screen">
+    <div className="pt-32 pb-24 bg-[#3b3b3b] min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
         <div className="max-w-3xl mb-24">
           <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-6">Nuestra Propuesta</p>
-          <h1 className="text-6xl md:text-8xl mb-10 leading-tight tracking-tighter font-bold font-sans text-gray-900">
+          <h1 className="text-6xl md:text-8xl mb-10 leading-tight tracking-tighter font-bold font-sans text-gray-100">
             Nuestros <br /><span className="text-[#f27d26] font-bold">Servicios.</span>
           </h1>
-          <p className="text-xl text-gray-600 mb-12 leading-relaxed font-medium">
+          <p className="text-xl text-gray-400 mb-12 leading-relaxed font-medium">
             Acompañamos a nuestros clientes en cada etapa del proceso, desde la concepción del proyecto hasta la entrega de llaves y el servicio posventa.
           </p>
         </div>
@@ -1060,11 +1064,11 @@ const Servicios = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "0px" }}
               transition={{ duration: 0.8, delay: i * 0.2, ease: [0.22, 1, 0.36, 1] }}
-              className="p-8 md:p-12 bg-white rounded-3xl shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] border border-gray-100 hover:border-[#f27d26]/30 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group"
+              className="p-8 md:p-12 bg-[#4a4a4a] rounded-3xl shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] border border-gray-800 hover:border-[#f27d26]/30 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group"
             >
               <p className="text-gray-200 text-[10px] uppercase tracking-[0.2em] font-bold mb-12 group-hover:text-[#f27d26]/40 transition-colors">0{i + 1}</p>
-              <h3 className="text-2xl mb-6 font-bold font-sans text-gray-900">{s.title}</h3>
-              <p className="text-gray-600 leading-relaxed font-medium">{s.desc}</p>
+              <h3 className="text-2xl mb-6 font-bold font-sans text-gray-100">{s.title}</h3>
+              <p className="text-gray-400 leading-relaxed font-medium">{s.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -1075,11 +1079,11 @@ const Servicios = () => {
 
 const Contacto = () => {
   return (
-    <div className="pt-32 pb-24 bg-white min-h-screen border-t border-gray-100">
+    <div className="pt-32 pb-24 bg-[#4a4a4a] min-h-screen border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-6">
         <div className="max-w-3xl mb-24">
           <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-6">Estamos a su disposición</p>
-          <h1 className="text-6xl md:text-8xl mb-10 leading-tight tracking-tighter font-bold font-sans text-gray-900">
+          <h1 className="text-6xl md:text-8xl mb-10 leading-tight tracking-tighter font-bold font-sans text-gray-100">
             Hablemos de su <br /><span className="text-[#f27d26] font-bold">Próximo Proyecto.</span>
           </h1>
         </div>
@@ -1094,21 +1098,21 @@ const Contacto = () => {
           >
             <div>
               <p className="text-gray-400 text-[10px] uppercase tracking-[0.2em] font-semibold mb-4">Teléfono</p>
-              <p className="text-xl md:text-2xl font-bold font-sans text-gray-900">+54 9 2262 506588</p>
+              <p className="text-xl md:text-2xl font-bold font-sans text-gray-100">+54 9 2262 506588</p>
             </div>
             <div>
               <p className="text-gray-400 text-[10px] uppercase tracking-[0.2em] font-semibold mb-4">Email</p>
-              <p className="text-xl md:text-2xl font-bold font-sans text-gray-900">info@apoloconstrucciones.com.ar</p>
+              <p className="text-xl md:text-2xl font-bold font-sans text-gray-100">info@apoloconstrucciones.com.ar</p>
             </div>
             <div>
               <p className="text-gray-400 text-[10px] uppercase tracking-[0.2em] font-semibold mb-4">Ubicación</p>
-              <p className="text-xl md:text-2xl font-bold font-sans text-gray-900">Calle 62 N° 3124, Necochea</p>
+              <p className="text-xl md:text-2xl font-bold font-sans text-gray-100">Av. 91 1779, Necochea</p>
             </div>
             <div className="pt-4 md:pt-8 flex gap-6">
-              <a href="https://www.instagram.com/apolo.construcciones/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-50 text-gray-500 hover:text-[#f27d26] hover:border-[#f27d26]/30 transition-all">
+              <a href="https://www.instagram.com/apolo.construcciones/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-[#2A2A2A] text-gray-500 hover:text-[#f27d26] hover:border-[#f27d26]/30 transition-all">
                 <Instagram size={18} />
               </a>
-              <a href="https://www.facebook.com/apoloconstructora" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-50 text-gray-500 hover:text-[#f27d26] hover:border-[#f27d26]/30 transition-all">
+              <a href="https://www.facebook.com/apoloconstructora" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-[#2A2A2A] text-gray-500 hover:text-[#f27d26] hover:border-[#f27d26]/30 transition-all">
                 <Facebook size={18} />
               </a>
             </div>
@@ -1124,17 +1128,17 @@ const Contacto = () => {
             <form className="grid gap-8 md:gap-12">
               <div className="grid md:grid-cols-2 gap-8 md:gap-12">
                 <div className="relative">
-                  <input type="text" placeholder="Nombre" className="w-full bg-transparent border-b border-gray-200 py-4 outline-none focus:border-[#f27d26] transition-all font-medium text-gray-900 placeholder:text-gray-400" />
+                  <input type="text" placeholder="Nombre" className="w-full bg-transparent border-b border-gray-700 py-4 outline-none focus:border-[#f27d26] transition-all font-medium text-gray-100 placeholder:text-gray-400" />
                 </div>
                 <div className="relative">
-                  <input type="email" placeholder="Email" className="w-full bg-transparent border-b border-gray-200 py-4 outline-none focus:border-[#f27d26] transition-all font-medium text-gray-900 placeholder:text-gray-400" />
+                  <input type="email" placeholder="Email" className="w-full bg-transparent border-b border-gray-700 py-4 outline-none focus:border-[#f27d26] transition-all font-medium text-gray-100 placeholder:text-gray-400" />
                 </div>
               </div>
               <div className="relative">
-                <input type="text" placeholder="Asunto" className="w-full bg-transparent border-b border-gray-200 py-4 outline-none focus:border-[#f27d26] transition-all font-medium text-gray-900 placeholder:text-gray-400" />
+                <input type="text" placeholder="Asunto" className="w-full bg-transparent border-b border-gray-700 py-4 outline-none focus:border-[#f27d26] transition-all font-medium text-gray-100 placeholder:text-gray-400" />
               </div>
               <div className="relative">
-                <textarea rows={4} placeholder="Mensaje" className="w-full bg-transparent border-b border-gray-200 py-4 outline-none focus:border-[#f27d26] transition-all font-medium resize-none text-gray-900 placeholder:text-gray-400"></textarea>
+                <textarea rows={4} placeholder="Mensaje" className="w-full bg-transparent border-b border-gray-700 py-4 outline-none focus:border-[#f27d26] transition-all font-medium resize-none text-gray-100 placeholder:text-gray-400"></textarea>
               </div>
               <button className="w-max px-8 py-4 bg-gray-900 hover:bg-black text-white hover:-translate-y-1 hover:shadow-lg active:scale-95 font-bold rounded-lg transition-all text-sm uppercase tracking-wider mt-4 md:mt-8">
                 Enviar Mensaje
@@ -1151,26 +1155,28 @@ const ProjectDetail = () => {
   const { id } = useParams();
   const project: any = PROJECTS.find(p => p.id === id);
 
-  if (!project) return <div className="pt-32 text-center text-gray-900 h-screen flex items-center justify-center text-2xl font-sans">Proyecto no encontrado</div>;
+  if (!project) return <div className="pt-32 text-center text-gray-100 h-screen flex items-center justify-center text-2xl font-sans">Proyecto no encontrado</div>;
 
   return (
-    <div className="bg-[#fafafa] min-h-screen pt-32 pb-24 font-sans text-gray-900">
+    <div className="bg-[#3b3b3b] min-h-screen pt-32 pb-24 font-sans text-gray-100">
       {/* Header Section */}
       <div className="max-w-7xl mx-auto px-6 mb-16">
         <Link to="/proyectos" className="group inline-flex items-center gap-3 text-gray-400 uppercase text-[10px] tracking-[0.3em] font-bold mb-10 hover:text-[#f27d26] transition-colors">
           <div className="w-8 h-px bg-gray-300 group-hover:bg-[#f27d26] group-hover:w-12 transition-all duration-300"></div>
           Volver a Proyectos
         </Link>
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-gray-200 pb-12 mb-12">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-gray-700 pb-12 mb-12">
           <div>
             <div className="flex items-center gap-4 mb-6">
               <span className="px-4 py-1.5 border border-[#f27d26] text-[#f27d26] rounded-full text-xs font-bold bg-[#f27d26]/5 uppercase tracking-widest">{project.status}</span>
-              <span className="px-4 py-1.5 bg-gray-100 text-gray-600 rounded-full text-xs font-bold uppercase tracking-widest">{project.category}</span>
+              {project.category !== project.status && (
+                <span className="px-4 py-1.5 bg-[#404040] text-gray-400 rounded-full text-xs font-bold uppercase tracking-widest">{project.category}</span>
+              )}
             </div>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight mb-6 font-sans text-gray-900">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight mb-6 font-sans text-gray-100">
               {project.name}
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-400 max-w-3xl leading-relaxed">
               {project.description}
             </p>
           </div>
@@ -1192,21 +1198,21 @@ const ProjectDetail = () => {
             <section>
               <h2 className="text-[#f27d26] text-[10px] uppercase tracking-[0.3em] font-bold mb-6">Sobre el Proyecto</h2>
               <div 
-                className="text-lg md:text-xl text-gray-700 leading-relaxed font-medium"
+                className="text-lg md:text-xl text-gray-300 leading-relaxed font-medium"
                 dangerouslySetInnerHTML={{ __html: project.fullDescriptionHtml || `<p>${project.fullDescription || project.description}</p>` }}
               />
             </section>
 
             {/* Features Info */}
-            <section className="bg-white p-8 md:p-12 rounded-3xl border border-gray-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)]">
-              <h2 className="text-gray-900 text-2xl font-bold mb-8 flex items-center gap-3">
+            <section className="bg-[#4a4a4a] p-8 md:p-12 rounded-3xl border border-gray-800 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)]">
+              <h2 className="text-gray-100 text-2xl font-bold mb-8 flex items-center gap-3">
                 <Building2 className="text-[#f27d26]" /> Características Destacadas
               </h2>
               <div className="grid sm:grid-cols-2 gap-6">
                 {project.features.map((f: string, i: number) => (
-                  <div key={i} className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 transition-colors">
+                  <div key={i} className="flex items-start gap-4 p-4 rounded-xl hover:bg-[#2A2A2A] transition-colors">
                     <CheckCircle2 className="w-6 h-6 text-[#22c55e] shrink-0" />
-                    <span className="text-gray-700 font-medium text-lg">{f}</span>
+                    <span className="text-gray-300 font-medium text-lg">{f}</span>
                   </div>
                 ))}
               </div>
@@ -1214,15 +1220,15 @@ const ProjectDetail = () => {
 
             {/* Financing Block */}
             {project.financing && project.financing.length > 0 && (
-              <section className="relative overflow-hidden bg-gradient-to-br from-[#fff6f0] to-[#fffdfc] p-8 md:p-12 rounded-3xl border border-[#f27d26]/10 shadow-lg">
+              <section className="relative overflow-hidden bg-gradient-to-br from-[#423129] to-[#33261f] p-8 md:p-12 rounded-3xl border border-[#f27d26]/10 shadow-lg">
                 <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none text-[#f27d26]">
                   <Wallet size={160} />
                 </div>
                 <h2 className="text-[#f27d26] text-[10px] uppercase tracking-[0.3em] font-bold mb-4">Inversión</h2>
-                <h3 className="text-gray-900 text-3xl font-bold mb-8 relative z-10">Opciones de Adquisición</h3>
+                <h3 className="text-gray-100 text-3xl font-bold mb-8 relative z-10">Opciones de Adquisición</h3>
                 <ul className="space-y-5 relative z-10">
                   {project.financing.map((f: string, i: number) => (
-                    <li key={i} className="flex items-center gap-4 text-lg text-gray-800 font-medium bg-white/60 backdrop-blur-sm p-4 rounded-xl border border-white">
+                    <li key={i} className="flex items-center gap-4 text-lg text-gray-200 font-medium bg-[#4a4a4a]/60 backdrop-blur-sm p-4 rounded-xl border border-white">
                       <div className="w-2.5 h-2.5 rounded-full bg-[#f27d26] shadow-[0_0_10px_rgba(242,125,38,0.5)]" />
                       {f}
                     </li>
@@ -1238,7 +1244,7 @@ const ProjectDetail = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="aspect-[4/5] overflow-hidden rounded-3xl shadow-xl border border-gray-100 group bg-white p-2"
+              className="aspect-[4/5] overflow-hidden rounded-3xl shadow-xl border border-gray-800 group bg-[#4a4a4a] p-2"
             >
               <img src={project.gallery?.[0] || project.image} alt={project.name} className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-1000" referrerPolicy="no-referrer" fetchPriority="high" decoding="async" />
             </motion.div>
@@ -1248,10 +1254,10 @@ const ProjectDetail = () => {
 
         {/* Full Gallery Section */}
         {project.gallery && project.gallery.length > 1 && (
-          <div className="mt-32 border-t border-gray-200 pt-24">
+          <div className="mt-32 border-t border-gray-700 pt-24">
             <div className="flex flex-col items-center text-center mb-16">
               <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.3em] font-bold mb-4">Registro Visual</p>
-              <h2 className="text-4xl md:text-5xl font-black font-sans text-gray-900 mb-6">Galería del Proyecto</h2>
+              <h2 className="text-4xl md:text-5xl font-black font-sans text-gray-100 mb-6">Galería del Proyecto</h2>
               <p className="text-gray-500 max-w-2xl text-lg font-medium">Explorá cada detalle arquitectónico y los espacios diseñados para tu confort en esta galería completa.</p>
             </div>
             
@@ -1263,7 +1269,7 @@ const ProjectDetail = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "0px" }}
                   transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                  className="break-inside-avoid shadow-sm rounded-3xl overflow-hidden border border-gray-100 group bg-white p-2 relative min-h-[250px] mb-6"
+                  className="break-inside-avoid shadow-sm rounded-3xl overflow-hidden border border-gray-800 group bg-[#4a4a4a] p-2 relative min-h-[250px] mb-6"
                 >
                   <img src={img} alt={`Gallery Detail ${i + 1}`} className="w-full h-auto object-cover rounded-2xl group-hover:scale-[1.03] transition-transform duration-700" referrerPolicy="no-referrer" loading="lazy" decoding="async"/>
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500 rounded-3xl m-2 pointer-events-none" />

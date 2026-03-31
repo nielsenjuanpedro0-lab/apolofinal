@@ -3,10 +3,10 @@
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --color-apolo-dark: #0a0a0a;
+  --color-apolo-dark: #3b3b3b;
   --color-apolo-green: #22c55e;
   --color-apolo-orange: #f27d26;
-  --color-apolo-paper: #111111;
+  --color-apolo-paper: #4a4a4a;
   --color-apolo-line: rgba(255, 255, 255, 0.1);
 }
 
