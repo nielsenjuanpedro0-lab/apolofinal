@@ -702,7 +702,7 @@ const Home = () => {
                     {project.features.map((feature, i) => (
                       <div key={i} className="flex items-start gap-3 text-gray-400 text-sm font-medium group-hover:text-gray-100 transition-colors duration-300">
                         <Check className="w-4 h-4 text-[#22c55e] shrink-0 mt-0.5" />
-                        <span>{feature}</span>
+                        <span dangerouslySetInnerHTML={{ __html: feature }}></span>
                       </div>
                     ))}
                   </div>
@@ -829,7 +829,7 @@ const Proyectos = () => {
                   {project.features.map((feature, i) => (
                     <div key={i} className="flex items-start gap-3 text-gray-400 text-sm font-medium group-hover:text-gray-100 transition-colors duration-300">
                       <Check className="w-4 h-4 text-[#22c55e] shrink-0 mt-0.5" />
-                      <span>{feature}</span>
+                      <span dangerouslySetInnerHTML={{ __html: feature }}></span>
                     </div>
                   ))}
                 </div>
@@ -1123,7 +1123,7 @@ const ProjectDetail = () => {
                 {project.features.map((f: string, i: number) => (
                   <div key={i} className="flex items-start gap-4 p-4 rounded-xl hover:bg-[#2A2A2A] transition-colors">
                     <CheckCircle2 className="w-6 h-6 text-[#22c55e] shrink-0" />
-                    <span className="text-gray-300 font-medium text-lg">{f}</span>
+                    <span className="text-gray-300 font-medium text-lg" dangerouslySetInnerHTML={{ __html: f }}></span>
                   </div>
                 ))}
               </div>
@@ -1141,7 +1141,7 @@ const ProjectDetail = () => {
                   {project.financing.map((f: string, i: number) => (
                     <li key={i} className="flex items-center gap-4 text-lg text-gray-200 font-medium bg-[#4a4a4a]/60 backdrop-blur-sm p-4 rounded-xl border border-white">
                       <div className="w-2.5 h-2.5 rounded-full bg-[#f27d26] shadow-[0_0_10px_rgba(242,125,38,0.5)]" />
-                      {f}
+                      <span dangerouslySetInnerHTML={{ __html: f }}></span>
                     </li>
                   ))}
                 </ul>
