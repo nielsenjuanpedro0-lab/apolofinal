@@ -213,8 +213,8 @@ const PROJECTS = [
     ]
   },
   {
-    id: 'morfeo',
-    name: 'Morfeo',
+    id: 'orfeo',
+    name: 'Orfeo',
     status: 'Finalizado',
     category: 'Finalizados',
     description: 'Unidades pensadas para la vida moderna, con espacios amplios y luminosos.',
@@ -297,7 +297,7 @@ const PROJECTS = [
   }
 ];
 
-const orderArr = ['viggo-91', 'ares-22', 'delfos-83', 'zeus-543', 'morfeo', 'dafne-42'];
+const orderArr = ['viggo-91', 'ares-22', 'delfos-83', 'zeus-543', 'orfeo', 'dafne-42'];
 PROJECTS.sort((a, b) => { const indexA = orderArr.indexOf(a.id); const indexB = orderArr.indexOf(b.id); if (indexA === -1) return 1; if (indexB === -1) return -1; return indexA - indexB; });
 
 // --- Components ---
