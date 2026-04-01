@@ -81,7 +81,10 @@ const PROJECTS = [
       '/optimized/4efcdd09-d9a2-4e73-a57a-8a36e30d61f6-1-1.webp',
       '/optimized/f3c351ac-bfc1-4fe9-b6ec-243d7d21c868-1.webp',
       '/optimized/28181947-4341-4094-84de-95157d4d66c6-1.webp'
-    ]
+    ],
+    videos: {
+      primary: 'https://www.youtube.com/embed/wZUlyK8_iyc'
+    }
   },
   {
     id: 'dafne-42',
@@ -150,7 +153,7 @@ const PROJECTS = [
     features: ['Rentabilidad del 30%', 'Ideal alquiler temporario', 'Hasta <strong style="color:#f27d26;font-size:1.1em;">120 CUOTAS</strong> en <strong>PESOS</strong>'],
     financing: ['Financiación hasta <strong style="color:#f27d26;font-size:1.4em;">120 CUOTAS</strong> en <strong>PESOS</strong>', 'Financiación directa sin intermediarios', 'Fideicomiso al costo'],
     videos: {
-      primary: 'https://www.youtube.com/embed/44Nh6jyD1BQ',
+      primary: 'https://www.youtube.com/embed/n_gQvlOyqwk',
       secondary: 'https://www.youtube.com/embed/T0ffgscJkFQ'
     },
     image: '/optimized/APOLO-ARES-1-1.webp',
@@ -192,7 +195,10 @@ const PROJECTS = [
       '/optimized/5.webp',
       '/optimized/6.webp',
       '/optimized/86646b10-16cf-4a7a-bcc5-f3165513313d.webp'
-    ]
+    ],
+    videos: {
+      primary: 'https://www.youtube.com/embed/iE6FO3X5duQ'
+    }
   },
   {
     id: 'orfeo',
