@@ -304,7 +304,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     { name: 'Financiación', path: '/financiacion' },
     { name: 'Compra en Pozo', path: '/proceso-compra' },
     { name: 'Nosotros', path: '/nosotros' },
-    { name: 'Nuestros Servicios', path: '/servicios' },
+    { name: 'Contacto', path: '/contacto' },
   ];
 
   const isHomePage = location.pathname === '/';
@@ -339,24 +339,15 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   <span className={`absolute -bottom-1 left-0 w-full h-[2px] bg-[#f27d26] transform origin-left transition-transform duration-300 ${location.pathname === link.path ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></span>
                 </Link>
               ))}
-              <Link 
-                to="/contacto"
-                className={`relative text-sm font-medium transition-all duration-300 group hover:text-[#f27d26] ${
-                  location.pathname === '/contacto' 
-                    ? 'text-[#f27d26]' 
-                    : (scrolled || !isHomePage ? 'text-gray-400' : 'text-white/80')
-                }`}
-              >
-                Contacto
-                <span className={`absolute -bottom-1 left-0 w-full h-[2px] bg-[#f27d26] transform origin-left transition-transform duration-300 ${location.pathname === '/contacto' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></span>
-              </Link>
             </div>
-            <Link 
-              to="/contacto"
-              className="px-6 py-2.5 bg-[#22c55e] hover:bg-[#16a34a] hover:-translate-y-0.5 hover:shadow-[0_8px_20px_-6px_rgba(34,197,94,0.5)] active:scale-95 transition-all duration-300 text-sm font-bold text-white rounded-md shadow-md"
+            <a 
+              href="https://wa.me/5492262506588"
+              target="_blank"
+              rel="noreferrer"
+              className="px-6 py-2.5 bg-[#22c55e] hover:bg-[#16a34a] hover:-translate-y-0.5 hover:shadow-[0_8px_20px_-6px_rgba(34,197,94,0.5)] active:scale-95 transition-all duration-300 text-sm font-bold text-white rounded-md shadow-md inline-flex items-center gap-2"
             >
-              Contactanos
-            </Link>
+              <MessageCircle size={16} /> WhatsApp
+            </a>
           </div>
 
           <button 
@@ -392,7 +383,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             className="fixed inset-0 z-40 bg-[#4a4a4a]/95 backdrop-blur-xl flex flex-col md:hidden pt-32 pb-12"
           >
             <div className="flex-grow flex flex-col items-center justify-center gap-10 px-8">
-              {[...navLinks, { name: 'Contacto', path: '/contacto' }].map((link, i) => (
+              {navLinks.map((link, i) => (
                 <motion.div
                   key={link.name}
                   initial={{ opacity: 0, y: 20 }}
@@ -774,7 +765,7 @@ const Proyectos = () => {
   return (
     <div className="pt-32 pb-24 bg-[#333333] min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-24 gap-8 md:gap-12">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-start mb-16 md:mb-24 gap-8 md:gap-12">
           <div className="max-w-2xl">
             <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-4 md:mb-6">Nuestros Desarrollos</p>
             <h1 className="text-5xl md:text-8xl mb-8 leading-tight tracking-tighter font-bold font-sans text-gray-100">
@@ -964,8 +955,9 @@ const Nosotros = () => {
               </div>
             </div>
           </div>
-          <div className="aspect-[4/5] overflow-hidden rounded-3xl shadow-xl bg-[#4a4a4a] p-2 border border-gray-800">
+          <div className="aspect-[4/5] overflow-hidden rounded-3xl shadow-xl bg-gradient-to-t from-[#333333] via-[#3b3b3b] to-[#4a4a4a] p-2 border border-gray-800 relative">
             <img src="/optimized/miguel.webp" alt="Miguel Angel Di Virgilio - Fundador de Apolo Construcciones" className="w-full h-full object-cover object-top rounded-2xl" referrerPolicy="no-referrer" loading="lazy" decoding="async"/>
+            <div className="absolute inset-2 rounded-2xl bg-gradient-to-t from-[#333333] via-transparent to-[#333333]/60 pointer-events-none" />
           </div>
         </motion.div>
 
