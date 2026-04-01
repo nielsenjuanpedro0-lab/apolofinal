@@ -933,6 +933,7 @@ const Nosotros = () => {
   return (
     <div className="pt-32 pb-24 bg-[#333333] min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
+        {/* Hero section with Miguel's photo */}
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -947,9 +948,6 @@ const Nosotros = () => {
             </h1>
             <p className="text-xl text-gray-400 mb-8 leading-relaxed font-medium">
               En Apolo Construcciones, no solo levantamos paredes; creamos espacios donde las familias construyen su futuro. Con más de 15 años en el mercado de Necochea, nos hemos consolidado como referentes en calidad y cumplimiento.
-            </p>
-            <p className="text-lg text-gray-400 mb-12 leading-relaxed font-medium">
-              Nuestra misión es transformar el sueño de la vivienda propia en una realidad tangible, ofreciendo oportunidades de inversión seguras y rentables en una de las ciudades con mayor potencial turístico de la costa argentina.
             </p>
             <div className="grid grid-cols-3 gap-8">
               <div>
@@ -967,11 +965,11 @@ const Nosotros = () => {
             </div>
           </div>
           <div className="aspect-[4/5] overflow-hidden rounded-3xl shadow-xl bg-[#4a4a4a] p-2 border border-gray-800">
-            <img src="/optimized/FOTOS-1D.webp" alt="Nosotros" className="w-full h-full object-cover rounded-2xl" referrerPolicy="no-referrer" loading="lazy" decoding="async"/>
+            <img src="/optimized/miguel.webp" alt="Miguel Angel Di Virgilio - Fundador de Apolo Construcciones" className="w-full h-full object-cover object-top rounded-2xl" referrerPolicy="no-referrer" loading="lazy" decoding="async"/>
           </div>
         </motion.div>
 
-        {/* Team section */}
+        {/* Miguel's story section */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -979,25 +977,55 @@ const Nosotros = () => {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="mb-24"
         >
-          <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-6">Nuestro Equipo</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-100 mb-16">Las personas detrás <span className="text-[#f27d26]">de Apolo.</span></h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { name: 'Director General', role: 'Fundador & CEO', desc: 'Más de 15 años de experiencia en desarrollo inmobiliario en la costa argentina.' },
-              { name: 'Arquitectura', role: 'Dirección de Obra', desc: 'Diseño funcional y contemporáneo que maximiza el confort y la rentabilidad.' },
-              { name: 'Comercial', role: 'Asesoramiento', desc: 'Acompañamiento personalizado en cada etapa del proceso de inversión.' }
-            ].map((member, i) => (
-              <div key={i} className="bg-[#4a4a4a] rounded-3xl border border-gray-800 overflow-hidden group hover:-translate-y-2 transition-all duration-500">
-                <div className="aspect-square bg-gradient-to-br from-[#f27d26]/20 to-[#3b3b3b] flex items-center justify-center">
-                  <Users className="w-20 h-20 text-[#f27d26]/30" />
-                </div>
-                <div className="p-8">
-                  <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-2">{member.role}</p>
-                  <h3 className="text-xl font-bold text-gray-100 mb-3">{member.name}</h3>
-                  <p className="text-gray-400 font-medium">{member.desc}</p>
-                </div>
+          <div className="max-w-4xl mx-auto">
+            <div className="relative bg-[#4a4a4a] p-8 md:p-16 rounded-3xl border border-gray-800 shadow-xl overflow-hidden">
+              <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-[#f27d26] to-transparent" />
+              <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-4">El Origen</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-8">Apolo, un nombre <span className="text-[#f27d26]">con historia.</span></h2>
+              
+              <div className="space-y-6 text-lg text-gray-400 leading-relaxed font-medium">
+                <p>
+                  Mi nombre es <strong className="text-gray-100">Miguel Angel Di Virgilio</strong> y nombré esta empresa por mi hijo. Te cuento por qué.
+                </p>
+                <p>
+                  Hace algunos años, mi esposa y yo nos enteramos que íbamos a ser padres, de un varón. Fue una gran noticia ya que yo en ese momento empezaba un gran proyecto. Ese proyecto consistía en el desarrollo de una empresa que se encargaría de volver sueños realidad, el sueño de la casa propia. De a poco fui armando mi equipo, pidiendo mil presupuestos para poder dar con el proveedor que pueda darme precio y calidad.
+                </p>
+                <p>
+                  El proyecto creció y también el embarazo. Llegó el momento de elegir un nombre para mi primer hijo. Tuvimos muchísimas idas y vueltas, no fue nada sencillo. Pero después de horas de debate elegimos el nombre <strong className="text-[#f27d26] text-xl">Apolo</strong>.
+                </p>
+                <p>
+                  Al momento del nacimiento de mi hijo, decido que qué mejor que bautizar a mi gran proyecto como él. Así nace <strong className="text-gray-100">Apolo Di Virgilio Construcciones</strong>, una idea que creció y hoy nos encuentra realizando varios proyectos simultáneos.
+                </p>
+                <p className="text-gray-300 italic border-l-4 border-[#f27d26]/30 pl-6 py-2">
+                  "Tal vez en un futuro mi familia pueda sumarse a este sueño, ya que prácticamente nacieron juntos."
+                </p>
               </div>
-            ))}
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Mission section */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "0px" }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          className="mb-24"
+        >
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-6">Nuestra Misión</p>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-100 mb-8">Necochea en todo <span className="text-[#f27d26]">su esplendor.</span></h2>
+              <p className="text-xl text-gray-400 leading-relaxed font-medium mb-6">
+                La ciudad de Necochea es nuestro hogar, por eso deseamos poder verla en todo su esplendor.
+              </p>
+              <p className="text-lg text-gray-400 leading-relaxed font-medium">
+                Somos una empresa constructora que busca mejorar la calidad de vida de sus habitantes mediante el desarrollo de proyectos inmobiliarios de alta calidad, ofreciendo oportunidades de inversión seguras y rentables en una de las ciudades con mayor potencial turístico de la costa argentina.
+              </p>
+            </div>
+            <div className="aspect-[4/5] overflow-hidden rounded-3xl shadow-xl bg-[#4a4a4a] p-2 border border-gray-800">
+              <img src="/optimized/FOTOS-1D.webp" alt="Proyecto Apolo" className="w-full h-full object-cover rounded-2xl" referrerPolicy="no-referrer" loading="lazy" decoding="async"/>
+            </div>
           </div>
         </motion.div>
 
@@ -1008,6 +1036,8 @@ const Nosotros = () => {
           viewport={{ once: true, margin: "0px" }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
+          <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-6">Nuestros Valores</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-100 mb-16">Lo que nos <span className="text-[#f27d26]">define.</span></h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { icon: <ShieldCheck className="w-8 h-8" />, title: 'Transparencia', desc: 'Contratos claros y condiciones justas. Sin letra chica ni sorpresas.' },
