@@ -940,14 +940,10 @@ const Nosotros = () => {
             <p className="text-xl text-gray-400 mb-8 leading-relaxed font-medium">
               En Apolo Construcciones, no solo levantamos paredes; creamos espacios donde las familias construyen su futuro. Con más de 15 años en el mercado de Necochea, nos hemos consolidado como referentes en calidad y cumplimiento.
             </p>
-            <div className="grid grid-cols-3 gap-8">
+            <div className="grid grid-cols-2 gap-8">
               <div>
                 <div className="text-5xl font-bold text-[#f27d26] mb-2">+15</div>
                 <div className="text-gray-400 text-[10px] uppercase tracking-[0.2em] font-semibold">Años de trayectoria</div>
-              </div>
-              <div>
-                <div className="text-5xl font-bold text-[#f27d26] mb-2">+500</div>
-                <div className="text-gray-400 text-[10px] uppercase tracking-[0.2em] font-semibold">Hogares entregados</div>
               </div>
               <div>
                 <div className="text-5xl font-bold text-[#f27d26] mb-2">6</div>
