@@ -1187,11 +1187,11 @@ const ProjectDetail = () => {
 
   const mapQueries: Record<string, string> = {
     'viggo-91': 'Avenida+91+1781+Necochea+Buenos+Aires+Argentina',
-    'ares-22': 'Calle+22+entre+77+y+79+Necochea+Buenos+Aires+Argentina',
-    'delfos-83': 'Calle+83+entre+24+y+26+Necochea+Buenos+Aires+Argentina',
-    'dafne-42': 'Avenida+42+Necochea+Buenos+Aires+Argentina',
+    'ares-22': 'Calle+22+e/+77+y+79+Necochea+Buenos+Aires+Argentina',
+    'delfos-83': 'Calle+83+e/+24+y+26+Necochea+Buenos+Aires+Argentina',
+    'dafne-42': 'Calle+42+Necochea+Buenos+Aires+Argentina',
     'orfeo': 'Necochea+Buenos+Aires+Argentina',
-    'zeus-543': 'Calle+543+Necochea+Buenos+Aires+Argentina'
+    'zeus-543': 'Calle+543+e/+Avenida+Loberia+y+580+Necochea+Buenos+Aires+Argentina'
   };
 
   if (!project) return <div className="pt-32 text-center text-gray-100 h-screen flex items-center justify-center text-2xl font-sans">Proyecto no encontrado</div>;
