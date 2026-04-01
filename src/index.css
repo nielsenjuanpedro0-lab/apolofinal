@@ -26,3 +26,19 @@
 .micro-label {
   @apply text-[10px] uppercase tracking-[0.2em] font-semibold text-white/50;
 }
+
+img {
+  image-orientation: from-image;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body.lightbox-open {
+  overflow: hidden;
+}

@@ -17,6 +17,7 @@ import {
   Building2, 
   CheckCircle2, 
   ChevronRight, 
+  ChevronLeft,
   Clock, 
   Facebook, 
   Instagram, 
@@ -31,7 +32,17 @@ import {
   ArrowRight,
   ShieldCheck,
   Wrench,
-  Check
+  Check,
+  Eye,
+  Users,
+  FileText,
+  KeyRound,
+  CreditCard,
+  ZoomIn,
+  Banknote,
+  Megaphone,
+  Gift,
+  Play
 } from 'lucide-react';
 import { motion, AnimatePresence, MotionConfig } from 'motion/react';
 
@@ -58,7 +69,7 @@ const PROJECTS = [
       <p class="font-bold text-[#f27d26] mt-6">Costos de mantenimiento: sin expensas.</p>
     `,
     features: ['3 ambientes con balcón', 'Doble cochera', 'Patio propio', 'Financiación del 70%'],
-    financing: ['Contacto directo sin intermediarios', 'Excelente rentabilidad', 'Resguardo de valor en ladrillos'],
+    financing: ['Descuentos por pago en efectivo', 'Costos de escrituración incluidos', 'Sin comisiones inmobiliarias'],
     image: '/optimized/Copia-de-1.8.webp',
     gallery: [
       '/optimized/Copia-de-1.8.webp',
@@ -100,23 +111,10 @@ const PROJECTS = [
       <p class="font-bold text-[#f27d26] mt-6">Costos de mantenimiento: sin expensas.</p>
     `,
     features: ['Departamentos de 1, 2 y 3 ambientes Adaptables', 'Cocheras Disponibles', 'Patio propio', 'Diseño funcional'],
-    financing: ['Financiación en hasta 24 cuotas', 'Posesión inmediata'],
+    financing: ['Financiación en hasta 48 cuotas', 'Posesión inmediata'],
     image: '/optimized/DAFNE-ENTREGADO.webp',
     gallery: [
       '/optimized/DAFNE-ENTREGADO.webp',
-      '/optimized/IMG-20201120-WA0031.webp',
-      '/optimized/IMG-20201120-WA0032.webp',
-      '/optimized/IMG-20201120-WA0033.webp',
-      '/optimized/IMG-20210405-WA0009.webp',
-      '/optimized/IMG-20210405-WA0010-1.webp',
-      '/optimized/IMG-20210405-WA0011.webp',
-      '/optimized/IMG-20210405-WA0012.webp',
-      '/optimized/IMG-20210405-WA0013.webp',
-      '/optimized/IMG-20210405-WA0014.webp',
-      '/optimized/IMG-20210405-WA0015.webp',
-      '/optimized/IMG-20210405-WA0016-1.webp',
-      '/optimized/IMG-20210405-WA0017.webp',
-      '/optimized/Fachada-PAGINA-PRINCIPAL-1.webp',
       '/optimized/IMG_20221106_150650785_HDR.webp',
       '/optimized/IMG-20230303-WA0200.webp',
       '/optimized/IMG_20230705_195352_310.webp',
@@ -128,27 +126,7 @@ const PROJECTS = [
       '/optimized/IMG_20221106_151502423_MF_PORTRAIT.webp',
       '/optimized/IMG_20221106_151347052_MF_PORTRAIT.webp',
       '/optimized/IMG_20221106_150904764.webp',
-      '/optimized/IMG_20221106_151138243_MF_PORTRAIT.webp',
-      '/optimized/IMG-20220316-WA0016.webp',
-      '/optimized/IMG_20220430_121604366_HDR.webp',
-      '/optimized/IMG_20210803_125321597.webp',
-      '/optimized/IMG_20210803_151629924.webp',
-      '/optimized/IMG_20210806_113913921_HDR.webp',
-      '/optimized/IMG-20210429-WA0011.webp',
-      '/optimized/IMG_20220430_121637706_HDR.webp',
-      '/optimized/IMG-20220323-WA0017.webp',
-      '/optimized/IMG-20220422-WA0025.webp',
-      '/optimized/IMG-20220422-WA0026.webp',
-      '/optimized/received_270039917990787.webp',
-      '/optimized/IMG-20210429-WA0015.webp',
-      '/optimized/IMG-20201212-WA0019.webp',
-      '/optimized/IMG-20201215-WA00041.webp',
-      '/optimized/IMG-20201230-WA0038.webp',
-      '/optimized/IMG-20210109-WA0012.webp',
-      '/optimized/IMG-20210224-WA0004.webp',
-      '/optimized/IMG-20210202-WA0028.webp',
-      '/optimized/IMG-20210109-WA0027.webp',
-      '/optimized/IMG-20210109-WA0019.webp'
+      '/optimized/IMG_20221106_151138243_MF_PORTRAIT.webp'
     ]
   },
   {
@@ -162,15 +140,19 @@ const PROJECTS = [
       <h3 class="text-xl font-bold text-gray-100 mt-8 mb-3">Rentabilidad Asegurada</h3>
       <p class="mb-4">«Ares 22» combina excelencia y rentabilidad. Con departamentos de dos ambientes y nueve cocheras disponibles, esta es una oportunidad inmejorable para ingresar al mercado inmobiliario con éxito garantizado.</p>
       <h3 class="text-xl font-bold text-gray-100 mt-8 mb-3">FINANCIACIÓN EXCLUSIVA DESDE EL POZO</h3>
-      <p class="mb-4">Solo por esta oportunidad, con tan solo una <strong>RESERVA DEL 20%</strong> podés adquirir tu unidad mas una financiación de 24 cuotas en <strong>PESOS</strong>.</p>
+      <p class="mb-4">Solo por esta oportunidad, con tan solo una <strong>RESERVA DEL 20%</strong> podés adquirir tu unidad mas una financiación de hasta <strong style="color: #f27d26; font-size: 1.3em;">120 CUOTAS</strong> en <strong>PESOS</strong>.</p>
       <h3 class="text-xl font-bold text-gray-100 mt-8 mb-3">Ubicación Estratégica</h3>
       <p class="mb-4">Situado en la calle 22, entre las calles 77 y 79, este proyecto se encuentra a tan solo tres cuadras y media de la vital Avenida 10, que representa el principal corredor peatonal de la ciudad y a 7 cuadras de la playa. Aprovechando el crecimiento dinámico hacia la costa, este desarrollo atrae tanto a turistas como a residentes locales.</p>
       <h3 class="text-xl font-bold text-gray-100 mt-8 mb-3">Diseño y Calidad</h3>
       <p class="mb-4">Ofrecemos departamentos de más de 45 m², cada uno con balcones orientados tanto al frente como al contrafrente, además de cocheras y servicios esenciales como agua, cloacas, electricidad y gas. Tu inversión se traduce en comodidad y funcionalidad.</p>
       <p class="font-bold text-[#f27d26] mt-6">Costos de mantenimiento: sin expensas.</p>
     `,
-    features: ['Rentabilidad del 30%', 'Ideal alquiler temporario', 'Financiación 10 años en <strong>PESOS</strong>'],
-    financing: ['Financiación directa', 'Fideicomiso'],
+    features: ['Rentabilidad del 30%', 'Ideal alquiler temporario', 'Hasta <strong style="color:#f27d26;font-size:1.1em;">120 CUOTAS</strong> en <strong>PESOS</strong>'],
+    financing: ['Financiación hasta <strong style="color:#f27d26;font-size:1.4em;">120 CUOTAS</strong> en <strong>PESOS</strong>', 'Financiación directa sin intermediarios', 'Fideicomiso al costo'],
+    videos: {
+      primary: 'https://www.youtube.com/embed/44Nh6jyD1BQ',
+      secondary: 'https://www.youtube.com/embed/T0ffgscJkFQ'
+    },
     image: '/optimized/APOLO-ARES-1-1.webp',
     gallery: [
       '/optimized/APOLO-ARES-1-1.webp',
@@ -195,7 +177,7 @@ const PROJECTS = [
       <p class="font-bold text-[#f27d26] mt-6">Costos de mantenimiento: sin expensas.</p>
     `,
     features: ['Entrega noviembre del 2026', 'Ubicación privilegiada', 'Financiación en 48 cuotas en <strong>PESOS</strong>'],
-    financing: ['Financiación en hasta 24 cuotas', 'Venta desde el pozo'],
+    financing: ['Financiación en hasta 48 cuotas', 'Venta desde el pozo'],
     image: '/optimized/Copia-de-Nueva-Fachada-1.webp',
     gallery: [
       '/optimized/Copia-de-Nueva-Fachada-1.webp',
@@ -320,8 +302,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   const navLinks = [
     { name: 'Emprendimientos', path: '/proyectos' },
     { name: 'Financiación', path: '/financiacion' },
+    { name: 'Compra en Pozo', path: '/proceso-compra' },
     { name: 'Nosotros', path: '/nosotros' },
-    { name: 'Proceso', path: '/servicios' },
+    { name: 'Nuestros Servicios', path: '/servicios' },
   ];
 
   const isHomePage = location.pathname === '/';
@@ -675,7 +658,16 @@ const Home = () => {
             </h2>
           </motion.div>
           <div className="grid md:grid-cols-3 gap-8">
-            {PROJECTS.filter(p => ['ares-22', 'delfos-83', 'viggo-91'].includes(p.id)).map((project, index) => (
+            {(() => {
+              const featured = PROJECTS.filter(p => ['ares-22', 'delfos-83', 'viggo-91'].includes(p.id));
+              const isMobileView = typeof window !== 'undefined' && window.innerWidth < 768;
+              if (isMobileView) {
+                featured.sort((a, b) => {
+                  const mobileOrder = ['ares-22', 'viggo-91', 'delfos-83'];
+                  return mobileOrder.indexOf(a.id) - mobileOrder.indexOf(b.id);
+                });
+              }
+              return featured.map((project, index) => (
               <motion.div 
                 key={project.id} 
                 initial={{ opacity: 0, y: 40 }}
@@ -711,7 +703,8 @@ const Home = () => {
                   </Link>
                 </div>
               </motion.div>
-            ))}
+            ));
+            })()}
           </div>
           <div className="mt-16 text-center">
             <Link to="/proyectos" className="inline-flex items-center gap-4 text-gray-100 uppercase text-[10px] tracking-[0.3em] font-bold group">
@@ -741,7 +734,7 @@ const Home = () => {
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
                   referrerPolicy="no-referrer" loading="lazy" decoding="async" />
               </div>
-              <div className="absolute -bottom-12 -right-12 w-64 h-80 bg-[#4a4a4a] shadow-2xl border border-gray-800 p-12 flex flex-col justify-end hidden md:flex rounded-3xl">
+              <div className="absolute -bottom-8 -right-8 w-44 h-52 bg-[#4a4a4a] shadow-2xl border border-gray-800 p-8 flex flex-col justify-end hidden md:flex rounded-3xl">
                 <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-4">Trayectoria</p>
                 <h4 className="text-gray-100 text-4xl font-bold">+15</h4>
                 <p className="text-gray-500 text-xs uppercase tracking-widest mt-2">Años de Excelencia</p>
@@ -868,7 +861,7 @@ const Financiacion = () => {
             className="bg-[#4a4a4a] p-8 md:p-16 rounded-3xl border border-gray-800 flex flex-col h-full hover:-translate-y-2 shadow-xl hover:shadow-[0_20px_40px_-15px_rgba(242,125,38,0.15)] transition-all duration-500 group"
           >
             <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-8">Plan Tradicional</p>
-            <h2 className="text-3xl md:text-4xl mb-8 font-bold font-sans text-gray-100">Hasta 24 Cuotas</h2>
+            <h2 className="text-3xl md:text-4xl mb-8 font-bold font-sans text-gray-100">Hasta 48 Cuotas</h2>
             <p className="text-gray-400 text-lg mb-12 leading-relaxed font-medium">
               Financiación directa con Apolo Construcciones. Planes adaptados a tu medida para que puedas invertir con tranquilidad y previsibilidad.
             </p>
@@ -891,6 +884,44 @@ const Financiacion = () => {
             </Link>
           </motion.div>
 
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "0px" }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            className="relative overflow-hidden bg-gradient-to-br from-[#423129] to-[#33261f] p-8 md:p-16 rounded-3xl border-2 border-[#f27d26]/40 flex flex-col h-full hover:-translate-y-2 shadow-xl hover:shadow-[0_20px_40px_-15px_rgba(242,125,38,0.3)] transition-all duration-500 group"
+          >
+            <div className="absolute top-4 right-4 px-4 py-1.5 bg-[#f27d26] text-white text-xs font-black uppercase tracking-wider rounded-full animate-pulse shadow-lg">
+              ★ Destacado
+            </div>
+            <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-8">Plan Ares 22 — Exclusivo</p>
+            <h2 className="text-4xl md:text-6xl mb-4 font-black font-sans text-[#f27d26]">120 CUOTAS</h2>
+            <p className="text-2xl text-gray-100 font-bold mb-8">en <strong>PESOS</strong></p>
+            <p className="text-gray-400 text-lg mb-12 leading-relaxed font-medium">
+              Plan exclusivo para el proyecto Ares 22. Financiación a 10 años en pesos con fideicomiso al costo. La mejor oportunidad de inversión inmobiliaria.
+            </p>
+            <div className="space-y-6 mb-16 flex-grow">
+              <div className="flex items-start gap-4 font-medium text-gray-200 bg-[#f27d26]/10 p-3 rounded-lg border border-[#f27d26]/20">
+                <Check className="w-5 h-5 text-[#f27d26] shrink-0 mt-0.5" />
+                <span>Fideicomiso al costo</span>
+              </div>
+              <div className="flex items-start gap-4 font-medium text-gray-200 bg-[#f27d26]/10 p-3 rounded-lg border border-[#f27d26]/20">
+                <Check className="w-5 h-5 text-[#f27d26] shrink-0 mt-0.5" />
+                <span>Reserva con solo el 20%</span>
+              </div>
+              <div className="flex items-start gap-4 font-medium text-gray-200 bg-[#f27d26]/10 p-3 rounded-lg border border-[#f27d26]/20">
+                <Check className="w-5 h-5 text-[#f27d26] shrink-0 mt-0.5" />
+                <span>Sin comisiones inmobiliarias</span>
+              </div>
+              <div className="flex items-start gap-4 font-medium text-gray-200 bg-[#f27d26]/10 p-3 rounded-lg border border-[#f27d26]/20">
+                <Check className="w-5 h-5 text-[#f27d26] shrink-0 mt-0.5" />
+                <span>Financiación directa sin intermediarios</span>
+              </div>
+            </div>
+            <Link to="/proyectos/ares-22" className="w-max px-8 py-4 bg-[#f27d26] hover:bg-[#e06d1a] hover:-translate-y-1 hover:shadow-lg active:scale-95 text-white font-black rounded-lg transition-all duration-300 text-sm uppercase tracking-wider">
+              Ver Proyecto Ares 22
+            </Link>
+          </motion.div>
 
         </div>
       </div>
@@ -914,10 +945,13 @@ const Nosotros = () => {
             <h1 className="text-6xl md:text-8xl mb-10 leading-tight tracking-tighter font-bold font-sans text-gray-100">
               Sobre <br /><span className="text-[#f27d26] font-bold">Nosotros.</span>
             </h1>
-            <p className="text-xl text-gray-400 mb-12 leading-relaxed font-medium">
+            <p className="text-xl text-gray-400 mb-8 leading-relaxed font-medium">
               En Apolo Construcciones, no solo levantamos paredes; creamos espacios donde las familias construyen su futuro. Con más de 15 años en el mercado de Necochea, nos hemos consolidado como referentes en calidad y cumplimiento.
             </p>
-            <div className="grid grid-cols-2 gap-12">
+            <p className="text-lg text-gray-400 mb-12 leading-relaxed font-medium">
+              Nuestra misión es transformar el sueño de la vivienda propia en una realidad tangible, ofreciendo oportunidades de inversión seguras y rentables en una de las ciudades con mayor potencial turístico de la costa argentina.
+            </p>
+            <div className="grid grid-cols-3 gap-8">
               <div>
                 <div className="text-5xl font-bold text-[#f27d26] mb-2">+15</div>
                 <div className="text-gray-400 text-[10px] uppercase tracking-[0.2em] font-semibold">Años de trayectoria</div>
@@ -926,10 +960,66 @@ const Nosotros = () => {
                 <div className="text-5xl font-bold text-[#f27d26] mb-2">+500</div>
                 <div className="text-gray-400 text-[10px] uppercase tracking-[0.2em] font-semibold">Hogares entregados</div>
               </div>
+              <div>
+                <div className="text-5xl font-bold text-[#f27d26] mb-2">6</div>
+                <div className="text-gray-400 text-[10px] uppercase tracking-[0.2em] font-semibold">Proyectos realizados</div>
+              </div>
             </div>
           </div>
           <div className="aspect-[4/5] overflow-hidden rounded-3xl shadow-xl bg-[#4a4a4a] p-2 border border-gray-800">
             <img src="/optimized/FOTOS-1D.webp" alt="Nosotros" className="w-full h-full object-cover rounded-2xl" referrerPolicy="no-referrer" loading="lazy" decoding="async"/>
+          </div>
+        </motion.div>
+
+        {/* Team section */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "0px" }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          className="mb-24"
+        >
+          <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-6">Nuestro Equipo</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-100 mb-16">Las personas detrás <span className="text-[#f27d26]">de Apolo.</span></h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { name: 'Director General', role: 'Fundador & CEO', desc: 'Más de 15 años de experiencia en desarrollo inmobiliario en la costa argentina.' },
+              { name: 'Arquitectura', role: 'Dirección de Obra', desc: 'Diseño funcional y contemporáneo que maximiza el confort y la rentabilidad.' },
+              { name: 'Comercial', role: 'Asesoramiento', desc: 'Acompañamiento personalizado en cada etapa del proceso de inversión.' }
+            ].map((member, i) => (
+              <div key={i} className="bg-[#4a4a4a] rounded-3xl border border-gray-800 overflow-hidden group hover:-translate-y-2 transition-all duration-500">
+                <div className="aspect-square bg-gradient-to-br from-[#f27d26]/20 to-[#3b3b3b] flex items-center justify-center">
+                  <Users className="w-20 h-20 text-[#f27d26]/30" />
+                </div>
+                <div className="p-8">
+                  <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-2">{member.role}</p>
+                  <h3 className="text-xl font-bold text-gray-100 mb-3">{member.name}</h3>
+                  <p className="text-gray-400 font-medium">{member.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Values section */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "0px" }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { icon: <ShieldCheck className="w-8 h-8" />, title: 'Transparencia', desc: 'Contratos claros y condiciones justas. Sin letra chica ni sorpresas.' },
+              { icon: <Building2 className="w-8 h-8" />, title: 'Calidad', desc: 'Materiales premium y terminaciones de primera en cada uno de nuestros proyectos.' },
+              { icon: <TrendingUp className="w-8 h-8" />, title: 'Rentabilidad', desc: 'Proyectos diseñados para maximizar el retorno de inversión de nuestros clientes.' }
+            ].map((v, i) => (
+              <div key={i} className="bg-[#4a4a4a] p-8 md:p-12 rounded-3xl border border-gray-800 hover:border-[#f27d26]/30 transition-all duration-300 group">
+                <div className="text-[#f27d26] mb-8 group-hover:scale-110 transition-transform">{v.icon}</div>
+                <h3 className="text-2xl font-bold text-gray-100 mb-4">{v.title}</h3>
+                <p className="text-gray-400 font-medium leading-relaxed">{v.desc}</p>
+              </div>
+            ))}
           </div>
         </motion.div>
       </div>
@@ -1062,11 +1152,30 @@ const Contacto = () => {
 const ProjectDetail = () => {
   const { id } = useParams();
   const project: any = PROJECTS.find(p => p.id === id);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
+  const mapQueries: Record<string, string> = {
+    'viggo-91': 'Avenida+91+1781+Necochea+Buenos+Aires+Argentina',
+    'ares-22': 'Calle+22+entre+77+y+79+Necochea+Buenos+Aires+Argentina',
+    'delfos-83': 'Calle+83+entre+24+y+26+Necochea+Buenos+Aires+Argentina',
+    'dafne-42': 'Avenida+42+Necochea+Buenos+Aires+Argentina',
+    'orfeo': 'Necochea+Buenos+Aires+Argentina',
+    'zeus-543': 'Calle+543+Necochea+Buenos+Aires+Argentina'
+  };
 
   if (!project) return <div className="pt-32 text-center text-gray-100 h-screen flex items-center justify-center text-2xl font-sans">Proyecto no encontrado</div>;
 
+  const openLightbox = (index: number) => { setLightboxIndex(index); setLightboxOpen(true); };
+
   return (
     <div className="bg-[#3b3b3b] min-h-screen pt-32 pb-24 font-sans text-gray-100">
+      <AnimatePresence>
+        {lightboxOpen && project.gallery && (
+          <Lightbox images={project.gallery} currentIndex={lightboxIndex} onClose={() => setLightboxOpen(false)} />
+        )}
+      </AnimatePresence>
+
       {/* Header Section */}
       <div className="max-w-7xl mx-auto px-6 mb-16">
         <Link to="/proyectos" className="group inline-flex items-center gap-3 text-gray-400 uppercase text-[10px] tracking-[0.3em] font-bold mb-10 hover:text-[#f27d26] transition-colors">
@@ -1147,6 +1256,37 @@ const ProjectDetail = () => {
                 </ul>
               </section>
             )}
+
+            {/* Videos Section */}
+            {project.videos && (
+              <section>
+                <h2 className="text-[#f27d26] text-[10px] uppercase tracking-[0.3em] font-bold mb-6">Video del Proyecto</h2>
+                <div className="space-y-6">
+                  {project.videos.primary && (
+                    <div className="aspect-video rounded-2xl overflow-hidden shadow-xl border border-gray-800">
+                      <iframe
+                        src={project.videos.primary}
+                        title={`${project.name} - Video Principal`}
+                        className="w-full h-full"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    </div>
+                  )}
+                  {project.videos.secondary && (
+                    <div className="aspect-video rounded-2xl overflow-hidden shadow-xl border border-gray-800">
+                      <iframe
+                        src={project.videos.secondary}
+                        title={`${project.name} - Video Secundario`}
+                        className="w-full h-full"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    </div>
+                  )}
+                </div>
+              </section>
+            )}
           </div>
 
           {/* Media Column */}
@@ -1155,9 +1295,13 @@ const ProjectDetail = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="aspect-[4/5] overflow-hidden rounded-3xl shadow-xl border border-gray-800 group bg-[#4a4a4a] p-2"
+              className="aspect-[4/5] overflow-hidden rounded-3xl shadow-xl border border-gray-800 group bg-[#4a4a4a] p-2 cursor-pointer relative"
+              onClick={() => openLightbox(0)}
             >
               <img src={project.gallery?.[0] || project.image} alt={project.name} className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-1000" referrerPolicy="no-referrer" fetchPriority="high" decoding="async" />
+              <div className="absolute bottom-4 right-4 bg-black/60 backdrop-blur-sm text-white px-3 py-2 rounded-lg flex items-center gap-2 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                <ZoomIn size={16} /> Ampliar
+              </div>
             </motion.div>
           </div>
           
@@ -1169,7 +1313,7 @@ const ProjectDetail = () => {
             <div className="flex flex-col items-center text-center mb-16">
               <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.3em] font-bold mb-4">Registro Visual</p>
               <h2 className="text-4xl md:text-5xl font-black font-sans text-gray-100 mb-6">Galería del Proyecto</h2>
-              <p className="text-gray-500 max-w-2xl text-lg font-medium">Explorá cada detalle arquitectónico y los espacios diseñados para tu confort en esta galería completa.</p>
+              <p className="text-gray-500 max-w-2xl text-lg font-medium">Hacé click en cualquier imagen para ampliarla y explorar cada detalle arquitectónico.</p>
             </div>
             
             <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
@@ -1180,12 +1324,37 @@ const ProjectDetail = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "0px" }}
                   transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                  className="break-inside-avoid shadow-sm rounded-3xl overflow-hidden border border-gray-800 group bg-[#4a4a4a] p-2 relative min-h-[250px] mb-6"
+                  className="break-inside-avoid shadow-sm rounded-3xl overflow-hidden border border-gray-800 group bg-[#4a4a4a] p-2 relative min-h-[250px] mb-6 cursor-pointer"
+                  onClick={() => openLightbox(i + 1)}
                 >
                   <img src={img} alt={`Gallery Detail ${i + 1}`} className="w-full h-auto object-cover rounded-2xl group-hover:scale-[1.03] transition-transform duration-700" referrerPolicy="no-referrer" loading="lazy" decoding="async"/>
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500 rounded-3xl m-2 pointer-events-none" />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500 rounded-3xl m-2 pointer-events-none flex items-center justify-center">
+                    <ZoomIn className="text-white opacity-0 group-hover:opacity-80 transition-opacity duration-300" size={32} />
+                  </div>
                 </motion.div>
               ))}
+            </div>
+          </div>
+        )}
+
+        {/* Google Maps Section */}
+        {id && mapQueries[id] && (
+          <div className="mt-32 border-t border-gray-700 pt-24">
+            <div className="flex flex-col items-center text-center mb-16">
+              <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.3em] font-bold mb-4">Ubicación</p>
+              <h2 className="text-4xl md:text-5xl font-black font-sans text-gray-100 mb-6">¿Dónde se encuentra?</h2>
+            </div>
+            <div className="rounded-3xl overflow-hidden border border-gray-800 shadow-xl">
+              <iframe
+                src={`https://maps.google.com/maps?q=${mapQueries[id]}&t=&z=16&ie=UTF8&iwloc=&output=embed`}
+                width="100%"
+                height="450"
+                style={{ border: 0 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title={`Mapa de ${project.name}`}
+                className="w-full"
+              />
             </div>
           </div>
         )}
@@ -1194,6 +1363,143 @@ const ProjectDetail = () => {
   );
 };
 
+
+// --- Lightbox Component ---
+const Lightbox = ({ images, currentIndex, onClose }: { images: string[], currentIndex: number, onClose: () => void }) => {
+  const [idx, setIdx] = useState(currentIndex);
+  
+  useEffect(() => {
+    document.body.classList.add('lightbox-open');
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+      if (e.key === 'ArrowRight') setIdx(i => (i + 1) % images.length);
+      if (e.key === 'ArrowLeft') setIdx(i => (i - 1 + images.length) % images.length);
+    };
+    window.addEventListener('keydown', handleKey);
+    return () => { document.body.classList.remove('lightbox-open'); window.removeEventListener('keydown', handleKey); };
+  }, [images.length, onClose]);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl flex items-center justify-center p-4"
+      onClick={onClose}
+    >
+      <button onClick={onClose} className="absolute top-6 right-6 text-white/70 hover:text-white z-50 p-2">
+        <X size={32} />
+      </button>
+      <button onClick={(e) => { e.stopPropagation(); setIdx(i => (i - 1 + images.length) % images.length); }} className="absolute left-4 md:left-8 text-white/70 hover:text-white z-50 p-2">
+        <ChevronLeft size={40} />
+      </button>
+      <button onClick={(e) => { e.stopPropagation(); setIdx(i => (i + 1) % images.length); }} className="absolute right-4 md:right-8 text-white/70 hover:text-white z-50 p-2">
+        <ChevronRight size={40} />
+      </button>
+      <motion.img
+        key={idx}
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.3 }}
+        src={images[idx]}
+        alt={`Gallery ${idx + 1}`}
+        className="max-w-[90vw] max-h-[85vh] object-contain rounded-2xl shadow-2xl"
+        onClick={(e) => e.stopPropagation()}
+        referrerPolicy="no-referrer"
+      />
+      <div className="absolute bottom-6 text-white/50 text-sm font-medium">
+        {idx + 1} / {images.length}
+      </div>
+    </motion.div>
+  );
+};
+
+// --- Proceso de Compra en Pozo ---
+const ProcesoCompra = () => {
+  const steps = [
+    { icon: <Eye className="w-8 h-8" />, title: 'Descubrí el Proyecto', desc: 'Conocé nuestros emprendimientos Ares 22, Viggo 91 o Delfos 83 a través de nuestras redes o sitio web.' },
+    { icon: <MessageCircle className="w-8 h-8" />, title: 'Consultá por WhatsApp', desc: 'Escribinos al +54 9 2262 506588 para recibir toda la información del proyecto que te interesa.' },
+    { icon: <Users className="w-8 h-8" />, title: 'Reunión Presencial', desc: 'Coordinamos un encuentro para conocernos, visitar la obra y resolver todas tus consultas.' },
+    { icon: <Banknote className="w-8 h-8" />, title: 'Seña de Reserva', desc: 'Reservá tu unidad con una seña del 20%. Asegurá tu lugar en el emprendimiento.' },
+    { icon: <FileText className="w-8 h-8" />, title: 'Firma de Contrato', desc: 'Formalizamos la operación con un contrato transparente. Sin letra chica ni sorpresas.' },
+    { icon: <KeyRound className="w-8 h-8" />, title: 'Entrega del Departamento', desc: 'Recibí las llaves de tu nuevo departamento con todas las terminaciones de calidad Apolo.' },
+    { icon: <CreditCard className="w-8 h-8" />, title: 'Pago de Cuotas', desc: 'Continuá abonando las cuotas restantes en PESOS. Planes de hasta 120 cuotas disponibles.' },
+    { icon: <TrendingUp className="w-8 h-8" />, title: 'Rentabilizá tu Inversión', desc: 'Generá ingresos a través del alquiler temporario o permanente, o revendé con ganancia.' }
+  ];
+
+  return (
+    <div className="pt-32 pb-24 bg-[#333333] min-h-screen">
+      <div className="max-w-5xl mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "0px" }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          className="text-center mb-20"
+        >
+          <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-6">Paso a paso</p>
+          <h1 className="text-5xl md:text-7xl mb-8 leading-tight tracking-tighter font-bold font-sans text-gray-100">
+            Proceso de Compra <br /><span className="text-[#f27d26] font-bold">en Pozo.</span>
+          </h1>
+          <p className="text-xl text-gray-400 font-medium leading-relaxed max-w-3xl mx-auto">
+            Invertir en un departamento desde el pozo es más simple de lo que pensás. Te acompañamos en cada etapa del proceso.
+          </p>
+        </motion.div>
+
+        <div className="relative">
+          {/* Vertical line */}
+          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#f27d26] via-[#f27d26]/50 to-transparent hidden md:block" />
+          <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-[#f27d26] via-[#f27d26]/50 to-transparent md:hidden" />
+
+          {steps.map((step, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "0px" }}
+              transition={{ duration: 0.6, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+              className={`relative flex items-start gap-6 md:gap-12 mb-12 ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+            >
+              {/* Step number circle */}
+              <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 w-8 h-8 md:w-12 md:h-12 rounded-full bg-[#f27d26] flex items-center justify-center text-white font-black text-sm md:text-lg shadow-lg shadow-[#f27d26]/30 z-10">
+                {i + 1}
+              </div>
+
+              {/* Content card */}
+              <div className={`ml-16 md:ml-0 md:w-[calc(50%-3rem)] ${i % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}>
+                <div className="bg-[#4a4a4a] p-6 md:p-8 rounded-2xl border border-gray-800 hover:border-[#f27d26]/30 transition-all duration-300 group hover:-translate-y-1 shadow-lg">
+                  <div className="text-[#f27d26] mb-4 group-hover:scale-110 transition-transform">{step.icon}</div>
+                  <h3 className="text-xl font-bold text-gray-100 mb-3">{step.title}</h3>
+                  <p className="text-gray-400 font-medium leading-relaxed">{step.desc}</p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Final CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "0px" }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          className="text-center mt-20 bg-gradient-to-br from-[#423129] to-[#33261f] p-12 md:p-16 rounded-3xl border border-[#f27d26]/20"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-6">¿Listo para invertir?</h2>
+          <p className="text-gray-400 text-lg mb-10 max-w-2xl mx-auto font-medium">Contactanos hoy y empezá a construir tu patrimonio con la seguridad y respaldo de Apolo Construcciones.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="https://wa.me/5492262506588" target="_blank" rel="noreferrer" className="px-8 py-4 bg-[#22c55e] hover:bg-[#16a34a] text-white font-bold rounded-lg transition-all text-sm uppercase tracking-wider shadow-lg hover:shadow-xl hover:-translate-y-0.5 inline-flex items-center justify-center gap-3">
+              <MessageCircle size={20} /> Consultar por WhatsApp
+            </a>
+            <Link to="/proyectos" className="px-8 py-4 bg-[#4a4a4a] border border-gray-700 hover:border-[#f27d26] text-gray-100 font-bold rounded-lg transition-all text-sm uppercase tracking-wider inline-flex items-center justify-center gap-3">
+              Ver Proyectos
+            </Link>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
 
 const useIsMobile = () => {
   const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth < 768 : false);
@@ -1218,6 +1524,7 @@ export default function App() {
           <Route path="/financiacion" element={<Financiacion />} />
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/servicios" element={<Servicios />} />
+          <Route path="/proceso-compra" element={<ProcesoCompra />} />
           <Route path="/contacto" element={<Contacto />} />
         </Routes>
       </Layout>
