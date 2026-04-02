@@ -190,12 +190,7 @@ const PROJECTS = [
     gallery: [
       '/optimized/Copia-de-Nueva-Fachada-1.webp',
       '/optimized/1.webp',
-      '/optimized/Copia-de-Nueva-Fachada-3.webp',
-      '/optimized/4.webp',
-      '/optimized/2.webp',
-      '/optimized/3.webp',
-      '/optimized/5.webp',
-      '/optimized/6.webp'
+      '/optimized/Copia-de-Nueva-Fachada-3.webp'
     ],
     videos: {
       primary: 'https://www.youtube.com/embed/iE6FO3X5duQ'
