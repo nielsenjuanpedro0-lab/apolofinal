@@ -275,7 +275,12 @@ const PROJECTS = [
       '/optimized/ZEUS-543-2.jpg',
       '/optimized/ZEUS-543-3.jpg',
       '/optimized/ZEUS-543-4.jpg',
-      '/optimized/ZEUS-543-5.jpg'
+      '/optimized/ZEUS-543-5.jpg',
+      '/optimized/ZEUS-543-6.jpg',
+      '/optimized/ZEUS-543-7.jpg',
+      '/optimized/ZEUS-543-8.png',
+      '/optimized/ZEUS-543-9.png',
+      '/optimized/ZEUS-543-10.jpg'
     ]
   }
 ];
