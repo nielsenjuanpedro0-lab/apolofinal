@@ -261,7 +261,12 @@ const PROJECTS = [
     financing: ['Llave en mano', 'Consultar por unidades de reventa'],
     image: '/optimized/Foto-MINIATURA.webp',
     gallery: [
-      '/optimized/Foto-MINIATURA.webp'
+      '/optimized/Foto-MINIATURA.webp',
+      '/optimized/ZEUS-543-1.jpg',
+      '/optimized/ZEUS-543-2.jpg',
+      '/optimized/ZEUS-543-3.jpg',
+      '/optimized/ZEUS-543-4.jpg',
+      '/optimized/ZEUS-543-5.jpg'
     ]
   }
 ];
