@@ -191,15 +191,11 @@ const PROJECTS = [
       '/optimized/Copia-de-Nueva-Fachada-1.webp',
       '/optimized/1.webp',
       '/optimized/Copia-de-Nueva-Fachada-3.webp',
-      '/optimized/IMG-20210405-WA0009.webp',
-      '/optimized/IMG-20201120-WA0031.webp',
-      '/optimized/IMG-20210405-WA0013.webp',
       '/optimized/4.webp',
       '/optimized/2.webp',
       '/optimized/3.webp',
       '/optimized/5.webp',
-      '/optimized/6.webp',
-      '/optimized/86646b10-16cf-4a7a-bcc5-f3165513313d.webp'
+      '/optimized/6.webp'
     ],
     videos: {
       primary: 'https://www.youtube.com/embed/iE6FO3X5duQ'
@@ -270,22 +266,7 @@ const PROJECTS = [
     financing: ['Llave en mano', 'Consultar por unidades de reventa'],
     image: '/optimized/Foto-MINIATURA.webp',
     gallery: [
-      '/optimized/Foto-MINIATURA.webp',
-      '/optimized/Copia-de-FB_IMG_1543263940429.webp',
-      '/optimized/Copia-de-FB_IMG_1543263943240.webp',
-      '/optimized/Copia-de-IMG_20181114_222343002.webp',
-      '/optimized/Copia-de-IMG_20190202_111248995.webp',
-      '/optimized/Copia-de-IMG_20190202_111331120.webp',
-      '/optimized/Copia-de-IMG_20190202_111441999.webp',
-      '/optimized/Copia-de-IMG_20190202_111559907.webp',
-      '/optimized/Copia-de-IMG_20190202_111714446.webp',
-      '/optimized/Copia-de-IMG_20190202_111737239.webp',
-      '/optimized/Copia-de-IMG_20190202_111805252.webp',
-      '/optimized/Copia-de-IMG_20190202_111808910.webp',
-      '/optimized/Copia-de-IMG_20190202_111814273.webp',
-      '/optimized/Copia-de-IMG_20190202_112036924.webp',
-      '/optimized/Copia-de-IMG_20190202_112038346.webp',
-      '/optimized/Copia-de-IMG_20191111_110334662.webp'
+      '/optimized/Foto-MINIATURA.webp'
     ]
   }
 ];
