@@ -130,7 +130,10 @@ const PROJECTS = [
       '/optimized/IMG_20221106_151347052_MF_PORTRAIT.webp',
       '/optimized/IMG_20221106_150904764.webp',
       '/optimized/IMG_20221106_151138243_MF_PORTRAIT.webp'
-    ]
+    ],
+    videos: {
+      primary: 'https://www.youtube.com/embed/q9adkRTRQkw'
+    }
   },
   {
     id: 'ares-22',
@@ -153,7 +156,7 @@ const PROJECTS = [
     features: ['Rentabilidad del 30%', 'Ideal alquiler temporario', 'Hasta <strong style="color:#f27d26;font-size:1.1em;">120 CUOTAS</strong> en <strong>PESOS</strong>'],
     financing: ['Financiación hasta <strong style="color:#f27d26;font-size:1.4em;">120 CUOTAS</strong> en <strong>PESOS</strong>', 'Financiación directa sin intermediarios', 'Fideicomiso al costo'],
     videos: {
-      primary: 'https://www.youtube.com/embed/n_gQvlOyqwk',
+      primary: 'https://www.youtube.com/embed/fo7SRJtvh44',
       secondary: 'https://www.youtube.com/embed/T0ffgscJkFQ'
     },
     image: '/optimized/ARES-22-FLYER.jpg',
@@ -190,7 +193,10 @@ const PROJECTS = [
     gallery: [
       '/optimized/Copia-de-Nueva-Fachada-1.webp',
       '/optimized/1.webp',
-      '/optimized/Copia-de-Nueva-Fachada-3.webp'
+      '/optimized/Copia-de-Nueva-Fachada-3.webp',
+      '/optimized/DELFOS-RENDER-1.png',
+      '/optimized/DELFOS-RENDER-2.png',
+      '/optimized/DELFOS-RENDER-3.png'
     ],
     videos: {
       primary: 'https://www.youtube.com/embed/iE6FO3X5duQ'
@@ -244,7 +250,10 @@ const PROJECTS = [
       '/optimized/3-BLANCO.webp',
       '/optimized/FOTOS-2.webp',
       '/optimized/FOTOS-2A.webp'
-    ]
+    ],
+    videos: {
+      primary: 'https://www.youtube.com/embed/jO_Yf5Zp7-U'
+    }
   },
   {
     id: 'zeus-543',
