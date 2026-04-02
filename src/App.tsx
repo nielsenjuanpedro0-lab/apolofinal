@@ -156,19 +156,19 @@ const PROJECTS = [
       primary: 'https://www.youtube.com/embed/n_gQvlOyqwk',
       secondary: 'https://www.youtube.com/embed/T0ffgscJkFQ'
     },
-    image: '/optimized/ARES-22-FLYER.webp',
+    image: '/optimized/ARES-22-FLYER.jpg',
     gallery: [
-      '/optimized/ARES-22-FLYER.webp',
+      '/optimized/ARES-22-FLYER.jpg',
       '/optimized/APOLO-ARES-1-1.webp',
       '/optimized/APOLO-ARES-2-1.webp',
       '/optimized/APOLO-ARES-3-1.webp',
       '/optimized/APOLO-ARES-4-1.webp',
       '/optimized/APOLO-ARES-5-1.webp',
       '/optimized/APOLO-ARES-6-1.webp',
-      '/optimized/ARES-22-BALCONY-1.webp',
-      '/optimized/ARES-22-BALCONY-2.webp',
-      '/optimized/ARES-22-BALCONY-3.webp',
-      '/optimized/ARES-22-BALCONY-4.webp'
+      '/optimized/ARES-22-BALCONY-1.jpg',
+      '/optimized/ARES-22-BALCONY-2.jpg',
+      '/optimized/ARES-22-BALCONY-3.jpg',
+      '/optimized/ARES-22-BALCONY-4.jpg'
     ]
   },
   {
