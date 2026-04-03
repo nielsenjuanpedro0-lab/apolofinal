@@ -905,7 +905,7 @@ const Nosotros = () => {
               <img 
                 src="/optimized/miguel.webp" 
                 alt="Miguel Angel Di Virgilio" 
-                className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-1000 scale-125 group-hover:scale-150" 
+                className="w-full h-full object-cover object-top transition-all duration-1000 scale-125 group-hover:scale-135" 
               />
               <div className="absolute bottom-10 left-10 z-20">
                 <p className="text-[#f27d26] text-xs font-bold uppercase tracking-widest mb-2">Fundador & CEO</p>
@@ -918,12 +918,23 @@ const Nosotros = () => {
                 <h2 className="text-4xl md:text-5xl font-black text-gray-100 leading-tight">El Origen.</h2>
                 <div className="w-20 h-1.5 bg-[#f27d26] rounded-full" />
               </div>
-              <p className="text-lg md:text-xl text-gray-400 leading-relaxed font-medium">
-                «En 2008, después de años de trabajar en el sector, decido que, qué mejor que volcar toda esa experiencia en proyectos propios. Así nace Apolo.»
-              </p>
-              <p className="text-lg md:text-xl text-gray-400 leading-relaxed font-medium">
-                «Junto a mi familia, nos propusimos elevar el estándar constructivo de nuestra ciudad. Empezamos con un sueño pequeño y hoy, con orgullo, vemos cómo cientos de personas viven en los hogares que imaginamos.»
-              </p>
+              <div className="space-y-6 text-lg md:text-xl text-gray-400 leading-relaxed font-medium">
+                <p>
+                  Mi nombre es Miguel Angel Di Virgilio y nombré esta empresa por mi hijo. Te cuento porqué:
+                </p>
+                <p>
+                  Hace algunos años, mi esposa y yo nos enteramos que íbamos a ser padres de un varón. Fue una gran noticia ya que yo en ese momento empezaba un gran proyecto. Ese proyecto consistía en el desarrollo de una empresa que se encargaría de volver sueños realidad, el sueño de la casa propia. De a poco fui armando mi equipo, pidiendo mil presupuestos para poder dar con el proveedor que pueda darme precio y calidad.
+                </p>
+                <p>
+                  El proyecto creció y también el embarazo. Llegó el momento de elegir un nombre para mi primer hijo. Tuvimos muchísimas idas y vueltas, no fue nada sencillo. Pero después de horas de debate elegimos el nombre <strong>Apolo</strong>.
+                </p>
+                <p>
+                  Al momento del nacimiento de mi hijo, decido que qué mejor que bautizar a mi gran proyecto como él. Así nace <strong>Apolo Di Virgilio Construcciones</strong>, una idea que creció y hoy nos encuentra realizando varios proyectos simultáneos.
+                </p>
+                <p>
+                  Tal vez en un futuro mi familia pueda sumarse a este sueño ya que prácticamente nacieron juntos.
+                </p>
+              </div>
               <div className="grid grid-cols-2 gap-8 pt-8">
                 <div>
                   <h4 className="text-4xl font-black text-[#f27d26] mb-2">+15</h4>
