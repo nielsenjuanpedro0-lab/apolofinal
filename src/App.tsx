@@ -1107,7 +1107,7 @@ const ProjectDetail = () => {
 
   const mapQueries: Record<string, string> = {
     'viggo-91': 'Avenida+91+1781+Necochea+Buenos+Aires+Argentina',
-    'ares-22': 'Calle+22+entre+77+y+79+Necochea+Buenos+Aires+Argentina',
+    'ares-22': '22,+entre+las+calles+77+y+79,+Necochea,+Buenos+Aires,+Argentina',
     'delfos-83': 'Calle+83+entre+24+y+26+Necochea+Buenos+Aires+Argentina',
     'dafne-42': 'Calle+42+Necochea+Buenos+Aires+Argentina',
     'orfeo': 'Necochea+Buenos+Aires+Argentina',
