@@ -62,7 +62,7 @@ const PROJECTS = [
       <h3 class="text-xl font-bold text-gray-100 mt-8 mb-3">FINANCIACIÓN EXCLUSIVA DESDE EL POZO</h3>
       <p class="mb-4">Solo por esta oportunidad, con tan solo una <strong>RESERVA DE 2000 USD</strong> podés adquirir tu unidad mas una financiación de hasta <strong style="color: #f27d26; font-size: 1.3em;">120 CUOTAS</strong> en <strong>PESOS</strong>.</p>
       <h3 class="text-xl font-bold text-gray-100 mt-8 mb-3">Ubicación Estratégica</h3>
-      <p class="mb-4">Situado en la calle 22, entre las calles 77 y 79, este proyecto se encuentra a tan solo tres cuadras y media de la vital Avenida 10, que representa el principal corredor peatonal de la ciudad y a 7 cuadras de la playa. Aprovechando el crecimiento dinámico hacia la costa, este desarrollo atrae tanto a turistas como a residentes locales.</p>
+      <p class="mb-4">Situado en la calle 22 N° 3819, este proyecto se encuentra a tan solo tres cuadras y media de la vital Avenida 10, que representa el principal corredor peatonal de la ciudad y a 7 cuadras de la playa. Aprovechando el crecimiento dinámico hacia la costa, este desarrollo atrae tanto al turista como al residente local.</p>
       <h3 class="text-xl font-bold text-gray-100 mt-8 mb-3">Diseño y Calidad</h3>
       <p class="mb-4">Ofrecemos departamentos de más de 45 m², cada uno con balcones orientados tanto al frente como al contrafrente, además de cocheras y servicios esenciales como agua, cloacas, electricidad y gas. Tu inversión se traduce en comodidad y funcionalidad.</p>
       <p class="font-bold text-[#f27d26] mt-6">Costos de mantenimiento: sin expensas.</p>
@@ -1154,7 +1154,7 @@ const ProjectDetail = () => {
 
   const mapQueries: Record<string, string> = {
     'viggo-91': 'Avenida+91+1781+Necochea+Buenos+Aires+Argentina',
-    'ares-22': '22,+entre+las+calles+77+y+79,+Necochea,+Buenos+Aires,+Argentina',
+    'ares-22': 'Calle+22+3819,+Necochea,+Buenos+Aires,+Argentina',
     'delfos-83': 'Calle+83+entre+24+y+26+Necochea+Buenos+Aires+Argentina',
     'dafne-42': 'Calle+42+Necochea+Buenos+Aires+Argentina',
     'orfeo': 'Necochea+Buenos+Aires+Argentina',
