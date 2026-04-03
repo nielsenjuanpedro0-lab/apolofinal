@@ -976,6 +976,61 @@ const Servicios = () => {
   );
 };
 
+const ASUNTOS = [
+  { value: 'inversor', label: 'Quiero ser inversor' },
+  { value: 'pozo', label: 'Comprar desde pozo' },
+  { value: 'primer-depto', label: 'Busco mi primer departamento' },
+  { value: 'construir', label: 'Quiero construir mi hogar' },
+  { value: 'proyectos', label: 'Proyectos de +1500m²' },
+];
+
+const ContactForm = () => {
+  const [selectedAsunto, setSelectedAsunto] = React.useState('');
+  return (
+    <form className="grid gap-10">
+      <div className="grid md:grid-cols-2 gap-8">
+        <div className="relative group">
+          <input type="text" placeholder="Nombre" className="w-full bg-transparent border-b border-gray-700 py-4 outline-none focus:border-[#f27d26] transition-all font-medium text-gray-100 placeholder:text-gray-400" />
+          <div className="absolute bottom-0 left-0 h-0.5 bg-[#f27d26] transition-all duration-300 w-0 group-focus-within:w-full" />
+        </div>
+        <div className="relative group">
+          <input type="email" placeholder="Email" className="w-full bg-transparent border-b border-gray-700 py-4 outline-none focus:border-[#f27d26] transition-all font-medium text-gray-100 placeholder:text-gray-400" />
+          <div className="absolute bottom-0 left-0 h-0.5 bg-[#f27d26] transition-all duration-300 w-0 group-focus-within:w-full" />
+        </div>
+      </div>
+
+      <div>
+        <p className="text-gray-400 text-[10px] uppercase tracking-[0.2em] font-semibold mb-5">¿En qué te podemos ayudar?</p>
+        <div className="flex flex-wrap gap-3">
+          {ASUNTOS.map((a) => (
+            <button
+              key={a.value}
+              type="button"
+              onClick={() => setSelectedAsunto(a.value)}
+              className={`px-5 py-2.5 rounded-full text-sm font-semibold border transition-all duration-200 cursor-pointer ${
+                selectedAsunto === a.value
+                  ? 'bg-[#f27d26] border-[#f27d26] text-white shadow-lg shadow-[#f27d26]/20'
+                  : 'bg-transparent border-gray-600 text-gray-400 hover:border-[#f27d26] hover:text-[#f27d26]'
+              }`}
+            >
+              {a.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="relative group">
+        <input type="tel" placeholder="Teléfono" required className="w-full bg-transparent border-b border-gray-700 py-4 outline-none focus:border-[#f27d26] transition-all font-medium text-gray-100 placeholder:text-gray-400" />
+        <div className="absolute bottom-0 left-0 h-0.5 bg-[#f27d26] transition-all duration-300 w-0 group-focus-within:w-full" />
+      </div>
+
+      <button className="group relative w-max px-10 py-5 bg-[#f27d26] text-white font-black rounded-xl hover:-translate-y-1 hover:shadow-[0_20px_40px_-10px_rgba(242,125,38,0.5)] active:scale-95 transition-all duration-300 text-sm uppercase tracking-[0.2em] flex items-center gap-3">
+        Enviar <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+      </button>
+    </form>
+  );
+};
+
 const Contacto = () => {
   return (
     <div className="pt-32 pb-24 bg-[#4a4a4a] min-h-screen border-t border-gray-800">
@@ -1024,46 +1079,7 @@ const Contacto = () => {
             transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-2"
           >
-            <form className="grid gap-8">
-              <div className="grid md:grid-cols-2 gap-8 ring-1 ring-gray-800 p-6 rounded-2xl bg-[#3b3b3b]/30">
-                <div className="space-y-8 w-full">
-                  <div className="relative group">
-                    <input type="text" placeholder="Nombre" className="w-full bg-transparent border-b border-gray-700 py-4 outline-none focus:border-[#f27d26] transition-all font-medium text-gray-100 placeholder:text-gray-400" />
-                    <div className="absolute bottom-0 left-0 h-0.5 bg-[#f27d26] transition-all duration-300 w-0 group-focus-within:w-full" />
-                  </div>
-                  <div className="relative group">
-                    <input type="email" placeholder="Email" className="w-full bg-transparent border-b border-gray-700 py-4 outline-none focus:border-[#f27d26] transition-all font-medium text-gray-100 placeholder:text-gray-400" />
-                    <div className="absolute bottom-0 left-0 h-0.5 bg-[#f27d26] transition-all duration-300 w-0 group-focus-within:w-full" />
-                  </div>
-                </div>
-                <div className="space-y-8 w-full">
-                  <div className="relative">
-                    <select className="w-full bg-[#3b3b3b] border-b border-gray-700 py-4 outline-none focus:border-[#f27d26] transition-all font-medium text-gray-100 appearance-none cursor-pointer">
-                      <option value="" disabled selected>Asunto de consulta</option>
-                      <option value="inversor">- Quiero ser inversor</option>
-                      <option value="pozo">- Comprar desde pozo</option>
-                      <option value="primer-depto">- Busco mi primer departamento</option>
-                      <option value="construir">- Quiero construir mi hogar</option>
-                      <option value="proyectos">- Busco construir proyectos de +1500m2</option>
-                    </select>
-                    <div className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
-                      <ChevronRight size={16} className="rotate-90" />
-                    </div>
-                  </div>
-                  <div className="relative group">
-                    <input type="tel" placeholder="Teléfono" required className="w-full bg-transparent border-b border-gray-700 py-4 outline-none focus:border-[#f27d26] transition-all font-medium text-gray-100 placeholder:text-gray-400" />
-                    <div className="absolute bottom-0 left-0 h-0.5 bg-[#f27d26] transition-all duration-300 w-0 group-focus-within:w-full" />
-                  </div>
-                </div>
-              </div>
-              <div className="relative group">
-                <textarea rows={4} placeholder="Escribí tu mensaje aquí..." className="w-full bg-transparent border-b border-gray-700 py-4 outline-none focus:border-[#f27d26] transition-all font-medium resize-none text-gray-100 placeholder:text-gray-400"></textarea>
-                <div className="absolute bottom-0 left-0 h-0.5 bg-[#f27d26] transition-all duration-300 w-0 group-focus-within:w-full" />
-              </div>
-              <button className="group relative w-max px-10 py-5 bg-[#f27d26] text-white font-black rounded-xl hover:-translate-y-1 hover:shadow-[0_20px_40px_-10px_rgba(242,125,38,0.5)] active:scale-95 transition-all duration-300 text-sm uppercase tracking-[0.2em] flex items-center gap-3">
-                Enviar Mensaje <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-              </button>
-            </form>
+            <ContactForm />
           </motion.div>
         </div>
       </div>
