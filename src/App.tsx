@@ -843,12 +843,12 @@ const Nosotros = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
               <img 
                 src="/optimized/miguel.webp" 
-                alt="Miguel Juan Pedro Nielsen" 
+                alt="Miguel Angel Di Virgilio" 
                 className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-1000 scale-125 group-hover:scale-150" 
               />
               <div className="absolute bottom-10 left-10 z-20">
                 <p className="text-[#f27d26] text-xs font-bold uppercase tracking-widest mb-2">Fundador & CEO</p>
-                <h3 className="text-white text-3xl font-black">Miguel <br />Nielsen.</h3>
+                <h3 className="text-white text-3xl font-black">Miguel Angel <br />Di Virgilio.</h3>
               </div>
             </motion.div>
             
