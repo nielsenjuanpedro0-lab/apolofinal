@@ -335,52 +335,52 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </nav>
+      </header>
 
-        <AnimatePresence>
-          {isMenuOpen && (
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            className="fixed inset-0 z-[110] flex flex-col md:hidden pt-32 pb-12"
+            style={{ backgroundColor: '#111111', opacity: 1 }}
+          >
+            <div className="flex-grow flex flex-col items-center justify-center gap-10 px-8">
+              {navLinks.map((link, i) => (
+                <motion.div
+                  key={link.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 + i * 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  <Link
+                    to={link.path}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`text-3xl font-bold tracking-wide transition-all duration-300 ${
+                      location.pathname === link.path ? 'text-[#f27d26]' : 'text-gray-100 hover:text-[#f27d26]'
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-              className="fixed inset-0 z-[90] flex flex-col md:hidden pt-32 pb-12"
-              style={{ backgroundColor: '#1a1a1a' }}
+              transition={{ delay: 0.6 }}
+              className="flex justify-center gap-8 mt-auto"
             >
-              <div className="flex-grow flex flex-col items-center justify-center gap-10 px-8">
-                {navLinks.map((link, i) => (
-                  <motion.div
-                    key={link.name}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.1 + i * 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                  >
-                    <Link
-                      to={link.path}
-                      onClick={() => setIsMenuOpen(false)}
-                      className={`text-3xl font-bold tracking-wide transition-all duration-300 ${
-                        location.pathname === link.path ? 'text-[#f27d26]' : 'text-gray-100 hover:text-[#f27d26]'
-                      }`}
-                    >
-                      {link.name}
-                    </Link>
-                  </motion.div>
-                ))}
-              </div>
-
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.6 }}
-                className="flex justify-center gap-8 mt-auto"
-              >
-                <a href="https://www.instagram.com/apolo.construcciones/" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#f27d26] transition-colors"><Instagram size={28} /></a>
-                <a href="https://www.facebook.com/apoloconstructora" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#f27d26] transition-colors"><Facebook size={28} /></a>
-                <a href="https://wa.me/5492262506588" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#f27d26] transition-colors"><MessageCircle size={28} /></a>
-              </motion.div>
+              <a href="https://www.instagram.com/apolo.construcciones/" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#f27d26] transition-colors"><Instagram size={28} /></a>
+              <a href="https://www.facebook.com/apoloconstructora" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#f27d26] transition-colors"><Facebook size={28} /></a>
+              <a href="https://wa.me/5492262506588" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#f27d26] transition-colors"><MessageCircle size={28} /></a>
             </motion.div>
-          )}
-        </AnimatePresence>
-      </header>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <main className="flex-grow">{children}</main>
 
