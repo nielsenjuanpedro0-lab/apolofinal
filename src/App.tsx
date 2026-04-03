@@ -328,7 +328,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             </a>
           </div>
 
-          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden text-gray-100 p-2 transform active:scale-90 transition-transform">
+          <button 
+            onClick={() => setIsMenuOpen(!isMenuOpen)} 
+            className="md:hidden text-gray-100 p-2 transform active:scale-90 transition-transform relative z-[100]"
+          >
             {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </nav>
@@ -340,7 +343,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-              className="fixed inset-0 z-40 bg-[#4a4a4a] bg-opacity-95 backdrop-blur-xl flex flex-col md:hidden pt-32 pb-12"
+              className="fixed inset-0 z-[90] flex flex-col md:hidden pt-32 pb-12"
+              style={{ backgroundColor: '#1a1a1a' }}
             >
               <div className="flex-grow flex flex-col items-center justify-center gap-10 px-8">
                 {navLinks.map((link, i) => (
