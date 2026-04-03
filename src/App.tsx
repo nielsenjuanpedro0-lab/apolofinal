@@ -278,6 +278,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     { name: 'Inicio', path: '/' },
     { name: 'Proyectos', path: '/proyectos' },
     { name: 'Financiación', path: '/financiacion' },
+    { name: 'Proceso de compra', path: '/proceso-compra' },
     { name: 'Sobre Nosotros', path: '/nosotros' },
     { name: 'Contacto', path: '/contacto' }
   ];
@@ -287,8 +288,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <header className="fixed top-0 w-full z-50 backdrop-blur-md bg-[#333333]/80 border-b border-gray-800">
         <nav className="max-w-7xl mx-auto px-6 h-20 md:h-24 flex items-center justify-between">
           <Link to="/" className="relative group">
-            <span className="text-2xl md:text-3xl font-black tracking-tighter text-gray-100 flex items-baseline">
-              APOLO<span className="text-[#f27d26] text-4xl md:text-5xl leading-none">.</span>
+            <span className="text-xl md:text-2xl font-black tracking-tighter text-gray-100 flex items-baseline uppercase">
+              APOLO CONSTRUCCIONES<span className="text-[#f27d26] text-4xl md:text-5xl leading-none">.</span>
             </span>
           </Link>
 
@@ -327,8 +328,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-12 gap-16 mb-20">
             <div className="md:col-span-4">
-              <Link to="/" className="text-3xl font-black tracking-tighter text-white mb-8 block">
-                APOLO<span className="text-[#f27d26]">.</span>
+              <Link to="/" className="text-2xl md:text-3xl font-black tracking-tighter text-white mb-8 block uppercase">
+                APOLO CONSTRUCCIONES<span className="text-[#f27d26]">.</span>
               </Link>
               <p className="text-gray-400 font-medium leading-relaxed mb-10 max-w-sm">
                 Desarrollamos el futuro de Necochea con una visión arquitectónica que prioriza la calidad, el diseño y la rentabilidad de nuestros inversores.
@@ -847,7 +848,7 @@ const Nosotros = () => {
               />
               <div className="absolute bottom-10 left-10 z-20">
                 <p className="text-[#f27d26] text-xs font-bold uppercase tracking-widest mb-2">Fundador & CEO</p>
-                <h3 className="text-white text-3xl font-black">Juan Pedro <br />Nielsen.</h3>
+                <h3 className="text-white text-3xl font-black">Miguel <br />Nielsen.</h3>
               </div>
             </motion.div>
             
