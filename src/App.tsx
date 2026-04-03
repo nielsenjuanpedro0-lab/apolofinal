@@ -244,24 +244,27 @@ const PROJECTS = [
     name: 'Zeus 543',
     status: 'Finalizado',
     category: 'Finalizados',
-    description: 'Complejo residencial en Quequén, unidades con terminaciones de alta calidad.',
+    description: 'Solidez y diseño en un proyecto ya entregado y consolidado.',
     fullDescriptionHtml: `
-<h3 class="text-xl font-bold text-gray-100 mb-3">Departamentos en planta alta y planta baja</h3>
-      <ul class="list-disc pl-5 mb-4 space-y-2">
-        <li>Ubicación: Calle 543 e/ Av. Loberia y 580, Quequén.</li>
-        <li>Unidades a estrenar.</li>
-        <li>Servicios: agua corriente, cloacas, electricidad, alumbrado público.</li>
-        <li>Entrada para vehículos.</li>
-        <li>Sin expensas.</li>
-      </ul>
+<p class="mb-4"><strong>Zeus 543</strong> es el primer emprendimiento que realizamos sobre la calle 543 entre Av. Loberia y 580.</p>
+      <p class="mb-4">Se emplazó en un lote de 10×40 un departamento de 2 ambientes y un dúplex de 110 m² cubiertos con entradas dobles vehiculares y patios propios.</p>
+      <p class="font-bold text-[#f27d26] mt-6">Obra Finalizada</p>
     `,
-    features: ['Quequén residencial', 'A metros de Av. Lobería', 'Ideal inversión'],
-    financing: ['Financiación directa', 'Entrega y cuotas'],
-    image: '/optimized/zeus-cover.webp',
+    features: ['Entrega inmediata', 'Calidad de marca Apolo', 'Arquitectura funcional'],
+    financing: ['Llave en mano', 'Consultar por unidades de reventa'],
+    image: '/optimized/Foto-MINIATURA.webp',
     gallery: [
-      '/optimized/zeus-cover.webp',
-      '/optimized/zeus-2.webp',
-      '/optimized/zeus-3.webp'
+      '/optimized/Foto-MINIATURA.webp',
+      '/optimized/ZEUS-543-1.jpg',
+      '/optimized/ZEUS-543-2.jpg',
+      '/optimized/ZEUS-543-3.jpg',
+      '/optimized/ZEUS-543-4.jpg',
+      '/optimized/ZEUS-543-5.jpg',
+      '/optimized/ZEUS-543-6.jpg',
+      '/optimized/ZEUS-543-7.jpg',
+      '/optimized/ZEUS-543-8.png',
+      '/optimized/ZEUS-543-9.png',
+      '/optimized/ZEUS-543-10.jpg'
     ]
   }
 ];
