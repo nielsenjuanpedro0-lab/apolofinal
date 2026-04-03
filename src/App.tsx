@@ -340,7 +340,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-              className="fixed inset-0 z-40 bg-[#4a4a4a]/95 backdrop-blur-xl flex flex-col md:hidden pt-32 pb-12"
+              className="fixed inset-0 z-40 bg-[#4a4a4a] bg-opacity-95 backdrop-blur-xl flex flex-col md:hidden pt-32 pb-12"
             >
               <div className="flex-grow flex flex-col items-center justify-center gap-10 px-8">
                 {navLinks.map((link, i) => (
