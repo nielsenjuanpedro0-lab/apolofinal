@@ -563,6 +563,20 @@ const Home = () => {
           ))}
         </div>
 
+        {/* Hero Slider Navigation Arrows */}
+        <button 
+          onClick={() => setCurrentIndex((prev) => (prev - 1 + carouselItems.length) % carouselItems.length)}
+          className="absolute left-6 top-1/2 -translate-y-1/2 p-3 bg-black/20 hover:bg-[#f27d26] text-white rounded-full backdrop-blur-md transition-all z-40 group hidden md:flex"
+        >
+          <ChevronLeft size={32} className="group-hover:scale-110 transition-transform" />
+        </button>
+        <button 
+          onClick={() => setCurrentIndex((prev) => (prev + 1) % carouselItems.length)}
+          className="absolute right-6 top-1/2 -translate-y-1/2 p-3 bg-black/20 hover:bg-[#f27d26] text-white rounded-full backdrop-blur-md transition-all z-40 group hidden md:flex"
+        >
+          <ChevronRight size={32} className="group-hover:scale-110 transition-transform" />
+        </button>
+
         {/* Scroll Indicator */}
         <motion.div 
           initial={{ opacity: 0 }}
@@ -1344,6 +1358,24 @@ const ProjectDetail = () => {
                       <div key={i} className={`h-1.5 rounded-full transition-all duration-500 ${i === currentSlide ? 'w-6 bg-[#f27d26]' : 'w-1.5 bg-white/40'}`} />
                     ))}
                   </div>
+                  <button 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setCurrentSlide((prev) => (prev - 1 + project.gallery.length) % project.gallery.length);
+                    }}
+                    className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-black/30 hover:bg-[#f27d26] text-white rounded-full backdrop-blur-md transition-all z-30 group opacity-0 group-hover:opacity-100"
+                  >
+                    <ChevronLeft size={24} className="group-hover:scale-110 transition-transform" />
+                  </button>
+                  <button 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setCurrentSlide((prev) => (prev + 1) % project.gallery.length);
+                    }}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-black/30 hover:bg-[#f27d26] text-white rounded-full backdrop-blur-md transition-all z-30 group opacity-0 group-hover:opacity-100"
+                  >
+                    <ChevronRight size={24} className="group-hover:scale-110 transition-transform" />
+                  </button>
                 </div>
               ) : (
                 <img src={project.gallery?.[0] || project.image} alt={project.name} className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-1000" referrerPolicy="no-referrer" fetchPriority="high" decoding="async" />
