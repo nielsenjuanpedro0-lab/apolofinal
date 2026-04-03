@@ -788,12 +788,12 @@ const Financiacion = () => {
             transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="relative overflow-hidden bg-gradient-to-br from-[#423129] to-[#33261f] p-8 md:p-20 rounded-[3rem] border-2 border-[#f27d26]/40 flex flex-col shadow-2xl hover:shadow-[0_40px_80px_-20px_rgba(242,125,38,0.25)] transition-all duration-700 group"
           >
-            <div className="absolute top-8 right-8 px-6 py-2 bg-[#f27d26] text-white text-xs font-black uppercase tracking-[0.3em] rounded-full animate-pulse shadow-lg z-20">
+            <div className="absolute top-4 right-4 sm:top-8 sm:right-8 px-4 py-1.5 sm:px-6 sm:py-2 bg-[#f27d26] text-white text-[9px] sm:text-xs font-black uppercase tracking-[0.2em] sm:tracking-[0.3em] rounded-full animate-pulse shadow-lg z-20">
               MÁS ELEGIDO
             </div>
             
             <div className="relative z-10 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-              <div>
+              <div className="pt-8 sm:pt-0">
                 <h2 className="text-gray-100 text-4xl md:text-6xl font-black mb-8 leading-tight">Plan 120 <br /><span className="text-[#f27d26]">Cuotas.</span></h2>
                 <p className="text-gray-300 text-lg md:text-xl mb-10 leading-relaxed font-medium">
                   La forma más accesible de dolarizar tus ahorros. Pagá tu departamento en cuotas mensuales en <strong>PESOS</strong> mientras tu capital se revaloriza en dólares.
