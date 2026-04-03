@@ -118,44 +118,6 @@ const PROJECTS = [
     }
   },
   {
-    id: 'viggo-91',
-    name: 'Viggo 91',
-    status: 'En venta',
-    category: 'En venta',
-    description: 'Viviendas modernas en una ubicación privilegiada. Un procedimiento seguro y confiable.',
-    fullDescriptionHtml: `
-<p class="mb-4">Venta desde el pozo de dos espectaculares dúplex ubicados sobre la importante Av. 91 entre las calles 42 y 40.</p>
-      <p class="mb-4">Un lugar privilegiado a pocas cuadras del mágico parque Miguel Lillo, en Necochea, Prov. de Buenos Aires.</p>
-      <h3 class="text-xl font-bold text-gray-100 mt-8 mb-3">Detalles</h3>
-      <ul class="list-disc pl-5 mb-4 space-y-2">
-        <li><strong>Ubicación:</strong> Av. 91 N° 1781 e/ 87 y 85.</li>
-        <li><strong>Metros cuadrados cubiertos:</strong> 105m² y 95m² respectivamente.</li>
-        <li><strong>Metros cuadrados semicubiertos:</strong> 50m² cada uno.</li>
-        <li><strong>Dormitorios:</strong> 3 and 2 respectively.</li>
-        <li><strong>Baños:</strong> 1 principal + 1 de servicio cada uno.</li>
-      </ul>
-      <p class="font-bold text-[#f27d26] mt-6">Costos de mantenimiento: sin expensas.</p>
-    `,
-    features: ['3 ambientes con balcón', 'Doble cochera', 'Patio propio', 'Financiación del 70%'],
-    financing: ['Descuentos por pago en efectivo', 'Costos de escrituración incluidos', 'Sin comisiones inmobiliarias'],
-    image: '/optimized/viggo-real.webp',
-    gallery: [
-      '/optimized/viggo-real.webp',
-      '/optimized/Copia-de-1.8.webp',
-      '/optimized/52c73f06-1843-44c7-be61-a318be8c1072-1.webp',
-      '/optimized/2e5afdf1-5119-4591-bc96-3bd37dc07dae-1.webp',
-      '/optimized/2608ad0f-1069-49cf-8368-fcf595ae2613-1.webp',
-      '/optimized/6128e319-cc85-42ea-a78c-7b032da48ba0-1.webp',
-      '/optimized/8de5d505-9fdd-4e78-9b33-37b657611bde-1.webp',
-      '/optimized/4efcdd09-d9a2-4e73-a57a-8a36e30d61f6-1-1.webp',
-      '/optimized/f3c351ac-bfc1-4fe9-b6ec-243d7d21c868-1.webp',
-      '/optimized/28181947-4341-4094-84de-95157d4d66c6-1.webp'
-    ],
-    videos: {
-      primary: 'https://www.youtube.com/embed/wZUlyK8_iyc'
-    }
-  },
-  {
     id: 'dafne-42',
     name: 'Dafne 42',
     status: 'Finalizado',
@@ -183,14 +145,52 @@ const PROJECTS = [
     `,
     features: ['Posesión inmediata', 'Apto crédito', 'Cocheras opcionales'],
     financing: ['Financiación bancaria disponible', 'Opciones de pago personalizadas'],
-    image: '/optimized/FOTOS-1E.webp',
+    image: '/optimized/dafne-new.webp',
     gallery: [
-      '/optimized/FOTOS-1E.webp',
+      '/optimized/dafne-new.webp',
       '/optimized/FOTOS-1A.webp',
       '/optimized/FOTOS-1C.webp',
       '/optimized/FB_IMG_1617231495038.webp',
       '/optimized/FB_IMG_1617231483347.webp'
     ]
+  },
+  {
+    id: 'viggo-91',
+    name: 'Viggo 91',
+    status: 'En venta',
+    category: 'En venta',
+    description: 'Viviendas modernas en una ubicación privilegiada. Un procedimiento seguro y confiable.',
+    fullDescriptionHtml: `
+<p class="mb-4">Venta desde el pozo de dos espectaculares dúplex ubicados sobre la importante Av. 91 entre las calles 42 y 40.</p>
+      <p class="mb-4">Un lugar privilegiado a pocas cuadras del mágico parque Miguel Lillo, en Necochea, Prov. de Buenos Aires.</p>
+      <h3 class="text-xl font-bold text-gray-100 mt-8 mb-3">Detalles</h3>
+      <ul class="list-disc pl-5 mb-4 space-y-2">
+        <li><strong>Ubicación:</strong> Av. 91 N° 1781 e/ 87 y 85.</li>
+        <li><strong>Metros cuadrados cubiertos:</strong> 105m² y 95m² respectivamente.</li>
+        <li><strong>Metros cuadrados semicubiertos:</strong> 50m² cada uno.</li>
+        <li><strong>Dormitorios:</strong> 3 y 2 respectivamente.</li>
+        <li><strong>Baños:</strong> 1 principal + 1 de servicio cada uno.</li>
+      </ul>
+      <p class="font-bold text-[#f27d26] mt-6">Costos de mantenimiento: sin expensas.</p>
+    `,
+    features: ['3 ambientes con balcón', 'Doble cochera', 'Patio propio', 'Financiación del 70%'],
+    financing: ['Descuentos por pago en efectivo', 'Costos de escrituración incluidos', 'Sin comisiones inmobiliarias'],
+    image: '/optimized/viggo-real.webp',
+    gallery: [
+      '/optimized/viggo-real.webp',
+      '/optimized/Copia-de-1.8.webp',
+      '/optimized/52c73f06-1843-44c7-be61-a318be8c1072-1.webp',
+      '/optimized/2e5afdf1-5119-4591-bc96-3bd37dc07dae-1.webp',
+      '/optimized/2608ad0f-1069-49cf-8368-fcf595ae2613-1.webp',
+      '/optimized/6128e319-cc85-42ea-a78c-7b032da48ba0-1.webp',
+      '/optimized/8de5d505-9fdd-4e78-9b33-37b657611bde-1.webp',
+      '/optimized/4efcdd09-d9a2-4e73-a57a-8a36e30d61f6-1-1.webp',
+      '/optimized/f3c351ac-bfc1-4fe9-b6ec-243d7d21c868-1.webp',
+      '/optimized/28181947-4341-4094-84de-95157d4d66c6-1.webp'
+    ],
+    videos: {
+      primary: 'https://www.youtube.com/embed/wZUlyK8_iyc'
+    }
   },
   {
     id: 'orfeo',
@@ -248,7 +248,7 @@ const PROJECTS = [
     fullDescriptionHtml: `
 <h3 class="text-xl font-bold text-gray-100 mb-3">Departamentos en planta alta y planta baja</h3>
       <ul class="list-disc pl-5 mb-4 space-y-2">
-        <li>Ubicación: Calle 543 e/ Av. Loberia and 580, Quequén.</li>
+        <li>Ubicación: Calle 543 e/ Av. Loberia y 580, Quequén.</li>
         <li>Unidades a estrenar.</li>
         <li>Servicios: agua corriente, cloacas, electricidad, alumbrado público.</li>
         <li>Entrada para vehículos.</li>
@@ -256,7 +256,7 @@ const PROJECTS = [
       </ul>
     `,
     features: ['Quequén residencial', 'A metros de Av. Lobería', 'Ideal inversión'],
-    financing: ['Financiación directa', 'Entrega and cuotas'],
+    financing: ['Financiación directa', 'Entrega y cuotas'],
     image: '/optimized/zeus-cover.webp',
     gallery: [
       '/optimized/zeus-cover.webp',
@@ -331,7 +331,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 APOLO<span className="text-[#f27d26]">.</span>
               </Link>
               <p className="text-gray-400 font-medium leading-relaxed mb-10 max-w-sm">
-                Desarrollamos el futuro de Necochea con una visión arquitectónica que prioriza la calidad, el diseño and la rentabilidad de nuestros inversores.
+                Desarrollamos el futuro de Necochea con una visión arquitectónica que prioriza la calidad, el diseño y la rentabilidad de nuestros inversores.
               </p>
               <div className="flex gap-6">
                 <a href="https://www.facebook.com/apoloconstructora" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-[#f27d26] hover:text-white hover:border-[#f27d26] transition-all text-gray-500">
@@ -730,7 +730,7 @@ const Financiacion = () => {
               MÁS ELEGIDO
             </div>
             
-            <div className="relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+            <div className="relative z-10 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
               <div>
                 <h2 className="text-gray-100 text-4xl md:text-6xl font-black mb-8 leading-tight">Plan 120 <br /><span className="text-[#f27d26]">Cuotas.</span></h2>
                 <p className="text-gray-300 text-lg md:text-xl mb-10 leading-relaxed font-medium">
@@ -740,7 +740,7 @@ const Financiacion = () => {
                   {[
                     'Financiación directa en PESOS',
                     'Ajuste por índice de la construcción',
-                    'Sin requisitos bancarios complejos',
+                    'Sin requisitos bancarios',
                     'Posibilidad de adelantar cuotas'
                   ].map((item, i) => (
                     <li key={i} className="flex items-center gap-4 text-gray-100 font-bold text-lg">
@@ -753,10 +753,10 @@ const Financiacion = () => {
                 </ul>
               </div>
               
-              <div className="bg-white/5 backdrop-blur-md rounded-3xl p-10 border border-white/10 shadow-inner flex flex-col items-center text-center">
+              <div className="bg-white/5 backdrop-blur-md rounded-3xl p-6 lg:p-10 border border-white/10 shadow-inner flex flex-col items-center text-center">
                 <p className="text-gray-400 text-xs uppercase tracking-[0.3em] font-bold mb-6">Inversión Inteligente</p>
                 <div className="text-gray-100 mb-8">
-                  <span className="text-7xl md:text-8xl font-black text-[#f27d26]">120</span>
+                  <span className="text-6xl md:text-7xl font-black text-[#f27d26]">120</span>
                   <p className="text-xl md:text-2xl font-bold uppercase tracking-widest mt-2">Meses de Financiación</p>
                 </div>
                 <Link to="/contacto" className="w-full py-5 bg-[#f27d26] hover:bg-white hover:text-[#f27d26] text-white font-black rounded-xl transition-all duration-300 text-sm uppercase tracking-widest shadow-xl">
@@ -843,7 +843,7 @@ const Nosotros = () => {
               <img 
                 src="/optimized/miguel.webp" 
                 alt="Miguel Juan Pedro Nielsen" 
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-110 group-hover:scale-125" 
+                className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-1000 scale-125 group-hover:scale-150" 
               />
               <div className="absolute bottom-10 left-10 z-20">
                 <p className="text-[#f27d26] text-xs font-bold uppercase tracking-widest mb-2">Fundador & CEO</p>
@@ -1017,17 +1017,18 @@ const Contacto = () => {
                   <div className="relative">
                     <select className="w-full bg-[#3b3b3b] border-b border-gray-700 py-4 outline-none focus:border-[#f27d26] transition-all font-medium text-gray-100 appearance-none cursor-pointer">
                       <option value="" disabled selected>Asunto de consulta</option>
-                      <option value="inversor">Quiero ser inversor</option>
-                      <option value="pozo">Comprar desde pozo</option>
-                      <option value="primer-depto">Busco mi primer departamento</option>
-                      <option value="construir">Quiero construir mi hogar</option>
+                      <option value="inversor">- Quiero ser inversor</option>
+                      <option value="pozo">- Comprar desde pozo</option>
+                      <option value="primer-depto">- Busco mi primer departamento</option>
+                      <option value="construir">- Quiero construir mi hogar</option>
+                      <option value="proyectos">- Busco construir proyectos de +1500m2</option>
                     </select>
                     <div className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
                       <ChevronRight size={16} className="rotate-90" />
                     </div>
                   </div>
                   <div className="relative group">
-                    <input type="tel" placeholder="Teléfono" className="w-full bg-transparent border-b border-gray-700 py-4 outline-none focus:border-[#f27d26] transition-all font-medium text-gray-100 placeholder:text-gray-400" />
+                    <input type="tel" placeholder="Teléfono" required className="w-full bg-transparent border-b border-gray-700 py-4 outline-none focus:border-[#f27d26] transition-all font-medium text-gray-100 placeholder:text-gray-400" />
                     <div className="absolute bottom-0 left-0 h-0.5 bg-[#f27d26] transition-all duration-300 w-0 group-focus-within:w-full" />
                   </div>
                 </div>
@@ -1197,7 +1198,7 @@ const ProjectDetail = () => {
                           />
                        </div>
                        <a 
-                         href="https://www.youtube.com/watch?v=44Nh6jyD1BQ" 
+                         href="https://www.youtube.com/watch?v=T0ffgscJkFQ" 
                          target="_blank" 
                          rel="noreferrer"
                          className="inline-flex items-center gap-3 px-8 py-4 bg-[#f27d26] text-white font-black rounded-xl hover:bg-white hover:text-[#f27d26] transition-all duration-300 text-sm uppercase tracking-widest shadow-xl"
