@@ -1021,7 +1021,7 @@ const Nosotros = () => {
               </div>
             </div>
             <div className="lg:w-1/2 relative h-[400px] lg:h-auto">
-              <img src="/optimized/playa-mision-v3.jpg" alt="Apolo Vision" className="absolute inset-0 w-full h-full object-cover object-bottom" />
+              <img src="/optimized/playa-mision-v3.jpg" alt="Apolo Vision" className="absolute inset-0 w-full h-full object-cover object-[center_30%]" />
               <div className="absolute inset-0 bg-[#f27d26]/10 mix-blend-overlay" />
             </div>
           </div>
