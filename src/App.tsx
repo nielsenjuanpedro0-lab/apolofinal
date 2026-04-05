@@ -448,20 +448,18 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             </div>
             <div className="md:col-span-5">
               <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-8">Contacto</p>
-              <div className="grid grid-cols-1 gap-8">
+              <div className="grid grid-cols-1 gap-10">
                 <div>
-                  <p className="text-gray-400 text-[10px] uppercase tracking-[0.2em] font-semibold mb-2">Oficina</p>
-                  <p className="text-xl font-bold text-gray-100">Av. 91 1779, Necochea</p>
+                  <p className="text-gray-400 text-[10px] uppercase tracking-[0.2em] font-semibold mb-3">Oficina</p>
+                  <p className="text-2xl font-bold text-gray-100">Av. 91 1779, Necochea</p>
                 </div>
-                <div className="flex flex-col md:flex-row gap-8 md:gap-16">
-                  <div>
-                    <p className="text-gray-400 text-[10px] uppercase tracking-[0.2em] font-semibold mb-2">Llamanos</p>
-                    <p className="text-xl font-bold text-gray-100">+54 9 2262 506588</p>
-                  </div>
-                  <div>
-                    <p className="text-gray-400 text-[10px] uppercase tracking-[0.2em] font-semibold mb-2">Email</p>
-                    <p className="text-xl font-bold text-gray-100">info@apoloconstrucciones.com.ar</p>
-                  </div>
+                <div>
+                  <p className="text-gray-400 text-[10px] uppercase tracking-[0.2em] font-semibold mb-3">Llamanos</p>
+                  <p className="text-2xl font-bold text-gray-100">+54 9 2262 506588</p>
+                </div>
+                <div>
+                  <p className="text-gray-400 text-[10px] uppercase tracking-[0.2em] font-semibold mb-3">Email</p>
+                  <p className="text-2xl font-bold text-gray-100">info@apoloconstrucciones.com.ar</p>
                 </div>
               </div>
             </div>
