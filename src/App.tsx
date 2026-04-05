@@ -635,7 +635,7 @@ const Home = () => {
         </motion.div>
       </section>
 
-      <section className="py-24 bg-[#4a4a4a] overflow-hidden">
+      <section className="py-16 bg-[#4a4a4a] overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
@@ -706,7 +706,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-24 bg-[#3b3b3b] overflow-hidden">
+      <section className="py-16 bg-[#3b3b3b] overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div 
             initial={{ opacity: 0, y: 40 }}
@@ -761,9 +761,9 @@ const Proyectos = () => {
     : PROJECTS.filter(p => p.category === filter);
 
   return (
-    <div className="pt-32 pb-24 bg-[#333333] min-h-screen">
+    <div className="pt-24 pb-16 bg-[#333333] min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-start mb-16 md:mb-24 gap-8 md:gap-12">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-start mb-12 md:mb-16 gap-8 md:gap-12">
           <div className="max-w-2xl">
             <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-4 md:mb-6">Nuestros Desarrollos</p>
             <h1 className="text-5xl md:text-8xl mb-8 leading-tight tracking-tighter font-bold font-sans text-gray-100">
@@ -828,9 +828,9 @@ const Proyectos = () => {
 
 const Financiacion = () => {
   return (
-    <div className="pt-24 pb-12 bg-[#3b3b3b] min-h-screen font-sans">
+    <div className="pt-16 pb-8 bg-[#3b3b3b] min-h-screen font-sans">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="max-w-3xl mb-12">
+        <div className="max-w-3xl mb-8">
           <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-4">Inversión y Resguardo</p>
           <h1 className="text-5xl md:text-7xl mb-6 leading-tight tracking-tighter font-bold text-gray-100">
             Opciones de <br /><span className="text-[#f27d26] font-bold">Financiación.</span>
@@ -914,12 +914,12 @@ const Financiacion = () => {
 const Nosotros = () => {
   return (
     <div className="bg-[#333333]">
-      {/* Hero Section */}
-      <section className="pt-40 pb-24 md:pt-56 md:pb-40 relative overflow-hidden">
+      {/* Hero Section - Reduced padding */}
+      <section className="pt-32 pb-16 md:pt-40 md:pb-24 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="max-w-4xl">
-            <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-bold mb-6">Nuestra Historia</p>
-            <h1 className="text-6xl md:text-9xl mb-12 leading-tight tracking-tighter font-black font-sans text-gray-100">
+            <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-bold mb-4">Nuestra Historia</p>
+            <h1 className="text-6xl md:text-8xl mb-8 leading-tight tracking-tighter font-black font-sans text-gray-100">
               Sobre <br /><span className="text-[#f27d26]">Nosotros.</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-400 font-medium leading-relaxed max-w-2xl">
@@ -932,10 +932,10 @@ const Nosotros = () => {
         </div>
       </section>
 
-      {/* Founder Section */}
-      <section className="py-24 bg-[#3b3b3b]">
+      {/* Founder Section - Reduced padding */}
+      <section className="py-16 bg-[#3b3b3b]">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-20 items-center">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
             <motion.div 
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -991,13 +991,13 @@ const Nosotros = () => {
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="py-24 bg-[#333333]">
+      {/* Mission Section - Reduced padding */}
+      <section className="py-16 bg-[#333333]">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-[#4a4a4a] border border-gray-800 rounded-[4rem] overflow-hidden flex flex-col lg:flex-row shadow-2xl">
-            <div className="lg:w-1/2 p-12 md:p-20 flex flex-col justify-center">
-              <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.4em] font-black mb-8">Propósito</p>
-              <h2 className="text-4xl md:text-6xl font-black text-gray-100 mb-10 leading-tight">Nuestra <br />Misión.</h2>
+          <div className="bg-[#4a4a4a] border border-gray-800 rounded-[3rem] overflow-hidden flex flex-col lg:flex-row shadow-2xl">
+            <div className="lg:w-1/2 p-10 md:p-16 flex flex-col justify-center">
+              <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.4em] font-black mb-6">Propósito</p>
+              <h2 className="text-3xl md:text-5xl font-black text-gray-100 mb-8 leading-tight">Nuestra <br />Misión.</h2>
               <p className="text-xl text-gray-400 leading-relaxed font-medium mb-10">
                 Ofrecer soluciones de inversión seguras y departamentos de alta calidad que superen las expectativas de nuestros clientes, garantizando transparencia en cada paso y un compromiso inquebrantable con el detalle arquitectónico.
               </p>
@@ -1124,9 +1124,9 @@ const ContactForm = () => {
 
 const Contacto = () => {
   return (
-    <div className="pt-32 pb-24 bg-[#4a4a4a] min-h-screen border-t border-gray-800">
+    <div className="pt-24 pb-16 bg-[#4a4a4a] min-h-screen border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="max-w-3xl mb-24">
+        <div className="max-w-3xl mb-16">
           <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-6">Estamos a su disposición</p>
           <h1 className="text-6xl md:text-8xl mb-10 leading-tight tracking-tighter font-bold font-sans text-gray-100">
             Hablemos de su <br /><span className="text-[#f27d26] font-bold">Próximo Proyecto.</span>
@@ -1415,10 +1415,10 @@ const ProjectDetail = () => {
           
         </div>
 
-        {/* Full Gallery Section */}
+        {/* Full Gallery Section - Reduced padding */}
         {project.gallery && project.gallery.length > 1 && (
-          <div className="mt-32 border-t border-gray-700 pt-24">
-            <div className="flex flex-col items-center text-center mb-16">
+          <div className="mt-20 border-t border-gray-700 pt-16">
+            <div className="flex flex-col items-center text-center mb-12">
               <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.3em] font-bold mb-4">Registro Visual</p>
               <h2 className="text-4xl md:text-5xl font-black font-sans text-gray-100 mb-6">Galería del Proyecto</h2>
               <p className="text-gray-500 max-w-2xl text-lg font-medium">Hacé click en cualquier imagen para ampliarla y explorar cada detalle arquitectónico.</p>
@@ -1445,10 +1445,10 @@ const ProjectDetail = () => {
           </div>
         )}
 
-        {/* Google Maps Section */}
+        {/* Google Maps Section - Reduced padding */}
         {id && mapQueries[id] && (
-          <div className="mt-32 border-t border-gray-700 pt-24">
-            <div className="flex flex-col items-center text-center mb-16">
+          <div className="mt-20 border-t border-gray-700 pt-16">
+            <div className="flex flex-col items-center text-center mb-12">
               <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.3em] font-bold mb-4">Ubicación</p>
               <h2 className="text-4xl md:text-5xl font-black font-sans text-gray-100 mb-6">¿Dónde se encuentra?</h2>
             </div>
@@ -1514,7 +1514,7 @@ const Lightbox = ({ images, currentIndex, onClose }: { images: string[], current
         onClick={(e) => e.stopPropagation()}
         referrerPolicy="no-referrer"
       />
-      <div className="absolute bottom-6 text-white/50 text-sm font-medium">
+            <div className="absolute bottom-6 text-white/50 text-sm font-medium">
         {idx + 1} / {images.length}
       </div>
     </motion.div>
@@ -1535,14 +1535,14 @@ const ProcesoCompra = () => {
   ];
 
   return (
-    <div className="pt-32 pb-24 bg-[#333333] min-h-screen">
+    <div className="pt-24 pb-16 bg-[#333333] min-h-screen">
       <div className="max-w-5xl mx-auto px-6">
-        <motion.div
+        <motion.div 
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "0px" }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center mb-20"
+          className="text-center mb-12"
         >
           <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-semibold mb-6">Paso a paso</p>
           <h1 className="text-5xl md:text-7xl mb-8 leading-tight tracking-tighter font-bold font-sans text-gray-100">
