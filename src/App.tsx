@@ -144,17 +144,20 @@ const PROJECTS = [
     `,
     features: ['Posesiónales'],
     financing: ['Financiación bancaria disponible', 'Opciones de pago personalizadas'],
-    image: '/optimized/IMG_20221106_150650785_HDR.webp',
+    image: '/optimized/IMG_20221106_150659567.jpg',
     gallery: [
-      '/optimized/IMG_20221106_150650785_HDR.webp',
-      '/optimized/IMG_20221106_150542803_HDR.webp',
-      '/optimized/IMG_20221106_150904764.webp',
-      '/optimized/IMG_20221106_151138243_MF_PORTRAIT.webp',
-      '/optimized/IMG_20221106_151147282_MF_PORTRAIT.webp',
-      '/optimized/IMG_20221106_151230141_MF_PORTRAIT.webp',
-      '/optimized/IMG_20221106_151234977_MF_PORTRAIT.webp',
-      '/optimized/IMG_20221106_151347052_MF_PORTRAIT.webp',
-      '/optimized/IMG_20221106_151502423_MF_PORTRAIT.webp'
+      '/optimized/IMG_20221106_150659567.jpg',
+      '/optimized/IMG_20221106_150817889.jpg',
+      '/optimized/IMG_20221106_151120494_MF_PORTRAIT.jpg',
+      '/optimized/IMG_20221106_151410376_MF_PORTRAIT.jpg',
+      '/optimized/IMG_20221106_152615511.jpg',
+      '/optimized/IMG_20221106_152813163.jpg',
+      '/optimized/IMG_20221106_152831039.jpg',
+      '/optimized/IMG_20221106_152841082.jpg',
+      '/optimized/IMG_20230705_182735186.jpg',
+      '/optimized/IMG-20221106-WA0012.jpg',
+      '/optimized/IMG-20221106-WA0046.jpg',
+      '/optimized/Copia de IMG_20221106_151502423_MF_PORTRAIT.jpg'
     ]
   },
   {
