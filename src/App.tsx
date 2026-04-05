@@ -142,7 +142,12 @@ const PROJECTS = [
         <li>Cocina amoblada, baño completo con bañera.</li>
       </ul>
     `,
-    features: ['Posesiónales'],
+    features: [
+      'Departamentos de 1, 2 y 3 ambientes Adaptables',
+      'Cocheras Disponibles',
+      'Patio propio',
+      'Diseño funcional'
+    ],
     financing: ['Financiación bancaria disponible', 'Opciones de pago personalizadas'],
     image: '/optimized/IMG_20221106_150659567.jpg',
     gallery: [
