@@ -946,7 +946,7 @@ const Nosotros = () => {
               <img 
                 src="/optimized/miguel.webp" 
                 alt="Miguel Angel Di Virgilio" 
-                className="w-full h-full object-cover object-center transition-all duration-1000 scale-[1.3] group-hover:scale-[1.4]" 
+                className="w-full h-full object-cover object-center transition-all duration-1000 scale-[1.8] group-hover:scale-[1.9]" 
               />
               <div className="absolute bottom-10 left-10 z-20">
                 <p className="text-[#f27d26] text-xs font-bold uppercase tracking-widest mb-2">Fundador & CEO</p>
