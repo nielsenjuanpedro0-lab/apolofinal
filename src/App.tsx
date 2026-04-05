@@ -73,9 +73,8 @@ const PROJECTS = [
       primary: 'https://www.youtube.com/embed/44Nh6jyD1BQ',
       secondary: 'https://www.youtube.com/embed/T0ffgscJkFQ'
     },
-    image: '/optimized/ARES-22-FLYER.jpg',
+    image: '/optimized/APOLO-ARES-1-1.webp',
     gallery: [
-      '/optimized/ARES-22-FLYER.jpg',
       '/optimized/APOLO-ARES-1-1.webp',
       '/optimized/APOLO-ARES-2-1.webp',
       '/optimized/APOLO-ARES-3-1.webp',
@@ -145,13 +144,17 @@ const PROJECTS = [
     `,
     features: ['Posesiónales'],
     financing: ['Financiación bancaria disponible', 'Opciones de pago personalizadas'],
-    image: '/optimized/dafne-new.webp',
+    image: '/optimized/IMG_20221106_150650785_HDR.webp',
     gallery: [
-      '/optimized/dafne-new.webp',
-      '/optimized/FOTOS-1A.webp',
-      '/optimized/FOTOS-1C.webp',
-      '/optimized/FB_IMG_1617231495038.webp',
-      '/optimized/FB_IMG_1617231483347.webp'
+      '/optimized/IMG_20221106_150650785_HDR.webp',
+      '/optimized/IMG_20221106_150542803_HDR.webp',
+      '/optimized/IMG_20221106_150904764.webp',
+      '/optimized/IMG_20221106_151138243_MF_PORTRAIT.webp',
+      '/optimized/IMG_20221106_151147282_MF_PORTRAIT.webp',
+      '/optimized/IMG_20221106_151230141_MF_PORTRAIT.webp',
+      '/optimized/IMG_20221106_151234977_MF_PORTRAIT.webp',
+      '/optimized/IMG_20221106_151347052_MF_PORTRAIT.webp',
+      '/optimized/IMG_20221106_151502423_MF_PORTRAIT.webp'
     ]
   },
   {
@@ -1196,7 +1199,7 @@ const ProjectDetail = () => {
   const mapQueries: Record<string, string> = {
     'viggo-91': 'Avenida+91+1781+Necochea+Buenos+Aires+Argentina',
     'ares-22': 'Calle+22+3819,+Necochea,+Buenos+Aires,+Argentina',
-    'delfos-83': 'Calle+83+entre+24+y+26+Necochea+Buenos+Aires+Argentina',
+    'delfos-83': 'Calle+83+2450,+Necochea,+Buenos+Aires,+Argentina',
     'dafne-42': 'Calle+42+Necochea+Buenos+Aires+Argentina',
     'orfeo': 'Necochea+Buenos+Aires+Argentina',
     'zeus-543': 'Calle+543+e/+Avenida+Loberia+y+580+Necochea+Buenos+Aires+Argentina'
