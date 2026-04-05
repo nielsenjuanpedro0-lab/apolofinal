@@ -843,55 +843,28 @@ const Financiacion = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 items-stretch">
+          {/* Card 1: 120 CUOTAS (Swapped to first position) */}
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "0px" }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="p-8 md:p-12 bg-[#4a4a4a] rounded-[2.5rem] border border-gray-800 hover:border-[#f27d26]/30 transition-all duration-500 shadow-xl flex flex-col"
-          >
-            <span className="inline-block px-4 py-1.5 bg-gray-900 border border-gray-700 text-[#f27d26] text-[9px] font-black tracking-widest rounded-full mb-8 w-fit uppercase">
-              RENTABILIDAD
-            </span>
-            <h3 className="text-3xl font-bold text-gray-100 mb-6">Plan Inversor</h3>
-            <p className="text-gray-400 text-lg leading-relaxed mb-10 font-medium flex-grow">
-              Ideal para quienes buscan rentabilidad rápida. Entrega del 50% y saldo en 24 o 36 cuotas fijas o ajustables.
-            </p>
-            <ul className="space-y-4 mb-10">
-              {['Financiación directa', 'Ajuste por CAC o FIJO', 'Posesión inmediata en listos'].map((item, i) => (
-                <li key={i} className="flex items-center gap-3 text-gray-100 font-bold text-base">
-                  <div className="w-5 h-5 rounded-full bg-[#f27d26]/20 flex items-center justify-center border border-[#f27d26]/40">
-                    <Check className="w-3 h-3 text-[#f27d26]" />
-                  </div>
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <Link to="/contacto" className="w-full py-4 bg-gray-900 hover:bg-black text-white font-black rounded-xl transition-all duration-300 text-sm uppercase tracking-widest text-center shadow-xl">
-              Consultar Detalles
-            </Link>
-          </motion.div>
-
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "0px" }}
-            transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="relative overflow-hidden bg-gradient-to-br from-[#423129] to-[#33261f] p-8 md:p-12 rounded-[2.5rem] border-2 border-[#f27d26]/40 flex flex-col shadow-2xl hover:shadow-[0_40px_80px_-20px_rgba(242,125,38,0.25)] transition-all duration-700 group h-full"
           >
             <div className="absolute top-4 right-4 px-4 py-1.5 bg-[#f27d26] text-white text-[9px] font-black uppercase tracking-widest rounded-full animate-pulse z-20">
-              MÃS ELEGIDO
+              MÁS ELEGIDO
             </div>
             
             <span className="inline-block px-4 py-1.5 bg-black/40 border border-[#f27d26]/30 text-[#f27d26] text-[9px] font-black tracking-widest rounded-full mb-8 w-fit uppercase">
-              120 CUOTAS
+              Plan Ares 22 — Exclusivo
             </span>
-            <h3 className="text-3xl font-bold text-gray-100 mb-6">Plan 120 <span className="text-[#f27d26]">Cuotas.</span></h3>
-            <p className="text-gray-300 text-lg mb-10 leading-relaxed font-medium flex-grow">
-              La forma más accesible de dolarizar sus ahorros. Pague en mensualidades en <strong>PESOS</strong> mientras capitaliza en dólares.
+            <h3 className="text-4xl font-black text-[#f27d26] mb-2 uppercase">120 CUOTAS</h3>
+            <p className="text-xl text-gray-100 font-bold mb-6">en <strong>PESOS</strong></p>
+            <p className="text-gray-300 text-lg mb-8 leading-relaxed font-medium flex-grow">
+              Plan exclusivo para el proyecto Ares 22. Financiación a 10 años en pesos con fideicomiso al costo. La mejor oportunidad de inversión inmobiliaria.
             </p>
             <ul className="space-y-4 mb-10">
-              {['Financiación directa en PESOS', 'Sin requisitos bancarios', 'Ares 22 - Exclusivo'].map((item, i) => (
+              {['Fideicomiso al costo', 'Reserva con solo el 20%', 'Sin comisiones inmobiliarias', 'Financiación directa sin intermediarios'].map((item, i) => (
                 <li key={i} className="flex items-center gap-3 text-gray-100 font-bold text-base">
                   <div className="w-5 h-5 rounded-full bg-[#f27d26]/20 flex items-center justify-center border border-[#f27d26]/40">
                     <Check className="w-3 h-3 text-[#f27d26]" />
@@ -904,11 +877,42 @@ const Financiacion = () => {
               Ver Proyecto Ares 22
             </Link>
           </motion.div>
+
+          {/* Card 2: Plan Tradicional (Second position) */}
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "0px" }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            className="p-8 md:p-12 bg-[#4a4a4a] rounded-[2.5rem] border border-gray-800 hover:border-[#f27d26]/30 transition-all duration-500 shadow-xl flex flex-col"
+          >
+            <span className="inline-block px-4 py-1.5 bg-gray-900 border border-gray-700 text-[#f27d26] text-[9px] font-black tracking-widest rounded-full mb-8 w-fit uppercase">
+              Plan Tradicional
+            </span>
+            <h3 className="text-3xl font-bold text-gray-100 mb-6">Hasta 48 Cuotas</h3>
+            <p className="text-gray-400 text-lg leading-relaxed mb-8 font-medium flex-grow">
+              Financiación directa con Apolo Construcciones. Planes adaptados a tu medida para que puedas invertir con tranquilidad y previsibilidad.
+            </p>
+            <ul className="space-y-4 mb-10">
+              {['Cuotas fijas en <strong>PESOS</strong> o dólares', 'Sin requisitos bancarios complejos', 'Posesión inmediata en obras finalizadas'].map((item, i) => (
+                <li key={i} className="flex items-start gap-3 text-gray-100 font-bold text-base">
+                  <div className="w-5 h-5 rounded-full bg-[#f27d26]/20 flex items-center justify-center border border-[#f27d26]/40 mt-0.5">
+                    <Check className="w-3 h-3 text-[#f27d26]" />
+                  </div>
+                  <span dangerouslySetInnerHTML={{ __html: item }}></span>
+                </li>
+              ))}
+            </ul>
+            <Link to="/contacto" className="w-full py-4 bg-gray-900 hover:bg-black text-white font-black rounded-xl transition-all duration-300 text-sm uppercase tracking-widest text-center shadow-xl">
+              Consultar Plan
+            </Link>
+          </motion.div>
         </div>
       </div>
     </div>
   );
 };
+
 const Nosotros = () => {
   return (
     <div className="bg-[#333333]">
