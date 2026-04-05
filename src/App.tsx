@@ -1,4 +1,4 @@
-﻿/**
+/**
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -692,7 +692,7 @@ const Home = () => {
                     ))}
                   </div>
                   <Link to={`/proyectos/${project.id}`} className="mt-auto w-max px-6 py-3 bg-[#4a4a4a] border border-gray-700 hover:border-[#f27d26] hover:bg-[#f27d26] text-gray-100 hover:text-white font-bold rounded-lg transition-colors text-sm group-hover:shadow-lg">
-                  Ver Detalles</Link>
+                    Ver Detalles
                   </Link>
                 </div>
               </motion.div>
