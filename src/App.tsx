@@ -94,10 +94,10 @@ const PROJECTS = [
     category: 'VENTA EN POZO',
     description: 'Exclusividad y confort en una de las mejores zonas de Necochea.',
     fullDescriptionHtml: `
-<p class="mb-4">Una joya inmobiliaria en el corazón de NECOCHEA.</p>
+      <p class="mb-4">Ubicado en la calle 83 N° 944 en el corazón de NECOCHEA.</p>
       <p class="mb-4">Ubicado estratégicamente en la vibrante ciudad, este proyecto es una oportunidad excepcional para inversores visionarios.</p>
       <p class="mb-4"><strong>«Delfos 83»</strong> ofrece calidad y rentabilidad. Con departamentos de 1, 2 y 3 ambientes con patios propios, balcones al frente y cocheras, esta es tu oportunidad de entrar al mercado inmobiliario con éxito asegurado.</p>
-      <p class="mb-4">En plena calle 83 entre calles 24 y 26 se emplaza a solo 3 cuadras y media de la importantísima Av. 10, la cual es el sendero peatonal mas importante de la cuidad. Este proyecto aprovecha el crecimiento dinámico de la ciudad hacia la playa en donde capta justo el publico turístico como el local.</p>
+      <p class="mb-4">Se emplaza a solo 3 cuadras y media de la importantísima Av. 10, la cual es el sendero peatonal mas importante de la cuidad. Este proyecto aprovecha el crecimiento dinámico de la ciudad hacia la playa en donde capta justo el publico turístico como el local.</p>
       <p class="font-bold text-[#f27d26] mt-6">Costos de mantenimiento: sin expensas.</p>
     `,
     features: ['Entrega noviembre del 2026', 'Ubicación privilegiada', 'Financiación en 48 cuotas en <strong>PESOS</strong>'],
@@ -1207,7 +1207,7 @@ const ProjectDetail = () => {
   const mapQueries: Record<string, string> = {
     'viggo-91': 'Avenida+91+1781+Necochea+Buenos+Aires+Argentina',
     'ares-22': 'Calle+22+3819,+Necochea,+Buenos+Aires,+Argentina',
-    'delfos-83': 'Calle+83+2450,+Necochea,+Buenos+Aires,+Argentina',
+    'delfos-83': 'Calle+83+944,+Necochea,+Buenos+Aires+Argentina',
     'dafne-42': 'Calle+42+4235+Necochea+Buenos+Aires+Argentina',
     'orfeo': 'Necochea+Buenos+Aires+Argentina',
     'zeus-543': 'Calle+543+e/+Avenida+Loberia+y+580+Necochea+Buenos+Aires+Argentina'
