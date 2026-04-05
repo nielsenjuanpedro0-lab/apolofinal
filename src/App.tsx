@@ -918,9 +918,9 @@ const Nosotros = () => {
       <section className="pt-40 pb-24 md:pt-56 md:pb-40 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="max-w-4xl">
-            <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.3em] font-bold mb-6">Quiénes Somos</p>
+            <p className="text-[#f27d26] text-[10px] uppercase tracking-[0.2em] font-bold mb-6">Nuestra Historia</p>
             <h1 className="text-6xl md:text-9xl mb-12 leading-tight tracking-tighter font-black font-sans text-gray-100">
-              Pasión por la <br /><span className="text-[#f27d26]">Arquitectura.</span>
+              Sobre <br /><span className="text-[#f27d26]">Nosotros.</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-400 font-medium leading-relaxed max-w-2xl">
               Somos una empresa familiar con más de 15 años transformando el paisaje urbano de Necochea a través de proyectos que combinan estética, funcionalidad y solidez.
@@ -946,7 +946,7 @@ const Nosotros = () => {
               <img 
                 src="/optimized/miguel.webp" 
                 alt="Miguel Angel Di Virgilio" 
-                className="w-full h-full object-cover object-top transition-all duration-1000 scale-125 group-hover:scale-135" 
+                className="w-full h-full object-cover object-top transition-all duration-1000 scale-[1.5] group-hover:scale-[1.6] origin-top" 
               />
               <div className="absolute bottom-10 left-10 z-20">
                 <p className="text-[#f27d26] text-xs font-bold uppercase tracking-widest mb-2">Fundador & CEO</p>
