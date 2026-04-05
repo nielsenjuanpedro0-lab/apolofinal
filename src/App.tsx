@@ -982,8 +982,8 @@ const Nosotros = () => {
                   <p className="text-gray-500 text-xs uppercase tracking-widest font-bold">Años de trayectoria</p>
                 </div>
                 <div>
-                  <h4 className="text-4xl font-black text-[#f27d26] mb-2">+10k</h4>
-                  <p className="text-gray-500 text-xs uppercase tracking-widest font-bold">M2 Construidos</p>
+                  <h4 className="text-4xl font-black text-[#f27d26] mb-2">+6</h4>
+                  <p className="text-gray-500 text-xs uppercase tracking-widest font-bold">Proyectos</p>
                 </div>
               </div>
             </div>
