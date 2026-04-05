@@ -1208,7 +1208,7 @@ const ProjectDetail = () => {
     'viggo-91': 'Avenida+91+1781+Necochea+Buenos+Aires+Argentina',
     'ares-22': 'Calle+22+3819,+Necochea,+Buenos+Aires,+Argentina',
     'delfos-83': 'Calle+83+2450,+Necochea,+Buenos+Aires,+Argentina',
-    'dafne-42': 'Calle+42+Necochea+Buenos+Aires+Argentina',
+    'dafne-42': 'Calle+42+4235+Necochea+Buenos+Aires+Argentina',
     'orfeo': 'Necochea+Buenos+Aires+Argentina',
     'zeus-543': 'Calle+543+e/+Avenida+Loberia+y+580+Necochea+Buenos+Aires+Argentina'
   };
