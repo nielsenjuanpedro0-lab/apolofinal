@@ -308,7 +308,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   const isHomePage = location.pathname === '/';
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#3b3b3b] font-sans">
+    <div className="min-h-screen flex flex-col bg-[#3b3b3b] font-sans overflow-x-hidden w-full">
       <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-[#4a4a4a]/95 backdrop-blur-md py-4 shadow-sm border-b border-gray-800 text-gray-100' : `bg-transparent py-6 ${isHomePage ? 'text-white' : 'text-gray-100'}`}`}>
         <div className="max-w-7xl mx-auto px-6 md:px-8 flex justify-between items-center">
           <Link to="/" className="flex items-center gap-4 group">
@@ -535,7 +535,7 @@ const Home = () => {
   }, [carouselItems.length]);
 
   return (
-    <div className="bg-[#4a4a4a]">
+    <div className="bg-[#4a4a4a] overflow-x-hidden w-full">
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <AnimatePresence>
